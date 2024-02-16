@@ -1,0 +1,11 @@
+[user]
+	name = Nelson Lee
+	email = leelhn2345@outlook.com
+[color]
+	ui = auto
+[core]
+	editor = code --wait
+[init]
+	defaultBranch = main
+[credential]
+	helper = /mnt/c/Program\\ Files\\ \\(x86\\)/Git\\ Credential\\ Manager/git-credential-manager.exe
