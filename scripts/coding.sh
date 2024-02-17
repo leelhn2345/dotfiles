@@ -12,5 +12,5 @@ poetry_install() {
 #######################################
 bun_install() {
 	curl -fsSL https://bun.sh/install | bash
-	SHELL=/bin/zsh "$HOME/.bun/bin/bun" completions
+	SHELL=/bin/zsh "$HOME/.bun/bin/bun" completions >~/.bun/_bun
 }
