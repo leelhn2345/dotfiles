@@ -19,6 +19,7 @@ zsh_plugins() {
 }
 
 zsh_completions() {
+	nala --install-completion zsh >"$ZSH_COMPLETIONS_FOLDER/_nala"
 	rustup completions zsh cargo >"$ZSH_COMPLETIONS_FOLDER/_cargo"
 	rustup completions zsh >"$ZSH_COMPLETIONS_FOLDER/_rustup"
 	"$HOME/.local/bin/poetry" completions zsh >"$ZSH_COMPLETIONS_FOLDER/_poetry"
