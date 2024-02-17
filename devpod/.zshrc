@@ -48,6 +48,7 @@ alias cat='batcat'
 alias ls='lsd'
 alias ll='lsd -alF'
 alias la='lsd -a'
+alias tree='lsd --tree'
 
 alias sz='source ~/.zshrc'
 
@@ -96,3 +97,5 @@ source "$ZSH_PLUGINS_FOLDER/zsh-you-should-use/you-should-use.plugin.zsh"
 # history substring search options
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
+
+eval "$(zoxide init --cmd cd zsh)"

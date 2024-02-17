@@ -13,16 +13,15 @@ rustup_toolchain() {
 }
 
 #######################################
-# install cargo binaries.
-#
-# i chose to install some binaries such as ripgrep with cargo
-# is because debian takes too long to release latest versions.
+# installs cargo binaries.
 #
 # some binaries are not available via apt.
+# debian/ubuntu derivatives take too long to upate their packages.
 #######################################
 cargo_binaries() {
 	cargo binstall ripgrep -y &
 	cargo binstall lsd -y &
+	cargo binstall zoxide -y &
 	cargo binstall cargo-update -y &
 	cargo binstall tree-sitter-cli -y &
 	cargo binstall cargo-makedocs -y &
