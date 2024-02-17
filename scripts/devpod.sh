@@ -37,7 +37,7 @@ main() {
 	title "Coding Tools"
 	poetry_install
 	bun_install
-	bun i -g npm @loopback/cli git-removed-branches
+	"$HOME/.bun/bin/bun" i -g npm @loopback/cli git-removed-branches
 	success "Finished installing coding tools."
 
 	title "Zsh"
