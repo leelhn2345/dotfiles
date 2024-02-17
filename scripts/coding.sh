@@ -12,4 +12,7 @@ poetry_install() {
 #######################################
 bun_install() {
 	curl -fsSL https://bun.sh/install | bash
+	wait
+	# shellcheck disable=SC1090
+	source ~/.bun/_bun
 }
