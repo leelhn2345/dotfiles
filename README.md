@@ -44,15 +44,7 @@ devpod context set-options \
 -o DOTFILES_URL=https://github.com/leelhn2345/dotfiles -o DOTFILES_SCRIPT=scripts/devpod.sh
 ```
 
-Once workspace is setup:
-
-```sh
-cd dotfiles
-stow --adopt devpod # remember to undo git changes
-stow .config -t ~/.config
-```
-
-Reconnect ssh and customize [p10k theme](https://github.com/romkatv/powerlevel10k)
+Once workspace is setup, reconnect ssh and customize [p10k theme](https://github.com/romkatv/powerlevel10k)
 via prompt.
 
 ## License

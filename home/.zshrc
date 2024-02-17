@@ -41,6 +41,8 @@ alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
 alias vim='nvim'
 
+alias cdd='cd ~/dotfiles'
+
 alias cat='batcat'
 
 alias ls='lsd'
@@ -56,7 +58,7 @@ alias tls='tmux list-sessions'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
 
-alias cargo-update='cargo install-update a'
+alias cu='cargo install-update a'
 alias cpf='cargo clippy --fix --allow-dirty --allow-staged'
 
 alias cc='cargo clippy'

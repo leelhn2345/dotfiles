@@ -41,6 +41,8 @@ alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
 alias vim='nvim'
 
+alias cdd='cd ~/dotfiles'
+
 alias cat='batcat'
 
 alias ls='lsd'
@@ -72,7 +74,7 @@ alias rustdoc='rustup doc'
 alias rustbook='rustup doc --book'
 alias ruststd='rustup doc --std'
 # alias cdo="cargo tree --depth 1 -e normal --prefix none | cut -d' ' -f1 | xargs printf -- '-p %s\n' | xargs cargo doc --no-deps --open"
-alias cargo-update='cargo install-update -a'
+alias cu='cargo install-update -a'
 alias cdo='cargo makedocs --open'
 
 alias update='sudo nala update && sudo nala upgrade -y'
