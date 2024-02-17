@@ -57,7 +57,7 @@ main() {
 	}
 	stow --adopt devpod
 	git checkout -- .
-	stow .config -t ~/.config
+	stow config -t ~/.config
 	success "Finished stowing."
 
 	success "Devpod has been setup. You may ssh now."
