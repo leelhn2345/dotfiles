@@ -35,8 +35,9 @@ main() {
 	success "Finished installing rustup toolchain and bob-nvim."
 
 	title "Coding Tools"
-	poetry
-	npm i -g npm @loopback/cli git-removed-branches
+	poetry_install
+	bun_install
+	bun i -g npm @loopback/cli git-removed-branches
 	success "Finished installing coding tools."
 
 	title "Zsh"

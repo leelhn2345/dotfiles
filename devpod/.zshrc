@@ -99,3 +99,10 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
 eval "$(zoxide init --cmd cd zsh)"
+
+# bun completions
+[ -s "/root/.bun/_bun" ] && source "/root/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
