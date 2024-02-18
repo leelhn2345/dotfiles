@@ -12,22 +12,28 @@ rustup_toolchain() {
 	cargo install cargo-binstall
 }
 
+cargo_crates=(
+	"ripgrep"
+	"lsd"
+	"zoxide"
+	"cargo-update"
+	"tree-sitter-cli"
+	"cargo-makedocs"
+	"cargo-watch"
+	"cargo-nextest"
+)
+
 #######################################
 # installs cargo binaries.
 #
-# some binaries are not available via apt.
-# debian/ubuntu derivatives take too long to upate their packages.
+# debian/ubuntu derivatives take too long to update their packages.
+# some binaries are not available in apt.
 #######################################
 cargo_binaries() {
-	cargo binstall ripgrep -y &
-	cargo binstall lsd -y &
-	cargo binstall zoxide -y &
-	cargo binstall cargo-update -y &
-	cargo binstall tree-sitter-cli -y &
-	cargo binstall cargo-makedocs -y &
-	cargo binstall cargo-watch -y &
-	cargo binstall cargo-nextest -y &
 
+	for package in "${cargo_crates[@]}"; do
+		cargo binstall "$package" -y &
+	done
 	wait
 }
 
