@@ -4,3 +4,5 @@
 if [ -d "/home/root/.local/share/bob/nvim-bin" ]; then
     PATH="/home/root/.local/share/bob/nvim-bin:$PATH"
 fi
+
+export SHELL=/bin/zsh
