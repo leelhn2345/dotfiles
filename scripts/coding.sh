@@ -16,10 +16,10 @@ bun_install() {
 }
 
 #######################################
-# golang version manager - https://github.com/ankitcharolia/goenv
+# golang version manager - https://github.com/go-nv/goenv
 #
 # uses `goenv` as cmd
 #######################################
 golang_install() {
-	wget -O - https://github.com/ankitcharolia/goenv/releases/latest/download/goenv-linux-amd64.tar.gz | tar -xz -C ~/.go
+	git clone https://github.com/go-nv/goenv.git ~/.goenv
 }

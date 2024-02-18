@@ -70,10 +70,15 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# golang
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+
 # ros settings
 #source /opt/ros/foxy/setup.zsh
 #source /usr/share/colcon_cd/function/colcon_cd.sh
 #source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.zsh
 #alias ri='rosdep install -i --from-path src --rosdistro ${ROS_DISTRO} -y'
-
-export PATH=$HOME/.go/1.21.6/bin:$PATH
