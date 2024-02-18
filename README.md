@@ -32,8 +32,15 @@ Summary:
 
 ### Home
 
-> [!NOTE]
-> To be documented.
+> [!WARN]
+> Never tried setup script for home before.
+> Pending Testing.
+
+```sh
+git clone https://github.com/leelhn2345/dotfiles ~/dotfiles
+cd ~/dotfiles/scripts
+source home.sh
+```
 
 ### Devpod
 

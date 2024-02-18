@@ -30,7 +30,6 @@ cargo_crates=(
 # some binaries are not available in apt.
 #######################################
 cargo_binaries() {
-
 	for package in "${cargo_crates[@]}"; do
 		cargo binstall "$package" -y &
 	done

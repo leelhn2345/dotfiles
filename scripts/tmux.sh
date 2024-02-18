@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+TMUX_DIR="$HOME/.config/tmux"
+
 #######################################
 # installs tmux package manager
 #######################################
 tmux_tpm() {
-	git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/tpm
+	git clone https://github.com/tmux-plugins/tpm "$TMUX_DIR/tpm"
 }

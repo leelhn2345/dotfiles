@@ -1,24 +1,18 @@
 #!/usr/bin/env bash
 
-if ! cd "scripts" >/dev/null; then
-	echo "error changing directory in $(pwd)"
-	exit 1
-fi
-
 . ./packages.sh
 . ./rustup.sh
 . ./coding.sh
 . ./zsh.sh
+. ./tmux.sh
 . ./utils.sh
 
-export TERM=xterm-256color
-
 main() {
-	info "setting up devpod..."
+	info "setting up ubuntu(wsl) terminal environment..."
 
 	title "Apt Packages"
 	install_apt_wrapper
-	install_packages
+	install_wsl_packages
 	post_process_packages
 	success "Finished installing apt packages."
 
@@ -31,31 +25,27 @@ main() {
 	title "Coding Tools"
 	poetry_install
 	bun_install
-	"$HOME/.bun/bin/bun" i -g @loopback/cli git-removed-branches
+	golang_install
 	success "Finished installing coding tools."
 
-	title "Zsh"
+	title "Zsh & tmux"
 	zsh_setup
 	zsh_plugins
 	zsh_completions
-	success "Finished setting up zsh."
+	tmux_tpm
+	success "Finished setting up zsh & tmux."
 
 	# whitelisting `.env` for ripgrep and fd-find
-	echo "!.env" >/.ignore
+	echo "!.env" >~/.ignore
 
 	title "Stowing"
-	cd ../..
-	mv dotfiles ~
-	cd ~/dotfiles || {
-		err "could not \`cd\` into dotfiles"
-		exit 1
-	}
-	stow --adopt devpod
+	cd ..
+	stow --adopt home
 	git checkout -- .
 	stow config -t ~/.config
 	success "Finished stowing."
 
-	success "Devpod has been setup. You may ssh now."
+	success "Finished setting up. Please restart terminal."
 }
 
 main

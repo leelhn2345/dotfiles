@@ -14,3 +14,12 @@ bun_install() {
 	curl -fsSL https://bun.sh/install | bash
 	SHELL=/bin/zsh "$HOME/.bun/bin/bun" completions >~/.bun/_bun
 }
+
+#######################################
+# golang version manager - https://github.com/ankitcharolia/goenv
+#
+# uses `goenv` as cmd
+#######################################
+golang_install() {
+	wget -O - https://github.com/ankitcharolia/goenv/releases/latest/download/goenv-linux-amd64.tar.gz | tar -xz -C ~/.go
+}
