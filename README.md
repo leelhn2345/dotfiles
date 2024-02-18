@@ -32,7 +32,7 @@ Summary:
 
 ### Home
 
-> [!WARN]
+> [!WARNING]
 > Never tried setup script for home before.
 > Pending Testing.
 
