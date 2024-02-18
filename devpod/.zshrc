@@ -36,60 +36,19 @@ setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
 setopt share_history          # share history between shells
 
+DOTFILES_COMMON_DIR="$HOME/dotfiles/common"
+
 # aliases
-alias v='nvim'
-alias vc='cd ~/.config/nvim && nvim'
-alias vim='nvim'
-
-alias cdd='cd ~/dotfiles'
-
-alias cat='batcat'
-
-alias ls='lsd'
-alias ll='lsd -alF'
-alias la='lsd -a'
-alias tree='lsd --tree'
-
-alias sz='source ~/.zshrc'
-
-alias ta='tmux attach -t'
-alias tn='tmux new-session -s'
-alias tns='tmux new-session'
-alias tls='tmux list-sessions'
-alias tksv='tmux kill-server'
-alias tkss='tmux kill-session -t'
-
-alias cpf='cargo clippy --fix --allow-dirty --allow-staged'
-
-alias cc='cargo clippy'
-alias cw='cargo watch -c -q'
-alias cwc='cargo watch -c -q -x clippy'
-alias ct='cargo nextest run'
-alias cwr='cargo watch -c -q -w src -x run'
-alias cwcr='cargo watch -c -q -w src -x clippy -x run'
-alias cwt='cargo watch -c -q -x -- cargo nextest run'
-alias cwtr='cargo watch -c -q -x clippy -x -- cargo nextest run -x run'
-alias clw='cargo leptos watch'
-
-alias rustdoc='rustup doc'
-alias rustbook='rustup doc --book'
-alias ruststd='rustup doc --std'
-# alias cdo="cargo tree --depth 1 -e normal --prefix none | cut -d' ' -f1 | xargs printf -- '-p %s\n' | xargs cargo doc --no-deps --open"
-alias cu='cargo install-update -a'
-alias cdo='cargo makedocs --open'
-
-alias update='sudo nala update && sudo nala upgrade -y'
-alias autoremove='sudo nala autoremove -y'
-alias autopurge='sudo nala autopurge -y'
+source "$DOTFILES_COMMON_DIR/aliases.zsh"
 
 # theme/plugins
-ZSH_PLUGINS_FOLDER="$HOME/.config/zsh/plugins"
+ZSH_PLUGINS_DIR="$HOME/.config/zsh/plugins"
 
-source "$ZSH_PLUGINS_FOLDER/powerlevel10k/powerlevel10k.zsh-theme"
-source "$ZSH_PLUGINS_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$ZSH_PLUGINS_FOLDER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$ZSH_PLUGINS_FOLDER/zsh-history-substring-search/zsh-history-substring-search.zsh"
-source "$ZSH_PLUGINS_FOLDER/zsh-you-should-use/you-should-use.plugin.zsh"
+source "$ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
+source "$ZSH_PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$ZSH_PLUGINS_DIR/zsh-history-substring-search/zsh-history-substring-search.zsh"
+source "$ZSH_PLUGINS_DIR/zsh-you-should-use/you-should-use.plugin.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
