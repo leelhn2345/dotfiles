@@ -39,7 +39,7 @@ Summary:
 ```sh
 git clone https://github.com/leelhn2345/dotfiles ~/dotfiles
 cd ~/dotfiles/scripts
-source home.sh
+source setup_home.sh
 ```
 
 ### Devpod
@@ -49,7 +49,7 @@ To create [all new workspaces with the same customization](https://devpod.sh/doc
 ```sh
 # script is for `image: mcr.microsoft.com/devcontainers/base:debian`
 devpod context set-options \
--o DOTFILES_URL=https://github.com/leelhn2345/dotfiles -o DOTFILES_SCRIPT=scripts/devpod.sh
+-o DOTFILES_URL=https://github.com/leelhn2345/dotfiles -o DOTFILES_SCRIPT=scripts/setup_devpod.sh
 ```
 
 Once workspace is setup, ssh into pod and then customize [p10k theme](https://github.com/romkatv/powerlevel10k)
