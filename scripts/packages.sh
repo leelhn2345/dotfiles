@@ -22,6 +22,7 @@ packages=(
 	sed
 	python3-venv
 	stow
+	tmux
 )
 
 #######################################
