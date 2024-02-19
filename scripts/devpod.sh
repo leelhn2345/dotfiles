@@ -9,7 +9,7 @@ fi
 . ./rustup.sh
 . ./coding.sh
 . ./zsh.sh
-. ./utils.sh
+. ./logging.sh
 
 export TERM=xterm-256color
 
@@ -52,6 +52,7 @@ main() {
 		err "could not \`cd\` into dotfiles"
 		exit 1
 	}
+	stow --adopt common
 	stow --adopt devpod
 	git checkout -- .
 	stow config -t ~/.config

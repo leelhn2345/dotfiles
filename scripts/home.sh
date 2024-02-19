@@ -5,7 +5,7 @@
 . ./coding.sh
 . ./zsh.sh
 . ./tmux.sh
-. ./utils.sh
+. ./logging.sh
 
 main() {
 	info "setting up ubuntu(wsl) terminal environment..."
@@ -40,6 +40,7 @@ main() {
 
 	title "Stowing"
 	cd ..
+	stow --adopt common
 	stow --adopt home
 	git checkout -- .
 	stow config -t ~/.config
