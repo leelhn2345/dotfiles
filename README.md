@@ -47,6 +47,7 @@ source home.sh
 To create [all new workspaces with the same customization](https://devpod.sh/docs/developing-in-workspaces/dotfiles-in-a-workspace#for-all-workspaces):
 
 ```sh
+# script is for `image: mcr.microsoft.com/devcontainers/base:debian`
 devpod context set-options \
 -o DOTFILES_URL=https://github.com/leelhn2345/dotfiles -o DOTFILES_SCRIPT=scripts/devpod.sh
 ```
