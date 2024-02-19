@@ -10,6 +10,7 @@ fi
 . ./coding.sh
 . ./zsh.sh
 . ./logging.sh
+. ./tmux.sh
 
 export TERM=xterm-256color
 
@@ -36,11 +37,12 @@ main() {
 	"$HOME/.bun/bin/bun" i -g @loopback/cli git-removed-branches
 	success "Finished installing coding tools."
 
-	title "Zsh"
+	title "Zsh & Tmux"
 	zsh_setup
 	zsh_plugins
 	zsh_completions
-	success "Finished setting up zsh."
+	tmux_tpm
+	success "Finished setting up zsh & tmux."
 
 	# whitelisting `.env` for ripgrep and fd-find
 	echo "!.env" >/.ignore
