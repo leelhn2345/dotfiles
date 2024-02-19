@@ -8,6 +8,16 @@ poetry_install() {
 }
 
 #######################################
+# installs nvm - node version manager
+#######################################
+nvm_install() {
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+	# shellcheck disable=SC1090
+	source ~/.nvm/nvm.sh
+	nvm install --lts
+}
+
+#######################################
 # installs bun, a nodeJS and npm alternative
 #######################################
 bun_install() {

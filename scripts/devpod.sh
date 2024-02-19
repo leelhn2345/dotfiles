@@ -30,6 +30,7 @@ main() {
 
 	title "Coding Tools"
 	poetry_install
+	nvm_install
 	bun_install
 	"$HOME/.bun/bin/bun" i -g @loopback/cli git-removed-branches
 	success "Finished installing coding tools."
