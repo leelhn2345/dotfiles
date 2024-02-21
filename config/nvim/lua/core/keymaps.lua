@@ -37,8 +37,18 @@ vim.keymap.set(
 )
 
 -- Yank to system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank motion" })
-vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line" })
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>y",
+  [["+y]],
+  { desc = "Yank motion to system clipboard" }
+)
+vim.keymap.set(
+  "n",
+  "<leader>Y",
+  [["+Y]],
+  { desc = "Yank line to system clipboard" }
+)
 
 -- Keep cursor centred while scrolling up and down
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Page down" })
