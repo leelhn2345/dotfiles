@@ -16,7 +16,7 @@ return {
       end
     end,
     open_mapping = [[\]],
-    direction = "vertical",
+    direction = "float",
     insert_mappings = false,
   },
 }
