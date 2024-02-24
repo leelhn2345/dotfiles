@@ -23,6 +23,7 @@ packages=(
 	python3-venv
 	stow
 	tmux
+	vim
 )
 
 #######################################

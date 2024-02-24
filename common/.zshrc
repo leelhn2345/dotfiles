@@ -39,7 +39,6 @@ setopt share_history          # share history between shells
 # aliases
 alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
-alias vim='nvim'
 
 alias cdd='cd ~/dotfiles'
 alias vd='cd ~/dotfiles && nvim'
