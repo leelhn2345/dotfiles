@@ -4,14 +4,13 @@ return {
   event = "VeryLazy",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope.nvim",
   },
   config = function()
     local harpoon = require("harpoon")
 
-    harpoon:setup()
+    harpoon:setup({ settings = { save_on_toggle = true } })
 
-    vim.keymap.set("n", "<leader>ha", function()
+    vim.keymap.set("n", "<leader>a", function()
       harpoon:list():append()
     end, { desc = "Harpoon Add" })
 
@@ -19,9 +18,9 @@ return {
       harpoon:list():remove()
     end, { desc = "Harpoon Remove" })
 
-    vim.keymap.set("n", "<leader>hm", function()
+    vim.keymap.set("n", "<leader>hl", function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
-    end, { desc = "Harpoon Marks" })
+    end, { desc = "Harpoon List" })
 
     vim.keymap.set("n", "<leader>h1", function()
       harpoon:list():select(1)
@@ -43,8 +42,9 @@ return {
     vim.keymap.set("n", "<C-p>", function()
       harpoon:list():prev()
     end, { desc = "Harpoon Prev" })
+
     vim.keymap.set("n", "<C-n>", function()
       harpoon:list():next()
-    end, { desc = "Harppon Next" })
+    end, { desc = "Harpoon Next" })
   end,
 }
