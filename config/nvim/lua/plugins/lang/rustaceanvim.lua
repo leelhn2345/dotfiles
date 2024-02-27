@@ -4,6 +4,14 @@ return {
   ft = { "rust" },
   config = function()
     vim.g.rustaceanvim = {
+      tools = {
+        hover_actions = {
+          replace_builtin_hover = false,
+        },
+        float_win_config = {
+          auto_focus = true,
+        },
+      },
       server = {
         on_attach = function(_, bufnr)
           vim.keymap.set("n", "<leader>ce", ":RustLsp explainError<CR>", {
@@ -15,6 +23,11 @@ return {
         settings = {
           -- rust-analyzer language server configuration
           ["rust-analyzer"] = {
+            diagnostics = {
+              disabled = {
+                "needless_return",
+              },
+            },
             cargo = {
               allFeatures = true,
               loadOutDirsFromCheck = true,
