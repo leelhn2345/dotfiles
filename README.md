@@ -7,6 +7,7 @@
   - [Setup](#setup)
     - [Home](#home)
     - [Devpod](#devpod)
+      - [Overriding devcontainer image](#overriding-devcontainer-image)
   - [License](#license)
 <!--toc:end-->
 
@@ -54,6 +55,15 @@ devpod context set-options \
 
 Once workspace is setup, ssh into pod and then customize [p10k theme](https://github.com/romkatv/powerlevel10k)
 via prompt.
+
+#### Overriding devcontainer image
+
+To override the image configured in workspace's `devcontainer.json`, setup workspace
+with `--devcontainer-image <image>` flag:
+
+```sh
+devpod up <workspace-git-url> --ide none --devcontainer-image mcr.microsoft.com/devcontainers/base:debian
+```
 
 ## License
 
