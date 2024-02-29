@@ -24,6 +24,7 @@ main() {
 
 	title "Coding Tools"
 	poetry_install
+	nvm_install
 	bun_install
 	golang_install
 	success "Finished installing coding tools."
