@@ -17,7 +17,7 @@ Dotfiles to set up various development environments.
 
 Summary:
 
-- Installs all the packages and apps I use
+- Automated installation of all the packages and apps I use
 - Setup all my preferred configurations
 - stows all my config files
 
@@ -29,15 +29,17 @@ Summary:
     1. WSL2
     2. devpod
 
-## Setup
+**Font used** is [Monaspace Neon](https://monaspace.githubnext.com/).
+Nerd font variant is `MonaspiceNe Nerd Font`.
 
-**Fonts used** is [Monaspace Neon](https://monaspace.githubnext.com/)
-& `MonaspiceNe Nerd Font`. Remember to switch on ligatures.
+Remember to switch on ligatures.
+
+## Setup
 
 ### Home
 
-> [!WARNING]
-> Bun installation failed for some reason.
+> [!NOTE]
+> Be around to enter password during initial `apt update` and changing of shells.
 
 ```sh
 git clone https://github.com/leelhn2345/dotfiles ~/dotfiles
@@ -63,7 +65,11 @@ via prompt.
 To override the image configured in workspace's `devcontainer.json`, setup workspace
 with `--devcontainer-image <image>` flag:
 
+> [!IMPORTANT]
+> Repository must contain `.devcontainer/devcontainer.json`!
+
 ```sh
+# using debian base img
 devpod up <workspace-git-url> --ide none --devcontainer-image mcr.microsoft.com/devcontainers/base:debian
 ```
 
