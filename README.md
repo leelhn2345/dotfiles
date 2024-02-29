@@ -37,8 +37,7 @@ Summary:
 ### Home
 
 > [!WARNING]
-> Never tried setup script for home before.
-> Pending Testing.
+> Bun installation failed for some reason.
 
 ```sh
 git clone https://github.com/leelhn2345/dotfiles ~/dotfiles

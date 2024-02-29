@@ -9,6 +9,7 @@ install_apt_wrapper() {
 }
 
 packages=(
+	zsh
 	build-essential
 	htop
 	neofetch
@@ -24,6 +25,7 @@ packages=(
 	stow
 	tmux
 	vim
+	unzip
 )
 
 #######################################
