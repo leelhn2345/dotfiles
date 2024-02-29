@@ -31,6 +31,9 @@ Summary:
 
 ## Setup
 
+**Fonts used** is [Monaspace Neon](https://monaspace.githubnext.com/)
+& `MonaspiceNe Nerd Font`. Remember to switch on ligatures.
+
 ### Home
 
 > [!WARNING]
