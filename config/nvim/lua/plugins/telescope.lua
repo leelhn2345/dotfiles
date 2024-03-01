@@ -8,6 +8,10 @@ local config = function()
         vertical = {
           prompt_position = "top",
         },
+        flex = {
+          -- `:echo nvim_win_get_width(0)` to find out column numbers
+          flip_columns = 111,
+        },
       },
       mappings = {
         i = {
