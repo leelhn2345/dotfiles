@@ -6,7 +6,7 @@ local config = function()
       layout_config = {
         preview_cutoff = 0,
         vertical = {
-          prompt_position = "top",
+          -- prompt_position = "top",
         },
         flex = {
           -- `:echo nvim_win_get_width(0)` to find out column numbers
