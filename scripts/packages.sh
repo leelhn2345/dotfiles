@@ -26,6 +26,7 @@ packages=(
 	tmux
 	vim
 	unzip
+	fswatch
 )
 
 #######################################
