@@ -4,13 +4,12 @@ return {
     "rcarriga/nvim-dap-ui",
     keys = {
       {
-        "<leader>db",
+        "<leader>dp",
         ":lua require('dapui').toggle()<CR>",
-        desc = "Debugger UI",
+        desc = "Debug Panes",
         silent = true,
       },
     },
-    dependencies = "mfussenegger/nvim-dap",
     config = function()
       local dap = require("dap")
       local dapui = require("dapui")
@@ -30,17 +29,18 @@ return {
   -- debugger
   {
     "mfussenegger/nvim-dap",
+    dependencies = "rcarriga/nvim-dap-ui",
     keys = {
       {
-        "<leader>dp",
+        "<leader>db",
         ":DapToggleBreakpoint<CR>",
-        desc = "Debugger Breakpoint",
+        desc = "Debug Breakpoint",
         silent = true,
       },
       {
         "<F5>",
         ":DapContinue<CR>",
-        desc = "Debugger Continue",
+        desc = "Debug Continue",
         silent = true,
       },
     },
@@ -67,16 +67,34 @@ return {
       end
 
       -- Set keymaps to control the debugger
-      local opts = { noremap = true, silent = true }
-      vim.keymap.set("n", "<F10>", ":DapStepOver<CR>", opts)
-      vim.keymap.set("n", "<F11>", ":DapStepInto<CR>", opts)
-      vim.keymap.set("n", "<F12>", ":DapStepOut<CR>", opts)
-      vim.keymap.set("n", "<S-F5>", ":DapTerminate<CR>", opts)
+      vim.keymap.set(
+        "n",
+        "<F10>",
+        ":DapStepOver<CR>",
+        { silent = true, desc = "Debug Step Over" }
+      )
+      vim.keymap.set(
+        "n",
+        "<F11>",
+        ":DapStepInto<CR>",
+        { silent = true, desc = "Debug Step Into" }
+      )
+      vim.keymap.set(
+        "n",
+        "<F12>",
+        ":DapStepOut<CR>",
+        { silent = true, desc = "Debug Step Out" }
+      )
+      vim.keymap.set(
+        "n",
+        "<S-F5>",
+        ":DapTerminate<CR>",
+        { silent = true, desc = "Debug Stop/Terminate" }
+      )
 
-      opts.desc = "Conditional Breakpoint"
       vim.keymap.set("n", "<leader>dB", function()
         require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
-      end, opts)
+      end, { silent = true, desc = "Conditional Breakpoint" })
     end,
   },
 
