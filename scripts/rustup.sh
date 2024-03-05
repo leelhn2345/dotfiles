@@ -6,7 +6,10 @@
 rustup_toolchain() {
 	curl https://sh.rustup.rs -sSf | sh -s -- -y
 
-	cargo install cargo-binstall
+	# shellcheck disable=SC1091
+	source "$HOME/.cargo/env"
+
+	curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 }
 
 cargo_crates=(
@@ -27,8 +30,10 @@ cargo_crates=(
 # some binaries are not available in apt.
 #######################################
 cargo_binaries() {
-	# shellcheck disable=SC1091
-	source "$HOME/.cargo/env"
+	if ! (which cargo >/dev/null); then
+		# shellcheck disable=SC1091
+		source "$HOME/.cargo/env"
+	fi
 
 	for package in "${cargo_crates[@]}"; do
 		cargo binstall "$package" -y &
