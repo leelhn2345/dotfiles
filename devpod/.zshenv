@@ -6,3 +6,4 @@ if [ -d "/home/root/.local/share/bob/nvim-bin" ]; then
 fi
 
 export SHELL=/bin/zsh
+cd ~ # start from HOME dir
