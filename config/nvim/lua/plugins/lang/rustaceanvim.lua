@@ -23,11 +23,6 @@ return {
         settings = {
           -- rust-analyzer language server configuration
           ["rust-analyzer"] = {
-            diagnostics = {
-              disabled = {
-                "needless_return",
-              },
-            },
             cargo = {
               allFeatures = true,
               loadOutDirsFromCheck = true,
