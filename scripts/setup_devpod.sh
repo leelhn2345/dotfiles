@@ -24,7 +24,7 @@ main() {
 	success "Finished installing apt packages."
 
 	title "Rustup Toolchain & Bob-nvim"
-	# rustup_toolchain
+	rustup_toolchain
 	cargo_binaries
 	bob_nvim
 	success "Finished installing rustup toolchain and bob-nvim."
