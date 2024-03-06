@@ -8,7 +8,7 @@ return {
         "~/code/*",
         "~/dotfiles",
         "~/dotfiles/config/nvim",
-        "/workspaces/*/*",
+        "/data/*",
       },
       pre_save_cmds = {
         "Neotree close",
