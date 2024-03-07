@@ -40,6 +40,8 @@ setopt share_history          # share history between shells
 alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
 
+alias vmp='source $HOME/.local/share/nvim/mason/packages/mypy/venv/bin/activate'
+
 alias cdd='cd ~/dotfiles'
 alias vd='cd ~/dotfiles && nvim'
 
