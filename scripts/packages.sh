@@ -27,6 +27,8 @@ packages=(
 	vim
 	unzip
 	fswatch
+	pkg-config
+	libssl-dev
 )
 
 #######################################
