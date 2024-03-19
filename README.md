@@ -24,7 +24,7 @@ Summary:
 ## Apps
 
 - shell: zsh
-- editor: neovim
+- editor: [neovim](./config/nvim/README.md)
 - environments:
     1. WSL2
     2. devpod
