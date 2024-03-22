@@ -58,7 +58,7 @@ return {
       capabilities = capabilities,
       settings = {
         basedpyright = {
-          typeCheckingMode = "basic",
+          typeCheckingMode = "standard",
         },
       },
     })
