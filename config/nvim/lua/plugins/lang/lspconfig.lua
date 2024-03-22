@@ -54,8 +54,13 @@ return {
     })
 
     -- configure python server
-    lspconfig["pyright"].setup({
+    lspconfig["basedpyright"].setup({
       capabilities = capabilities,
+      settings = {
+        basedpyright = {
+          typeCheckingMode = "basic",
+        },
+      },
     })
 
     -- configure ruff server

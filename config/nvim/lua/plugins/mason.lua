@@ -34,7 +34,7 @@ return {
         "html",
         "jsonls",
         "lua_ls",
-        "pyright",
+        "basedpyright",
         "ruff_lsp",
         "rust_analyzer",
         "yamlls",

@@ -21,7 +21,6 @@ packages=(
 	libfuse2
 	mercurial
 	sed
-	python3-venv
 	stow
 	tmux
 	vim
@@ -29,6 +28,10 @@ packages=(
 	fswatch
 	pkg-config
 	libssl-dev
+
+	# python packages
+	python3-venv
+	python3-pip
 )
 
 #######################################
