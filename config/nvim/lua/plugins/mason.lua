@@ -49,7 +49,6 @@ return {
     mason_tool_installer.setup({
       ensure_installed = {
         "markdownlint", -- md formatter + linter
-        "mypy", -- python linter
         "prettierd", -- prettier linter
         "stylua", -- lua formatter
         "debugpy", -- python debugger
