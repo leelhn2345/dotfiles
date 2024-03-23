@@ -1,5 +1,6 @@
 return {
   "sindrets/diffview.nvim",
+  cmd = { "DiffviewOpen", "DiffviewFileHistory" },
   keys = {
     {
       "<leader>dv",
@@ -14,11 +15,20 @@ return {
       desc = "Diff View",
       silent = true,
     },
+    {
+      "<leader>dh",
+      ":DiffviewFileHistory<CR>",
+      desc = "Diff History",
+      silent = true,
+    },
   },
   opts = {
     keymaps = {
       view = { { "n", "q", ":tabc<CR>", { desc = "Quit diffview" } } },
       file_panel = { { "n", "q", ":tabc<CR>", { desc = "Quit diffview" } } },
+      file_history_panel = {
+        { "n", "q", ":tabc<CR>", { desc = "Quit diffview" } },
+      },
     },
   },
 }
