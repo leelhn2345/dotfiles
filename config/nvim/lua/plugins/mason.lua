@@ -1,10 +1,6 @@
 return {
   {
     "williamboman/mason.nvim",
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-      "WhoIsSethDaniel/mason-tool-installer.nvim",
-    },
     opts = {
       ui = {
         icons = {
@@ -17,6 +13,7 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
+    dependencies = { "williamboman/mason.nvim" },
     opts = {
       ensure_installed = {
         "eslint",
@@ -38,6 +35,7 @@ return {
   },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = { "williamboman/mason.nvim" },
     opts = {
       ensure_installed = {
         "markdownlint", -- md formatter + linter
