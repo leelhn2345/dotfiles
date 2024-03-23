@@ -1,6 +1,12 @@
 -- Select all
 vim.keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
 
+-- Go to start/end of line
+-- vim.keymap.set("n", "H", "0", { desc = "Start of line" })
+-- vim.keymap.set("v", "H", "0", { desc = "Start of line" })
+-- vim.keymap.set("n", "L", "$", { desc = "End of line" })
+-- vim.keymap.set("v", "L", "$", { desc = "End of line" })
+
 -- Window Management
 vim.keymap.set(
   "n",

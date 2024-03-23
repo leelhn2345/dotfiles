@@ -1,6 +1,7 @@
 return {
   {
     "williamboman/mason.nvim",
+    lazy = true,
     opts = {
       ui = {
         icons = {
@@ -38,16 +39,21 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     opts = {
       ensure_installed = {
-        "markdownlint", -- md formatter + linter
-        "prettierd", -- prettier linter
-        "stylua", -- lua formatter
-        "debugpy", -- python debugger
-        "js-debug-adapter", -- nodejs debugger
-        "codelldb", -- rust debugger
-        "shellcheck", -- bash linter
-        "shfmt", -- bash formatter
-        "hadolint", -- dockerfile linter
-        "sql-formatter", -- sql formatter
+        -- dap
+        "debugpy", -- python
+        "js-debug-adapter", -- nodejs
+        "codelldb", -- rust
+
+        -- linter
+        "markdownlint",
+        "shellcheck",
+        "hadolint",
+
+        -- formatter
+        "stylua",
+        "prettierd",
+        "shfmt",
+        "sql-formatter",
       },
     },
   },
