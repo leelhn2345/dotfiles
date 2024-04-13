@@ -9,7 +9,8 @@ rustup_toolchain() {
 	# shellcheck disable=SC1091
 	source "$HOME/.cargo/env"
 
-	curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+	rustup update
+	rustup component add rust-src clippy rustfmt rust-analyzer
 }
 
 cargo_crates=(
@@ -34,6 +35,8 @@ cargo_binaries() {
 		# shellcheck disable=SC1091
 		source "$HOME/.cargo/env"
 	fi
+
+	curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 
 	for package in "${cargo_crates[@]}"; do
 		cargo binstall "$package" -y &

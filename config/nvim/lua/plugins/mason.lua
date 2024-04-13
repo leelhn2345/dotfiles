@@ -25,7 +25,7 @@ return {
         "lua_ls",
         "basedpyright",
         "ruff_lsp",
-        "rust_analyzer",
+        -- "rust_analyzer",
         "yamlls",
         "taplo",
         "marksman",
