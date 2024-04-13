@@ -59,7 +59,7 @@ alias tls='tmux list-sessions'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
 
-alias cpf='cargo clippy --fix --allow-dirty --allow-staged'
+alias ccf='cargo clippy --fix --allow-dirty --allow-staged'
 
 alias cc='cargo clippy'
 alias cw='cargo watch -c -q -x clippy'
