@@ -15,7 +15,7 @@ return {
         "TroubleClose",
         "lua require('neogit').close()",
         "lua require('spectre').close()",
-        "lua require('dapui').close()",
+        "DBUIClose",
       },
     })
   end,
