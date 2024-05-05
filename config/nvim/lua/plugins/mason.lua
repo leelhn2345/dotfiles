@@ -30,6 +30,7 @@ return {
         "taplo",
         "marksman",
         "bashls",
+        "tailwindcss",
       },
       automatic_installation = true,
     },

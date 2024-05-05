@@ -39,6 +39,11 @@ return {
         capabilities = capabilities,
       })
 
+      -- configure tailwindcss server
+      lspconfig["tailwindcss"].setup({
+        capabilities = capabilities,
+      })
+
       -- configure typescript server
       lspconfig["vtsls"].setup({
         capabilities = capabilities,
