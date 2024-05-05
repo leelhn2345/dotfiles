@@ -19,7 +19,7 @@ require("core.filetypes")
 
 local plugins = {
   { import = "plugins" },
-  { import = "plugins.lang" },
+  { import = "plugins.code" },
 }
 local opts = {
   rtp = {
