@@ -83,6 +83,8 @@ alias update='sudo nala update && sudo nala upgrade -y'
 alias autoremove='sudo nala autoremove -y'
 alias autopurge='sudo nala autopurge -y'
 
+alias explorer='explorer.exe `wslpath -w "$PWD"`'
+
 # theme/plugins
 ZSH_PLUGINS_DIR="$HOME/.config/zsh/plugins"
 
