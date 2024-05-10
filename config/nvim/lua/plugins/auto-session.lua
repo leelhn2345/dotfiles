@@ -7,7 +7,7 @@ return {
       auto_session_allowed_dirs = {
         "~/code/*",
         "~/dotfiles",
-        "~/dotfiles/config/nvim",
+        "~/config/nvim",
         "/data/*",
       },
       pre_save_cmds = {
