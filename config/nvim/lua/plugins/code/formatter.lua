@@ -3,6 +3,11 @@ return {
   lazy = true,
   event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
   opts = {
+    formatters = {
+      sql_formatter = {
+        args = { "-l", "postgresql" },
+      },
+    },
     formatters_by_ft = {
       javascript = { "prettierd" },
       typescript = { "prettierd" },
