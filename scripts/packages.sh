@@ -16,7 +16,6 @@ packages=(
 	tree
 	bat
 	jq
-	fzf
 	fd-find
 	libfuse2
 	mercurial
@@ -40,6 +39,17 @@ packages=(
 install_packages() {
 	sudo nala install "${packages[@]}" -y
 	wait
+
+	# installs latest fzf.
+	#
+	# debian's ppa is way too outdated.
+	#
+	## to upgrade
+	##
+	## cd ~/.fzf && git pull && ./install
+	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+	wait
+	~/.fzf/install --key-bindings --no-completion --no-update-rc
 }
 
 #######################################

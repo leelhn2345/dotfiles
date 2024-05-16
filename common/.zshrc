@@ -127,3 +127,5 @@ export PATH="$PATH:$GOPATH/bin"
 #source /usr/share/colcon_cd/function/colcon_cd.sh
 #source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.zsh
 #alias ri='rosdep install -i --from-path src --rosdistro ${ROS_DISTRO} -y'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
