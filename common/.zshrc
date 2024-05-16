@@ -24,6 +24,7 @@ compinit
 # misc zsh settings
 zle_highlight=('paste:none')
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 setopt menu_complete # first tab is first match
 unsetopt beep
 bindkey '^[[Z' reverse-menu-complete # shift-tab to reverse menu selection
