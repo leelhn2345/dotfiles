@@ -1,6 +1,6 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
-  "LuaSnip": { "branch": "master", "commit": "7b1dda0dfdefc10b2501295eba5e463dbd7c338f" },
+  "LuaSnip": { "branch": "master", "commit": "78296bfabf756dbb6c7134aa219e75564dddf40f" },
   "auto-session": { "branch": "main", "commit": "9e0a169b6fce8791278abbd110717b921afe634d" },
   "barbecue": { "branch": "main", "commit": "cd7e7da622d68136e13721865b4d919efd6325ed" },
   "bigfile.nvim": { "branch": "main", "commit": "33eb067e3d7029ac77e081cfe7c45361887a311a" },
@@ -27,7 +27,7 @@
   "mason.nvim": { "branch": "main", "commit": "49ff59aded1047a773670651cfa40e76e63c6377" },
   "neo-tree.nvim": { "branch": "main", "commit": "6e20108c4a8128782f534f5fe90c757b44212ef6" },
   "neogen": { "branch": "main", "commit": "6de0add4805165317ab7d3d36b5cef48b1b865f3" },
-  "neogit": { "branch": "master", "commit": "f4f7a1017da57f31c182c46fb2535099718fa178" },
+  "neogit": { "branch": "master", "commit": "bc0c609e3568a171e0549b449aa1b2b4b5b20e8c" },
   "noice.nvim": { "branch": "main", "commit": "ee433a724c31858537a7d8c80d09c7686810da4a" },
   "nui.nvim": { "branch": "main", "commit": "a3597dc88b53489d3fddbddbbd13787355253bb0" },
   "nvim-autopairs": { "branch": "master", "commit": "b0b79e42a28f09719a7da9534c3731fa37319d9b" },
