@@ -6,8 +6,8 @@ return {
     require("auto-session").setup({
       auto_session_allowed_dirs = {
         "~/code/*",
-        "~/dotfiles",
-        "~/config/nvim",
+        -- "~/dotfiles",
+        "~/dotfiles/config/nvim",
         "/data/*",
       },
       pre_save_cmds = {
