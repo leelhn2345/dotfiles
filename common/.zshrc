@@ -49,6 +49,8 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
 # preview directory's content when completing cd
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color $realpath'
+# switch group using `<` and `>`
+zstyle ':fzf-tab:*' switch-group '<' '>'
 
 # misc zsh settings
 zle_highlight=('paste:none')  # no highlighting during paste
