@@ -58,8 +58,11 @@ install_packages() {
 # addition of `wslu`
 #######################################
 install_wsl_packages() {
-	packages+=(wslu ppa-purge)
-	sudo nala install "${packages[@]}" -y
+	wsl_packages=(
+		wslu
+		ppa-purge
+	)
+	sudo nala install "${wsl_packages[@]}" -y
 	wait
 }
 

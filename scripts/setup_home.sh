@@ -12,7 +12,8 @@ main() {
 
 	title "Apt Packages"
 	install_apt_wrapper
-	install_wsl_packages
+	install_packages
+	# install_wsl_packages # uncomment if installing in wsl
 	post_process_packages
 	success "Finished installing apt packages."
 
