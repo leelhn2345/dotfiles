@@ -25,20 +25,14 @@ opt.scrolloff = 10
 opt.completeopt = "menu,menuone,preview"
 
 -- Behaviour
-opt.hidden = true
-opt.errorbells = false
 opt.swapfile = false
-opt.backup = false
-opt.undodir = vim.fn.expand("~/.vim/undodir")
 opt.undofile = true
-opt.backspace = "indent,eol,start"
+opt.undodir = vim.fn.expand("~/.vim/undodir")
 opt.splitright = true
 opt.splitbelow = true
-opt.autochdir = false
 opt.iskeyword:append("-")
+opt.selection = "exclusive"
 opt.mouse = "a"
-opt.modifiable = true
-opt.encoding = "UTF-8"
 
 -- Clipboard for WSL2
 if vim.fn.has("wsl") == 1 then
