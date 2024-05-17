@@ -5,37 +5,53 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Lines configured by zsh-newuser-install
+# keybind (emacs)
+bindkey -e
+
+# variables
+export ZSH_COMPLETIONS_DIR="$HOME/.config/zsh/completions"
+export ZSH_PLUGINS_DIR="$HOME/.config/zsh/plugins"
+
+# history
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
-SAVEHIST=1000
-bindkey -e
-# End of lines configured by zsh-newuser-install
+SAVEHIST=$HISTSIZE
+setopt append_history         # appends history rather than overwriting it
+setopt share_history          # share history between shells
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore if command is same as previous
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
 
-# The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.zshrc"
-
-fpath=(~/.config/zsh/completions $fpath) # tab completion folder (line manually added)
+# completions
+fpath=($ZSH_COMPLETIONS_DIR $fpath) # tab completion folder
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
+
+# ! completion styling (depracated)
+# zstyle ':completion:*' menu select                      # arrow key navigation
+# bindkey '^[[Z' reverse-menu-complete                    # shift-tab to reverse menu selection
+# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # insensitive case match
+# setopt menu_complete                                    # first tab is first match
+# unsetopt beep                                           # disable sound if there's an error
+
+# ! fzf-tab completion styling
+# insensitive case matching
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+# preview directory's content when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color $realpath'
 
 # misc zsh settings
-zle_highlight=('paste:none')
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-setopt menu_complete # first tab is first match
-unsetopt beep
-bindkey '^[[Z' reverse-menu-complete # shift-tab to reverse menu selection
-bindkey '^H' backward-kill-word # enables ctrl+del for deleting till left word break
-
-## history command configuration
-setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
-setopt hist_verify            # show command with history expansion to user before running it
-setopt share_history          # share history between shells
+zle_highlight=('paste:none')  # no highlighting during paste
 
 # aliases
 alias v='nvim'
@@ -87,9 +103,8 @@ alias autopurge='sudo nala autopurge -y'
 alias explorer='explorer.exe `wslpath -w "$PWD"`'
 
 # theme/plugins
-ZSH_PLUGINS_DIR="$HOME/.config/zsh/plugins"
-
 source "$ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
+source "$ZSH_PLUGINS_DIR/fzf-tab/fzf-tab.plugin.zsh"
 source "$ZSH_PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZSH_PLUGINS_DIR/zsh-history-substring-search/zsh-history-substring-search.zsh"
@@ -98,9 +113,11 @@ source "$ZSH_PLUGINS_DIR/zsh-you-should-use/you-should-use.plugin.zsh"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# history substring search options
+# history substring search keybinds
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
 
 eval "$(zoxide init --cmd cd zsh)"
 

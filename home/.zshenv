@@ -15,7 +15,7 @@ if [ -d "$HOME/.local/share/bob/nvim-bin" ]; then
     PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 fi
 
-export FLYCTL_INSTALL="/home/nelson/.fly"
+export FLYCTL_INSTALL="$HOME/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 export MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA
