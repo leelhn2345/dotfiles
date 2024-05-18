@@ -15,22 +15,24 @@ return {
         silent = true,
       },
     },
-    config = function()
-      require("neogit").setup({
-        integrations = {
-          diffview = true,
+    opts = {
+      integrations = {
+        diffview = true,
+      },
+      status = {
+        recent_commit_count = 50,
+      },
+      commit_editor = {
+        kind = "auto",
+        show_staged_diff = false,
+      },
+      mappings = {
+        finder = {
+          ["<c-j>"] = "Next",
+          ["<c-k>"] = "Previous",
         },
-        status = {
-          recent_commit_count = 50,
-        },
-        mappings = {
-          finder = {
-            ["<c-j>"] = "Next",
-            ["<c-k>"] = "Previous",
-          },
-        },
-      })
-    end,
+      },
+    },
   },
 
   -- Git Blame
