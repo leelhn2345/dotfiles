@@ -68,6 +68,13 @@ return {
       -- configure css server
       lspconfig["cssls"].setup({
         capabilities = capabilities,
+        settings = {
+          css = {
+            lint = {
+              unknownAtRules = "ignore",
+            },
+          },
+        },
       })
 
       -- configure python server
