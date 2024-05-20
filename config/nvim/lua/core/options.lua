@@ -31,7 +31,6 @@ opt.undodir = vim.fn.expand("~/.vim/undodir")
 opt.splitright = true
 opt.splitbelow = true
 opt.iskeyword:append("-")
-opt.selection = "exclusive"
 opt.mouse = "a"
 
 -- Clipboard for WSL2
