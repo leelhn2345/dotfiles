@@ -47,6 +47,7 @@ main() {
 	stow --adopt home
 	git checkout -- .
 	stow config -t ~/.config
+	stow .cargo -t ~/.cargo
 	success "Finished stowing."
 
 	success "Finished setting up. Please restart terminal."

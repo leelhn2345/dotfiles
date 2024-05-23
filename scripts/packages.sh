@@ -11,6 +11,8 @@ install_apt_wrapper() {
 packages=(
 	zsh
 	build-essential
+	lld
+	clang
 	htop
 	neofetch
 	tree
