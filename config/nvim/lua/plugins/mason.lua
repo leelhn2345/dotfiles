@@ -24,7 +24,7 @@ return {
         "jsonls",
         "lua_ls",
         "basedpyright",
-        "ruff_lsp",
+        "ruff",
         -- "rust_analyzer",
         "yamlls",
         "taplo",

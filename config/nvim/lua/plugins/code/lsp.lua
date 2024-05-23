@@ -82,13 +82,15 @@ return {
         capabilities = capabilities,
         settings = {
           basedpyright = {
-            typeCheckingMode = "standard",
+            analysis = {
+              typeCheckingMode = "standard",
+            },
           },
         },
       })
 
       -- configure ruff server
-      lspconfig["ruff_lsp"].setup({
+      lspconfig["ruff"].setup({
         capabilities = capabilities,
       })
 
