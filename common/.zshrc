@@ -94,9 +94,10 @@ alias clw='cargo leptos watch'
 alias rustdoc='rustup doc'
 alias rustbook='rustup doc --book'
 alias ruststd='rustup doc --std'
-# alias cdo="cargo tree --depth 1 -e normal --prefix none | cut -d' ' -f1 | xargs printf -- '-p %s\n' | xargs cargo doc --no-deps --open"
 alias cu='cargo install-update -a'
-alias cdo='cargo makedocs --open'
+# alias cdo="cargo tree --depth 1 -e normal --prefix none | cut -d' ' -f1 | xargs printf -- '-p %s\n' | xargs cargo doc --no-deps --open"
+# alias cdo='cargo makedocs --open'
+alias cdo='cargo doc --no-deps --open'
 
 alias update='sudo nala update && sudo nala upgrade -y'
 alias autoremove='sudo nala autoremove -y'
