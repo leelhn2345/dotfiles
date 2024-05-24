@@ -16,6 +16,7 @@ return {
       },
     },
     opts = {
+      console_timeout = 5000,
       integrations = {
         diffview = true,
       },
