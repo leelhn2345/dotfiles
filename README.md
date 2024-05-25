@@ -25,6 +25,7 @@ Summary:
 
 - shell: zsh
 - editor: [neovim](./config/nvim/README.md)
+  - plugings are configured for neovim 0.10
 - environments:
     1. WSL2
     2. devpod
