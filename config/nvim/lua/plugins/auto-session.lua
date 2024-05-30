@@ -12,7 +12,7 @@ return {
       },
       pre_save_cmds = {
         "Neotree close",
-        "TroubleClose",
+        "lua require('trouble').close()",
         "lua require('neogit').close()",
         "lua require('spectre').close()",
         "DBUIClose",
