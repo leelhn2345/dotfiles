@@ -13,7 +13,7 @@ return {
     },
   },
   opts = {
-    -- auto_close = true,
+    auto_close = true,
     focus = true,
     keys = {
       m = { -- example of a custom action that toggles the active view filter
