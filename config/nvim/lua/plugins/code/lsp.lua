@@ -67,10 +67,6 @@ return {
       -- configure eslint server
       lspconfig["eslint"].setup({
         capabilities = capabilities,
-        settings = {
-          -- TODO: wait till using flat config then can remove the bottom line
-          experimental = { useFlatConfig = false },
-        },
       })
 
       -- configure css server
