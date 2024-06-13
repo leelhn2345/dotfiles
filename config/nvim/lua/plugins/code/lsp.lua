@@ -54,6 +54,16 @@ return {
         capabilities = capabilities,
       })
 
+      -- configure emmet server
+      lspconfig["emmet_language_server"].setup({
+        capabilities = capabilities,
+        filetypes = {
+          "html",
+          "htmldjango",
+          "pug",
+        },
+      })
+
       -- configure tailwindcss server
       lspconfig["tailwindcss"].setup({
         capabilities = capabilities,
