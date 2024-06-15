@@ -79,6 +79,7 @@ alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
 
 alias ccf='cargo clippy --fix --allow-dirty --allow-staged && cargo fmt'
+alias cai='cargo autoinherit'
 
 alias cc='cargo clippy'
 alias cw='cargo watch -c -q -x clippy'

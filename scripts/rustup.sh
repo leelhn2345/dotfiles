@@ -22,6 +22,7 @@ cargo_crates=(
 	"cargo-makedocs"
 	"cargo-watch"
 	"cargo-nextest"
+	"cargo-autoinherit"
 )
 
 #######################################
