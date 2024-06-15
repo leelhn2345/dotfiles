@@ -108,6 +108,11 @@ return {
         capabilities = capabilities,
       })
 
+      -- configure csharp server
+      lspconfig["csharp_ls"].setup({
+        capabilities = capabilities,
+      })
+
       -- configure json server
       lspconfig["jsonls"].setup({
         capabilities = capabilities,

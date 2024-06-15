@@ -28,6 +28,7 @@ main() {
 	nvm_install
 	bun_install
 	golang_install
+	dotnet_install
 	success "Finished installing coding tools."
 
 	title "Zsh & tmux"

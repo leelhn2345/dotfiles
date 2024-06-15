@@ -23,6 +23,7 @@ return {
       python = { "ruff", "ruff_format" },
       sh = { "shfmt" },
       sql = { "sql_formatter" },
+      cs = { "csharpier" },
       ["_"] = { "trim_whitespace" },
     },
     format_on_save = {
