@@ -12,9 +12,9 @@ return {
       on_attach = function(bufnr)
         vim.keymap.set(
           "n",
-          "<leader>cf",
-          crates.show_features_popup,
-          { silent = true, desc = "Show crate features", buffer = bufnr }
+          "<leader>cp",
+          crates.show_popup,
+          { silent = true, desc = "Show crate popup", buffer = bufnr }
         )
       end,
     })

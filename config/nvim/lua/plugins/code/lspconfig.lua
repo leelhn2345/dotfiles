@@ -10,11 +10,8 @@ return {
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
 
-    -- import cmp-nvim-lsp plugin
-    local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
     -- used to enable autocompletion (assign to every lsp server config)
-    local capabilities = cmp_nvim_lsp.default_capabilities()
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     -- configure html server
     lspconfig["html"].setup({
@@ -76,8 +73,12 @@ return {
     })
 
     -- configure csharp server
-    lspconfig["csharp_ls"].setup({
+    local pid = vim.fn.getpid()
+    -- needs to change path depending on host
+    local omnisharp = "/home/nelson/.local/share/nvim/mason/bin/omnisharp"
+    lspconfig["omnisharp"].setup({
       capabilities = capabilities,
+      cmd = { omnisharp, "--languageserver", "--hostPID", tostring(pid) },
     })
 
     -- configure json server
