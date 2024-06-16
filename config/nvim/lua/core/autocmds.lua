@@ -32,7 +32,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     opts.desc = "Smart rename"
     vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
-    opts.desc = "Show documentation for what is under cursor"
+    opts.desc = "Hover"
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
     opts.desc = "Restart LSP"

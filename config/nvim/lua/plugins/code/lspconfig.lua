@@ -73,8 +73,12 @@ return {
     })
 
     -- configure csharp server
-    lspconfig["csharp_ls"].setup({
+    local pid = vim.fn.getpid()
+    -- needs to change path depending on host
+    local omnisharp = "/home/nelson/.local/share/nvim/mason/bin/omnisharp"
+    lspconfig["omnisharp"].setup({
       capabilities = capabilities,
+      cmd = { omnisharp, "--languageserver", "--hostPID", tostring(pid) },
     })
 
     -- configure json server
