@@ -48,6 +48,7 @@ return {
         "codelldb", -- rust
 
         -- linter
+        "mypy",
         "markdownlint",
         "shellcheck",
         "hadolint",
