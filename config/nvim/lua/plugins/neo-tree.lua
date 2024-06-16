@@ -1,5 +1,3 @@
-local keymap = vim.keymap
-local opts = { noremap = true, silent = true }
 return {
   "nvim-neo-tree/neo-tree.nvim",
   dependencies = {
@@ -32,6 +30,9 @@ return {
         },
       },
     })
+
+    local keymap = vim.keymap
+    local opts = { noremap = true, silent = true }
 
     opts.desc = "Focus File Explorer"
     keymap.set("n", "<leader>em", ":Neotree focus<CR>", opts)
