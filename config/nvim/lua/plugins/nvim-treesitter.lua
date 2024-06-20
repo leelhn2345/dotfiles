@@ -26,6 +26,7 @@ return {
         "c",
         "sql",
         "tsx",
+        "c_sharp",
       },
       auto_install = true,
       highlight = {

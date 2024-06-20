@@ -32,7 +32,7 @@ return {
         "bashls",
         "tailwindcss",
         "emmet_language_server",
-        "csharp_ls",
+        "omnisharp",
       },
       automatic_installation = true,
     },

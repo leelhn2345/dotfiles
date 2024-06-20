@@ -5,6 +5,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "SmiteshP/nvim-navbuddy",
     "b0o/schemastore.nvim",
+    "Hoffs/omnisharp-extended-lsp.nvim",
   },
   config = function()
     -- import lspconfig plugin
@@ -75,10 +76,24 @@ return {
     -- configure csharp server
     local pid = vim.fn.getpid()
     -- needs to change path depending on host
-    local omnisharp = "/home/nelson/.local/share/nvim/mason/bin/omnisharp"
+    local omnisharp_bin = "/home/nelson/.local/share/nvim/mason/bin/omnisharp"
     lspconfig["omnisharp"].setup({
       capabilities = capabilities,
-      cmd = { omnisharp, "--languageserver", "--hostPID", tostring(pid) },
+      on_attach = function(_, bufnr)
+        local bufopts = {
+          desc = "Show LSP definition",
+          noremap = true,
+          silent = true,
+          buffer = bufnr,
+        }
+        vim.keymap.set("n", "gd", function()
+          require("omnisharp_extended").telescope_lsp_definitions()
+        end, bufopts)
+      end,
+      cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
+      handlers = {
+        ["textDocument/definition"] = require("omnisharp_extended").handler,
+      },
     })
 
     -- configure json server
@@ -94,6 +109,7 @@ return {
 
     -- configure toml server
     lspconfig["taplo"].setup({
+      capabilities = capabilities,
       on_attach = function(_, bufnr)
         local bufopts = {
           noremap = true,
@@ -112,7 +128,6 @@ return {
           end
         end, bufopts)
       end,
-      capabilities = capabilities,
     })
 
     -- configure yaml server
