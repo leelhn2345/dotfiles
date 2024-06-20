@@ -74,9 +74,6 @@ return {
     })
 
     -- configure csharp server
-    local pid = vim.fn.getpid()
-    -- needs to change path depending on host
-    local omnisharp_bin = "/home/nelson/.local/share/nvim/mason/bin/omnisharp"
     lspconfig["omnisharp"].setup({
       capabilities = capabilities,
       on_attach = function(_, bufnr)
@@ -90,7 +87,12 @@ return {
           require("omnisharp_extended").telescope_lsp_definitions()
         end, bufopts)
       end,
-      cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
+      cmd = {
+        vim.fn.expand("~/.local/share/nvim/mason/bin/omnisharp"),
+        "--languageserver",
+        "--hostPID",
+        tostring(vim.fn.getpid()),
+      },
       handlers = {
         ["textDocument/definition"] = require("omnisharp_extended").handler,
       },
