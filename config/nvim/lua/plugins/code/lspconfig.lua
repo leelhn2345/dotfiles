@@ -98,6 +98,11 @@ return {
       },
     })
 
+    -- configure go server
+    lspconfig["gopls"].setup({
+      capabilities = capabilities,
+    })
+
     -- configure json server
     lspconfig["jsonls"].setup({
       capabilities = capabilities,

@@ -24,6 +24,7 @@ return {
       sh = { "shfmt" },
       sql = { "sql_formatter" },
       cs = { "csharpier" },
+      go = { "goimports-reviser", "gofumpt", "golines" },
       ["_"] = { "trim_whitespace" },
     },
     format_on_save = {

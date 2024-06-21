@@ -27,6 +27,9 @@ return {
         "sql",
         "tsx",
         "c_sharp",
+        "java",
+        "go",
+        "gomod",
       },
       auto_install = true,
       highlight = {
