@@ -24,6 +24,7 @@ zsh_completions() {
 	rustup completions zsh cargo >"$ZSH_COMPLETIONS_DIR/_cargo"
 	rustup completions zsh >"$ZSH_COMPLETIONS_DIR/_rustup"
 	"$HOME/.local/bin/poetry" completions zsh >"$ZSH_COMPLETIONS_DIR/_poetry"
+	curl -o "$ZSH_COMPLETIONS_DIR/_golang" https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_golang
 
 	rm -rf ~/.zfunc
 }

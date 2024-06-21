@@ -30,6 +30,7 @@ return {
         "java",
         "go",
         "gomod",
+        "gosum",
       },
       auto_install = true,
       highlight = {
