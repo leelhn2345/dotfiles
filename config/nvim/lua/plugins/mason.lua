@@ -53,6 +53,7 @@ return {
         "markdownlint",
         "shellcheck",
         "hadolint",
+        "golangci-lint",
 
         -- formatter
         "stylua",
