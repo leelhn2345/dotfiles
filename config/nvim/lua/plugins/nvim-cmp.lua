@@ -8,13 +8,12 @@ return {
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "rafamadriz/friendly-snippets", -- useful snippets
     "onsails/lspkind.nvim", -- vs-code like pictograms
+    "brenoprata10/nvim-highlight-colors", -- colors in code completions
   },
   config = function()
     local cmp = require("cmp")
 
     local luasnip = require("luasnip")
-
-    local lspkind = require("lspkind")
 
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
@@ -55,33 +54,49 @@ return {
 
       -- configure lspkind for vs-code like pictograms in completion menu
       formatting = {
-        format = lspkind.cmp_format({
-          maxwidth = 40,
-          ellipsis_char = "...",
-          menu = {},
+        format = function(entry, item)
+          local color_item =
+            require("nvim-highlight-colors").format(entry, { kind = item.kind })
+          item = require("lspkind").cmp_format({
+            -- any lspkind format settings here
+            maxwidth = 40,
+            ellipsis_char = "...",
+            menu = {},
+          })(entry, item)
+          if color_item.abbr_hl_group then
+            item.kind_hl_group = color_item.abbr_hl_group
+            item.kind = color_item.abbr
+          end
+          return item
+        end,
 
-          -- menu = {
-          --   buffer = "[Buffer]",
-          --   nvim_lsp = "[LSP]",
-          --   luasnip = "[Snippet]",
-          --   path = "[Path]",
-          -- },
+        -- format = lspkind.cmp_format({
+        --   maxwidth = 40,
+        --   ellipsis_char = "...",
+        --   menu = {},
 
-          -- truncate lsp source path
-          -- before = function(_, item)
-          --   local MAX_MENU_WIDTH = 20
-          --   local ELLIPSIS = "..."
-          --
-          --   if item.menu ~= nil then
-          --     local menu = item.menu
-          --     if #menu > MAX_MENU_WIDTH then
-          --       item.menu = vim.fn.strcharpart(menu, 0, MAX_MENU_WIDTH)
-          --         .. ELLIPSIS
-          --     end
-          --   end
-          --   return item
-          -- end,
-        }),
+        -- menu = {
+        --   buffer = "[Buffer]",
+        --   nvim_lsp = "[LSP]",
+        --   luasnip = "[Snippet]",
+        --   path = "[Path]",
+        -- },
+
+        -- truncate lsp source path
+        -- before = function(_, item)
+        --   local MAX_MENU_WIDTH = 20
+        --   local ELLIPSIS = "..."
+        --
+        --   if item.menu ~= nil then
+        --     local menu = item.menu
+        --     if #menu > MAX_MENU_WIDTH then
+        --       item.menu = vim.fn.strcharpart(menu, 0, MAX_MENU_WIDTH)
+        --         .. ELLIPSIS
+        --     end
+        --   end
+        --   return item
+        -- end,
+        -- }),
       },
     })
 
