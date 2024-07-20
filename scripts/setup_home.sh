@@ -8,50 +8,50 @@
 . ./logging.sh
 
 main() {
-	info "setting up ubuntu(wsl) terminal environment..."
+  info "setting up ubuntu(wsl) terminal environment..."
 
-	title "Apt Packages"
-	install_apt_wrapper
-	install_packages
-	# install_wsl_packages # uncomment if installing in wsl
-	post_process_packages
-	success "Finished installing apt packages."
+  title "Apt Packages"
+  install_apt_wrapper
+  install_packages
+  # install_wsl_packages # uncomment if installing in wsl
+  post_process_packages
+  success "Finished installing apt packages."
 
-	title "Rustup Toolchain & Bob-nvim"
-	rustup_toolchain
-	cargo_binaries
-	bob_nvim
-	success "Finished installing rustup toolchain and bob-nvim."
+  title "Rustup Toolchain & Bob-nvim"
+  rustup_toolchain
+  cargo_binaries
+  bob_nvim
+  success "Finished installing rustup toolchain and bob-nvim."
 
-	title "Coding Tools"
-	poetry_install
-	nvm_install
-	bun_install
-	golang_install
-	dotnet_install
-	success "Finished installing coding tools."
+  title "Coding Tools"
+  poetry_install
+  nvm_install
+  bun_install
+  golang_install
+  dotnet_install
+  success "Finished installing coding tools."
 
-	title "Zsh & tmux"
-	zsh_setup
-	zsh_plugins
-	zsh_completions
-	tmux_tpm
-	success "Finished setting up zsh & tmux."
+  title "Zsh & tmux"
+  zsh_setup
+  zsh_plugins
+  zsh_completions
+  tmux_tpm
+  success "Finished setting up zsh & tmux."
 
-	# whitelisting `.env` for ripgrep and fd-find
-	echo "!.env" >~/.ignore
-	echo "!fly.toml" >>~/.ignore
+  # whitelisting `.env` for ripgrep and fd-find
+  echo "!.env" >~/.ignore
+  echo "!fly.toml" >>~/.ignore
 
-	title "Stowing"
-	cd ..
-	stow --adopt common
-	stow --adopt home
-	git checkout -- .
-	stow config -t ~/.config
-	stow .cargo -t ~/.cargo
-	success "Finished stowing."
+  title "Stowing"
+  cd ..
+  stow --adopt common
+  stow --adopt home
+  git checkout -- .
+  stow config -t ~/.config
+  stow .cargo -t ~/.cargo
+  success "Finished stowing."
 
-	success "Finished setting up. Please restart terminal."
+  success "Finished setting up. Please restart terminal."
 }
 
 main

@@ -7,7 +7,7 @@ if wezterm.config_builder then
 end
 
 -- core settings
-config.default_domain = "WSL:Ubuntu" -- remove if not using WSL
+-- config.default_domain = "WSL:Ubuntu" -- uncomment if using WSL
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.9
 config.window_padding = {
