@@ -9,7 +9,15 @@ return {
         globalstatus = true,
       },
       sections = {
-        lualine_b = { "branch", "diagnostics" },
+        lualine_b = {
+          "branch",
+          {
+            "diagnostics",
+            sources = {
+              "nvim_workspace_diagnostic",
+            },
+          },
+        },
       },
     })
   end,
