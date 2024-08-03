@@ -23,7 +23,7 @@ local config = function()
         "%.git/",
         ".*%-lock%.json",
         ".*%.lock",
-        "%.cargo/registry/",
+        -- "%.cargo/registry/",
         --   "node_modules/",
         --   "%.venv/",
         --   "dist/",
