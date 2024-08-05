@@ -3,13 +3,13 @@ return {
   event = "VeryLazy",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope.nvim",
+    "folke/trouble.nvim",
   },
   opts = {},
   keys = {
     {
-      "<leader>td",
-      ":TodoTelescope<CR>",
+      "<leader>em",
+      ":TodoTrouble toggle<CR>",
       desc = "Find Todos",
       silent = true,
     },
