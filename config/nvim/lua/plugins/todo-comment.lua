@@ -8,9 +8,9 @@ return {
   opts = {},
   keys = {
     {
-      "<leader>eq",
+      "<leader>tl",
       ":TodoTrouble toggle<CR>",
-      desc = "Find Todos",
+      desc = "Todos List",
       silent = true,
     },
   },
