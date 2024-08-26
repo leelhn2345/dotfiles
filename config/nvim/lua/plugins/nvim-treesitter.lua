@@ -31,6 +31,7 @@ return {
         "go",
         "gomod",
         "gosum",
+        "http",
       },
       auto_install = true,
       highlight = {

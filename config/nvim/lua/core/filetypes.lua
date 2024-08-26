@@ -4,6 +4,7 @@ vim.filetype.add({
     log = "log",
     conf = "conf",
     env = "dotenv",
+    http = "http",
   },
   -- detect and assign filetypes based on entire filename
   filename = {
