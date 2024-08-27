@@ -106,6 +106,8 @@ alias autopurge='sudo nala autopurge -y'
 
 alias explorer='explorer.exe `wslpath -w "$PWD"`'
 
+alias k='kubectl'
+
 # theme/plugins
 source "$ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
 source "$ZSH_PLUGINS_DIR/fzf-tab/fzf-tab.plugin.zsh"
