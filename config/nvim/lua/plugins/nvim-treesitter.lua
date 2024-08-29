@@ -33,7 +33,7 @@ return {
         "gosum",
         "http",
       },
-      auto_install = true,
+      auto_install = false,
       highlight = {
         enable = true,
       },
