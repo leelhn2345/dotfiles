@@ -105,8 +105,8 @@ alias autoremove='sudo nala autoremove -y'
 alias autopurge='sudo nala autopurge -y'
 
 alias explorer='explorer.exe `wslpath -w "$PWD"`'
-
 alias k='kubectl'
+alias net='netstat -tuln'
 
 # theme/plugins
 source "$ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme"

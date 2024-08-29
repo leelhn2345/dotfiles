@@ -30,6 +30,7 @@ packages=(
   pkg-config
   libssl-dev
   libxml2-utils
+  net-tools
 
   # python packages
   python3-venv
