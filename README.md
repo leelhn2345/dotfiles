@@ -48,6 +48,12 @@ cd ~/dotfiles/scripts
 source setup_home.sh
 ```
 
+afterwards, to log in into github
+
+```sh
+gh auth login
+```
+
 ### Devpod
 
 To create [all new workspaces with the same customization](https://devpod.sh/docs/developing-in-workspaces/dotfiles-in-a-workspace#for-all-workspaces):

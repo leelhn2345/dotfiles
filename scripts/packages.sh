@@ -31,6 +31,7 @@ packages=(
   libssl-dev
   libxml2-utils
   net-tools
+  gh
 
   # python packages
   python3-venv
