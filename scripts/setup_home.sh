@@ -24,7 +24,7 @@ main() {
   success "Finished installing rustup toolchain and bob-nvim."
 
   title "Coding Tools"
-  poetry_install
+  uv_install
   nvm_install
   bun_install
   golang_install
