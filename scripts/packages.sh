@@ -32,6 +32,7 @@ packages=(
   libxml2-utils
   net-tools
   gh
+  direnv
 
   # python packages
   python3-venv

@@ -152,3 +152,5 @@ export PATH="$PATH:$GOPATH/bin"
 #alias ri='rosdep install -i --from-path src --rosdistro ${ROS_DISTRO} -y'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(direnv hook zsh)"
