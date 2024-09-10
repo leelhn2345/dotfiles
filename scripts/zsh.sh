@@ -26,6 +26,7 @@ zsh_completions() {
   curl -o "$ZSH_COMPLETIONS_DIR/_golang" https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_golang
   uv generate-shell-completions zsh >"$ZSH_COMPLETIONS_DIR/_uv"
   pip3 completion --zsh >"$ZSH_COMPLETIONS_DIR/_pip3"
+  rg --generate complete-zsh >"$ZSH_COMPLETIONS_DIR/_rg"
 
   rm -rf ~/.zfunc
 }
