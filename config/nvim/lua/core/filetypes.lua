@@ -9,9 +9,11 @@ vim.filetype.add({
   -- detect and assign filetypes based on entire filename
   filename = {
     [".env"] = "dotenv",
+    [".envrc"] = "sh",
   },
   -- detect and assign filetypes based on certain patterns
   pattern = {
     ["%.env%.[%w_.-]+"] = "dotenv",
+    ["%.envrc%.[%w_.-]+"] = "sh",
   },
 })
