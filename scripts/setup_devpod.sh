@@ -46,6 +46,7 @@ main() {
 
   # whitelisting `.env` for ripgrep and fd-find
   echo "!.env" >/.ignore
+  echo "!.envrc" >>/.ignore
 
   title "Stowing"
   cd ../..

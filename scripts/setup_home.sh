@@ -41,6 +41,7 @@ main() {
   # whitelisting `.env` for ripgrep and fd-find
   echo "!.env" >~/.ignore
   echo "!fly.toml" >>~/.ignore
+  echo "!.envrc" >>~/.ignore
 
   title "Stowing"
   cd ..
