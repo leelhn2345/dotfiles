@@ -106,7 +106,7 @@ alias autopurge='sudo nala autopurge -y'
 
 alias explorer='explorer.exe `wslpath -w "$PWD"`'
 alias k='kubectl'
-alias net='netstat -tuln'
+alias port='netstat -tuln'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
 
 # theme/plugins
