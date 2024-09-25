@@ -23,6 +23,7 @@ cargo_crates=(
   "cargo-watch"
   "cargo-nextest"
   "cargo-autoinherit"
+  "cargo-machete"
 )
 
 #######################################
