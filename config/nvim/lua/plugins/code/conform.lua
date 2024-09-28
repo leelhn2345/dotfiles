@@ -8,8 +8,10 @@ return {
         args = {
           "-l",
           "postgresql",
-          "-c",
-          '{  "keywordCase" : "upper"  }',
+          "-c", -- use json string for config
+          '{\
+            "keywordCase": "upper"\
+          }',
         },
       },
     },
