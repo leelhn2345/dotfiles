@@ -5,7 +5,12 @@ return {
   opts = {
     formatters = {
       sql_formatter = {
-        args = { "-l", "postgresql" },
+        args = {
+          "-l",
+          "postgresql",
+          "-c",
+          '{  "keywordCase" : "upper"  }',
+        },
       },
     },
     formatters_by_ft = {
