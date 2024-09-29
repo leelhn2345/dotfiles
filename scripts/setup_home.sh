@@ -51,8 +51,7 @@ main() {
   stow config -t ~/.config
   stow .cargo -t ~/.cargo
 
-  stow infra -t ~/infra
-  info "delete ~/infra if it is a production server and use vps-infra repository instead"
+  warn "delete ~/infra if it is a production server and use vps-infra repository instead"
 
   success "Finished stowing."
 
