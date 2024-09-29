@@ -1,0 +1,75 @@
+services:
+  postgres-db:
+    image: postgres
+    container_name: postgres-db
+    restart: always
+    networks:
+      - shared-network
+    ports:
+      - 5432:5432
+    volumes:
+      - psql-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+  minio:
+    image: quay.io/minio/minio
+    container_name: minio
+    restart: always
+    networks:
+      - shared-network
+    ports:
+      - 9000:9000
+      - 9001:9001
+    environment:
+      MINIO_ROOT_USER: ${MINIO_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_PASSWORD}
+    volumes:
+      - ~/minio/data:/data
+    command:
+      - server
+      - /data
+      - --console-address
+      - ":9001"
+
+  # NOTE: spin up dedicated redis instances if needed,
+  # but use different service name
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    networks:
+      - shared-network
+    ports:
+      - 6379:6379
+    expose:
+      - 6379
+    volumes:
+      - redis-data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf
+      - --requirepass
+      - ${REDIS_PASSWORD}
+
+  redis-insight:
+    image: redis/redisinsight
+    container_name: redis-insight
+    restart: always
+    networks:
+      - shared-network
+    ports:
+      - 5540:5540
+    volumes:
+      - redis-insight:/db
+
+volumes:
+  psql-data:
+  redis-data:
+  redis-insight:
+
+networks:
+  shared-network:
+    external: true

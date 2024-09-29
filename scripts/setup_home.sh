@@ -50,6 +50,7 @@ main() {
   git checkout -- .
   stow config -t ~/.config
   stow .cargo -t ~/.cargo
+  stow infra -t ~/infra
   success "Finished stowing."
 
   success "Finished setting up. Please restart terminal."
