@@ -38,13 +38,9 @@ main() {
   tmux_tpm
   success "Finished setting up zsh & tmux."
 
-  # whitelisting `.env` for ripgrep and fd-find
-  echo "!.env" >~/.ignore
-  echo "!fly.toml" >>~/.ignore
-  echo "!.envrc" >>~/.ignore
-
   title "Stowing"
   cd ..
+  cp .ignore ~ # whitelisting for `.env` for ripgren and fd-find
   stow --adopt common
   stow --adopt home
   git checkout -- .

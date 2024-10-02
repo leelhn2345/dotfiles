@@ -45,7 +45,7 @@ Remember to switch on ligatures.
 ```sh
 git clone https://github.com/leelhn2345/dotfiles ~/dotfiles
 cd ~/dotfiles/scripts
-source setup_home.sh
+source setup_<env>.sh
 ```
 
 afterwards, to log in into github

@@ -44,10 +44,6 @@ main() {
   tmux_tpm
   success "Finished setting up zsh & tmux."
 
-  # whitelisting `.env` for ripgrep and fd-find
-  echo "!.env" >/.ignore
-  echo "!.envrc" >>/.ignore
-
   title "Stowing"
   cd ../..
   mv dotfiles ~
@@ -55,6 +51,7 @@ main() {
     err "could not \`cd\` into dotfiles"
     exit 1
   }
+  cp .ignore ~ # whitelisting `.env` for ripgrep and fd-find
   stow --adopt common
   stow --adopt devpod
   git checkout -- .
