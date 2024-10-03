@@ -5,9 +5,10 @@
   - [About](#about)
   - [Apps](#apps)
   - [Setup](#setup)
-    - [Home](#home)
+    - [Ubuntu](#ubuntu)
     - [Devpod](#devpod)
       - [Overriding devcontainer image](#overriding-devcontainer-image)
+    - [MacOS](#macos)
   - [License](#license)
 <!--toc:end-->
 
@@ -37,7 +38,7 @@ Remember to switch on ligatures.
 
 ## Setup
 
-### Home
+### Ubuntu
 
 > [!NOTE]
 > Be around to enter password during initial `apt update` and changing of shells.
@@ -45,7 +46,7 @@ Remember to switch on ligatures.
 ```sh
 git clone https://github.com/leelhn2345/dotfiles ~/dotfiles
 cd ~/dotfiles/scripts
-source setup_<env>.sh
+source setup_ubuntu.sh
 ```
 
 afterwards, to log in into github
@@ -54,7 +55,13 @@ afterwards, to log in into github
 gh auth login
 ```
 
+> [!NOTE]
+> if using WSL, may want to install wsl packages in `./scripts/packages.sh`.
+> checkout the `install_wsl_packages` function.
+
 ### Devpod
+
+The script here is for **Debian**.
 
 To create [all new workspaces with the same customization](https://devpod.sh/docs/developing-in-workspaces/dotfiles-in-a-workspace#for-all-workspaces):
 
@@ -85,11 +92,15 @@ devpod up <workspace-git-url> --ide none --devcontainer-image mcr.microsoft.com/
 2 important things to take note:
 
 - download [dotnet](https://learn.microsoft.com/en-us/dotnet/core/install/macos).
-- download nerd fonts
+- download [nerd fonts](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Monaspace.zip)
+  - use monaspice neon nerd font
 
 ```sh
 cd dotfiles/scripts
 . setup_mac.sh
+
+# authenticate github afterwards
+gh auth login
 ```
 
 ## License
