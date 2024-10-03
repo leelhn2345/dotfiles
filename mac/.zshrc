@@ -62,7 +62,7 @@ alias vc='cd ~/.config/nvim && nvim'
 alias cdd='cd ~/dotfiles'
 alias vd='cd ~/dotfiles && nvim'
 
-alias cat='batcat'
+alias cat='bat'
 
 alias ls='lsd'
 alias ll='lsd -alF'
