@@ -3,7 +3,11 @@
 # TODO: mac empty commands
 # need to fill up these functions
 . ./logging.sh
-. ./mac/pkg.sh
+. ./packages.sh
+. ./rustup.sh
+. ./coding.sh
+. ./zsh.sh
+. ./tmux.sh
 
 main() {
   info "setting up mac environment"
@@ -11,8 +15,6 @@ main() {
   title "packages"
   install_brew
   install_packages
-
-  post_process_packages
   success "finished installing packages"
 
   title "rustup toolchain & bob-nvim"
@@ -28,9 +30,8 @@ main() {
   success "finished installing coding tools"
 
   title "zsh & tmux"
-  zsh_setup
   zsh_plugins
-  zsh_completions
+  mac_zsh_completions
   tmux_tpm
   success "finished setting up zsh & tmux"
 
@@ -38,7 +39,8 @@ main() {
   cd ..
   cp .ignore ~
   stow --adopt common
-  stow --adopt home
+  rm ~/.zshrc
+  stow --adopt mac
   git checkout -- .
   stow config -t ~/.config
   stow .cargo -t ~/.cargo

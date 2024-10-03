@@ -82,3 +82,32 @@ post_process_packages() {
   mkdir -p ~/.local/bin
   ln -s "$(which fdfind)" ~/.local/bin/fd # symlink to `find`
 }
+
+install_brew() {
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
+mac_packages=(
+  lld
+  htop
+  neofetch
+  tree
+  bat
+  jq
+  fd
+  mercurial
+  stow
+  fswatch
+  pkg-config
+  gh
+  direnv
+  fzf
+  tmux
+)
+
+#######################################
+# install packages on macOS.
+#######################################
+install_brew_packages() {
+  brew install "${mac_packages[@]}"
+}

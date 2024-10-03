@@ -16,10 +16,22 @@ config.window_padding = {
 }
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font_with_fallback({
+	"MonaspiceNe Nerd Font",
 	"Monaspace Neon",
 	"Cascadia Code",
 })
-config.harfbuzz_features = { "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "calt", "dlig" }
+config.harfbuzz_features = {
+	"ss03",
+	"ss02",
+	"ss03",
+	"ss04",
+	"ss05",
+	"ss06",
+	"ss07",
+	"ss08",
+	"calt",
+	"dlig",
+}
 
 -- keys
 local act = wezterm.action

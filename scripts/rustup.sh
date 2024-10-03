@@ -19,7 +19,7 @@ cargo_crates=(
   "zoxide"
   "cargo-update"
   # "tree-sitter-cli"
-  "cargo-makedocs"
+  # "cargo-makedocs"
   "cargo-watch"
   "cargo-nextest"
   "cargo-autoinherit"

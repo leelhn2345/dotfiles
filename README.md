@@ -80,6 +80,18 @@ with `--devcontainer-image <image>` flag:
 devpod up <workspace-git-url> --ide none --devcontainer-image mcr.microsoft.com/devcontainers/base:debian
 ```
 
+### MacOS
+
+2 important things to take note:
+
+- download [dotnet](https://learn.microsoft.com/en-us/dotnet/core/install/macos).
+- download nerd fonts
+
+```sh
+cd dotfiles/scripts
+. setup_mac.sh
+```
+
 ## License
 
 Do whatever you want license, © Nelson Lee 2024.
