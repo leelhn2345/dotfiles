@@ -100,10 +100,6 @@ alias cu='cargo install-update -a'
 # alias cdo='cargo makedocs --open'
 alias cdo='cargo doc --no-deps --open'
 
-alias update='sudo nala update && sudo nala upgrade -y'
-alias autoremove='sudo nala autoremove -y'
-alias autopurge='sudo nala autopurge -y'
-
 alias explorer='explorer.exe `wslpath -w "$PWD"`'
 alias k='kubectl'
 alias port='netstat -tuln'
