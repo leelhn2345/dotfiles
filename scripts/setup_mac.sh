@@ -44,8 +44,7 @@ main() {
   git checkout -- .
   stow config -t ~/.config
   stow .cargo -t ~/.cargo
-
-  warn "delete ~/infra if it is a production server and use vps-infra repository instead"
+  stow --adopt wezterm
 
   success "Finished stowing."
 
