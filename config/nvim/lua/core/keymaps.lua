@@ -8,8 +8,13 @@ vim.keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
 -- vim.keymap.set("v", "L", "$", { desc = "End of line" })
 
 -- comment
-vim.keymap.set("n", "<C-_>", "gcc", { remap = true })
-vim.keymap.set("v", "<C-_>", "gc", { remap = true })
+if vim.fn.has("mac") > 0 then
+  vim.keymap.set("n", "<C-/>", "gcc", { remap = true })
+  vim.keymap.set("v", "<C-/>", "gc", { remap = true })
+else
+  vim.keymap.set("n", "<C-_>", "gcc", { remap = true })
+  vim.keymap.set("v", "<C-_>", "gc", { remap = true })
+end
 
 -- Window Management
 vim.keymap.set(
