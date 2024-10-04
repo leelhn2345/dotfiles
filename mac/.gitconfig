@@ -1,0 +1,15 @@
+[user]
+	name = Nelson Lee
+	email = leelhn2345@outlook.com
+[color]
+	ui = auto
+[core]
+	editor = code --wait
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
