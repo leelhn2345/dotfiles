@@ -15,7 +15,6 @@ packages=(
   clang
   htop
   neofetch
-  tree
   bat
   jq
   fd-find
@@ -91,7 +90,6 @@ mac_packages=(
   lld
   htop
   neofetch
-  tree
   bat
   jq
   fd
