@@ -101,6 +101,9 @@ mac_packages=(
   direnv
   fzf
   tmux
+
+  # database cli
+  libpq # psql
 )
 
 #######################################
@@ -108,4 +111,11 @@ mac_packages=(
 #######################################
 install_brew_packages() {
   brew install "${mac_packages[@]}"
+}
+
+#######################################
+# some brew packages need symlinks
+#######################################
+post_process_brew_packages() {
+  brew link --force libpq
 }
