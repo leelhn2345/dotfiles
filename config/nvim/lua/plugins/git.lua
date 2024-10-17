@@ -36,6 +36,21 @@ return {
     },
   },
 
+  {
+    "pwntester/octo.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+      enable_builtin = true,
+    },
+    keys = {
+      { "<leader>O", ":Octo<CR>", desc = "Octo", silent = true },
+    },
+  },
+
   -- Git Blame
   {
     "lewis6991/gitsigns.nvim",

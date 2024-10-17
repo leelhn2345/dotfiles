@@ -7,6 +7,7 @@ if wezterm.config_builder then
 end
 
 -- core settings
+config.window_close_confirmation = "NeverPrompt"
 -- config.default_domain = "WSL:Ubuntu" -- uncomment if using WSL
 -- config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.9
