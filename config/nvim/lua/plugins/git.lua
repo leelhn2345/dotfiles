@@ -36,6 +36,11 @@ return {
     },
   },
 
+  {
+    "daliusd/ghlite.nvim",
+    opts = {},
+  },
+
   -- Git Blame
   {
     "lewis6991/gitsigns.nvim",
