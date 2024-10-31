@@ -36,6 +36,7 @@ return {
     },
   },
 
+  -- Github pull requests
   {
     "pwntester/octo.nvim",
     requires = {
