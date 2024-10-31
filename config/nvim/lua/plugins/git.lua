@@ -45,7 +45,7 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
-      default_merge_method = "squash delete",
+      default_merge_method = "squash",
       enable_builtin = true,
     },
     keys = {
