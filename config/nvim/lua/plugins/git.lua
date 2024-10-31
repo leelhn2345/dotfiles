@@ -47,6 +47,9 @@ return {
     opts = {
       default_merge_method = "squash",
       enable_builtin = true,
+      suppress_missing_scope = {
+        projects_v2 = true,
+      },
     },
     keys = {
       { "<leader>O", ":Octo<CR>", desc = "Octo", silent = true },

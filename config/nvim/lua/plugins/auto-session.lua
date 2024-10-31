@@ -2,6 +2,9 @@ return {
   "rmagatti/auto-session",
   -- can't be VeryLazy
   -- Mason can't be VeryLazy as well due to LSP on 1st file read
+  init = function()
+    vim.opt.sessionoptions = "buffers,curdir,terminal"
+  end,
   config = function()
     require("auto-session").setup({
       auto_session_allowed_dirs = {
@@ -16,6 +19,11 @@ return {
         "lua require('neogit').close()",
         "lua require('spectre').close()",
         "DBUIClose",
+      },
+      bypass_session_save_file_types = {
+        "",
+        "no-neck-pain",
+        "noice",
       },
     })
   end,
