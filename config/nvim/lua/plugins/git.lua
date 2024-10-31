@@ -36,6 +36,7 @@ return {
     },
   },
 
+  -- Github pull requests
   {
     "pwntester/octo.nvim",
     requires = {
@@ -44,6 +45,7 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
+      default_merge_method = "squash",
       enable_builtin = true,
     },
     keys = {
