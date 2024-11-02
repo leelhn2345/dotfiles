@@ -27,6 +27,7 @@ return {
         kind = "auto",
         show_staged_diff = false,
       },
+      graph_style = "unicode",
       mappings = {
         finder = {
           ["<c-j>"] = "Next",

@@ -1,5 +1,5 @@
 [user]
-	name = Nelson Lee
+	name = leelhn2345
 	email = leelhn2345@outlook.com
 [color]
 	ui = auto
@@ -8,8 +8,8 @@
 [init]
 	defaultBranch = main
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/usr/bin/gh auth git-credential
