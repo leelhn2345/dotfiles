@@ -69,3 +69,7 @@ vim.keymap.set("n", "N", "Nzz", { desc = "Prev search result" })
 
 -- Joins next line without moving cursor
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Joins the line below" })
+
+-- tabs
+vim.keymap.set("n", "<leader>tj", ":tabnext<CR>", { desc = "Next tab" })
+vim.keymap.set("n", "<leader>tk", ":tabprevious<CR>", { desc = "Prev tab" })
