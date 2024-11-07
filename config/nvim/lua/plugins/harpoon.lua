@@ -11,9 +11,9 @@ return {
     -- harpoon:setup({ settings = { save_on_toggle = true } })
     harpoon:setup()
 
-    vim.keymap.set("n", "<leader>hx", function()
+    vim.keymap.set("n", "<leader>ha", function()
       harpoon:list():add()
-    end, { desc = "Harpoon Mark" })
+    end, { desc = "Harpoon Add" })
 
     vim.keymap.set("n", "<leader>hd", function()
       harpoon:list():remove()
