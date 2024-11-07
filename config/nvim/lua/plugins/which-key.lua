@@ -1,7 +1,12 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
-  opts = {},
+  opts = {
+    spec = {
+      { "<leader>h", group = "harpoon" },
+      { "<leader>f", group = "telescope" },
+    },
+  },
   keys = {
     {
       "<leader>?",
