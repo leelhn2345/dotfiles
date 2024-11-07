@@ -65,6 +65,6 @@ return {
     { "<leader>fa", ":Telescope <CR>", silent = true },
     { "<leader>fg", ":Telescope live_grep<CR>", silent = true },
     { "<leader>fb", ":Telescope buffers<CR>", silent = true },
-    { "<leader>gb", ":Telescope git_branches<CR>", silent = true },
+    -- { "<leader>gb", ":Telescope git_branches<CR>", silent = true },
   },
 }
