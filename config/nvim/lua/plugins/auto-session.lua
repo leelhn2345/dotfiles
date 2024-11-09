@@ -3,7 +3,7 @@ return {
   -- can't be VeryLazy
   -- Mason can't be VeryLazy as well due to LSP on 1st file read
   init = function()
-    vim.opt.sessionoptions = "buffers,curdir,terminal"
+    vim.opt.sessionoptions = "buffers,curdir,terminal,localoptions"
   end,
   config = function()
     require("auto-session").setup({
