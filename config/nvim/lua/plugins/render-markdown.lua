@@ -5,6 +5,14 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   ft = { "markdown" },
+  keys = {
+    {
+      "<leader>rm",
+      ":RenderMarkdown toggle<CR>",
+      desc = "RenderMarkdown Toggle",
+      silent = true,
+    },
+  },
   opts = {
     sign = {
       enabled = false,

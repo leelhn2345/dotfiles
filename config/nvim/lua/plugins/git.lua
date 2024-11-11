@@ -27,6 +27,7 @@ return {
         kind = "auto",
         show_staged_diff = false,
       },
+      process_spinner = false,
       graph_style = "unicode",
       mappings = {
         finder = {
