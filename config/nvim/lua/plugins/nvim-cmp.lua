@@ -8,7 +8,8 @@ return {
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "rafamadriz/friendly-snippets", -- useful snippets
     "onsails/lspkind.nvim", -- vs-code like pictograms
-    "brenoprata10/nvim-highlight-colors", -- colors in code completions
+    -- "brenoprata10/nvim-highlight-colors",
+    "roobert/tailwindcss-colorizer-cmp.nvim", -- colors in code completions
   },
   config = function()
     local cmp = require("cmp")
@@ -55,19 +56,23 @@ return {
       -- configure lspkind for vs-code like pictograms in completion menu
       formatting = {
         format = function(entry, item)
-          local color_item =
-            require("nvim-highlight-colors").format(entry, { kind = item.kind })
           item = require("lspkind").cmp_format({
             -- any lspkind format settings here
             maxwidth = 40,
             ellipsis_char = "...",
             menu = {},
           })(entry, item)
-          if color_item.abbr_hl_group then
-            item.kind_hl_group = color_item.abbr_hl_group
-            item.kind = color_item.abbr
-          end
-          return item
+
+          -- local color_item =
+          --   require("nvim-highlight-colors").format(entry, { kind = item.kind })
+
+          -- if color_item.abbr_hl_group then
+          --   item.kind_hl_group = color_item.abbr_hl_group
+          --   item.kind = color_item.abbr
+          -- end
+          -- return item
+
+          return require("tailwindcss-colorizer-cmp").formatter(entry, item)
         end,
 
         -- format = lspkind.cmp_format({
