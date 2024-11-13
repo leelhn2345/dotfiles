@@ -71,5 +71,5 @@ vim.keymap.set("n", "N", "Nzz", { desc = "Prev search result" })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Joins the line below" })
 
 -- tabs
-vim.keymap.set("n", "<leader>tj", ":tabnext<CR>", { desc = "Next tab" })
-vim.keymap.set("n", "<leader>tk", ":tabprevious<CR>", { desc = "Prev tab" })
+vim.keymap.set("n", "<leader>tn", ":tabnext<CR>", { desc = "Next tab" })
+vim.keymap.set("n", "<leader>tp", ":tabprevious<CR>", { desc = "Prev tab" })
