@@ -25,7 +25,6 @@ return {
     code = {
       width = "block",
       right_pad = 1,
-      -- min_width = 78,
     },
   },
 }
