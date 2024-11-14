@@ -6,10 +6,23 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+-- change appearance on lost focus
+wezterm.on("update-status", function(window, _)
+	local overrides = window:get_config_overrides() or {}
+	if window:is_focused() then
+		overrides.color_scheme = nil
+	else
+		overrides.color_scheme = "nightfox"
+	end
+	window:set_config_overrides(overrides)
+end)
+
 -- core settings
 config.window_close_confirmation = "NeverPrompt"
 -- config.default_domain = "WSL:Ubuntu" -- uncomment if using WSL
--- config.window_decorations = "RESIZE"
+
+-- appearance
+config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.9
 config.window_padding = {
 	bottom = 0,
