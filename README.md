@@ -28,8 +28,9 @@ Summary:
 - editor: [neovim](./config/nvim/README.md)
   - plugings are configured for neovim 0.10
 - environments:
-    1. WSL2
-    2. devpod
+  1. WSL2
+  2. devpod
+  3. macOS
 
 **Font used** is [Monaspace Neon](https://monaspace.githubnext.com/).
 Nerd font variant is `MonaspiceNe Nerd Font`.
