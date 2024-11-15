@@ -104,6 +104,12 @@ cd dotfiles/scripts
 gh auth login
 ```
 
+To use `make` command:
+
+```sh
+xcode-select --install
+```
+
 ## License
 
 Do whatever you want license, © Nelson Lee 2024.
