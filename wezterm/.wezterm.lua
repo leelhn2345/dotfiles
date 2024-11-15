@@ -22,6 +22,7 @@ config.window_close_confirmation = "NeverPrompt"
 -- config.default_domain = "WSL:Ubuntu" -- uncomment if using WSL
 
 -- appearance
+config.native_macos_fullscreen_mode = true -- only has an effect when running on macOS
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.9
 config.window_padding = {
