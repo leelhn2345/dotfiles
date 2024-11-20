@@ -2,7 +2,7 @@ services:
   postgres-db:
     image: postgres
     container_name: postgres-db
-    restart: always
+    restart: unless-stopped
     networks:
       - shared-network
     ports:
@@ -16,7 +16,7 @@ services:
   minio:
     image: quay.io/minio/minio
     container_name: minio
-    restart: always
+    restart: unless-stopped
     networks:
       - shared-network
     ports:
@@ -38,7 +38,7 @@ services:
   redis:
     image: redis
     container_name: redis
-    restart: always
+    restart: unless-stopped
     networks:
       - shared-network
     ports:
@@ -57,7 +57,7 @@ services:
   redis-insight:
     image: redis/redisinsight
     container_name: redis-insight
-    restart: always
+    restart: unless-stopped
     networks:
       - shared-network
     ports:
