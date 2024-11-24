@@ -15,6 +15,11 @@ return {
   opts = {
     auto_close = true,
     focus = true,
+    win = {
+      wo = {
+        wrap = true,
+      },
+    },
     keys = {
       m = { -- example of a custom action that toggles the active view filter
         action = function(view)
