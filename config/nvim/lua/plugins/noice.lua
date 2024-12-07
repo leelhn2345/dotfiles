@@ -1,19 +1,35 @@
 return {
-  "folke/noice.nvim",
-  event = "VeryLazy",
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-    {
-      "rcarriga/nvim-notify",
-      config = function()
-        require("notify").setup({
-          background_colour = "#000000",
-        })
-      end,
+  {
+    "rcarriga/nvim-notify",
+    lazy = true, -- loads only when noice.nvim requires it
+    keys = {
+      {
+        "<leader>fn",
+        ":Telescope notify<CR>",
+        silent = true,
+        desc = "Notification logs",
+      },
+    },
+    opts = {
+      background_color = "#000000",
     },
   },
-  config = function()
-    require("noice").setup({
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+    keys = {
+      {
+        "<leader>nd",
+        ":NoiceDismiss<CR>",
+        silent = true,
+        desc = "Dismiss notifications",
+      },
+    },
+    opts = {
       -- disable write notification
       routes = {
         {
@@ -41,12 +57,6 @@ return {
         -- inc_rename = false, -- enables an input dialog for inc-rename.nvim
         lsp_doc_border = true, -- add a border to hover docs and signature help
       },
-    })
-    vim.keymap.set(
-      "n",
-      "<leader>nd",
-      ":NoiceDismiss<CR>",
-      { silent = true, desc = "Dismiss notifications" }
-    )
-  end,
+    },
+  },
 }
