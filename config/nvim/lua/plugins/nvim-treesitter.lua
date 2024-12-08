@@ -2,6 +2,9 @@ return {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
+  config = function(_, opts)
+    require("nvim-treesitter.configs").setup(opts)
+  end,
   opts = {
     ensure_installed = {
       "rust",
