@@ -24,9 +24,9 @@ return {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
       },
-      preselect = cmp.PreselectMode.None,
+      preselect = cmp.PreselectMode.None, -- makes cmp ignore preselect requests from language servers
       completion = {
-        completeopt = "menu,menuone,preview",
+        completeopt = table.concat(vim.opt.completeopt:get(), ","),
       },
       snippet = { -- configure how nvim-cmp interacts with snippet engine
         expand = function(args)
