@@ -24,6 +24,7 @@ cargo_crates=(
   "cargo-nextest"
   "cargo-autoinherit"
   "cargo-machete"
+  "jaq"
 )
 
 #######################################
