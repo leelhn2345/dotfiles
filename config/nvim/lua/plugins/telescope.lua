@@ -22,6 +22,7 @@ local config = function()
       file_ignore_patterns = {
         "%.git/",
         ".*%-lock%.json",
+        ".*%-lock%.yaml",
         ".*%.lock",
         -- "%.cargo/registry/",
         --   "node_modules/",
