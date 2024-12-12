@@ -21,7 +21,7 @@ main() {
   rustup_toolchain
   cargo_binaries
   bob_nvim
-  succes "finished installing rustup toolchain and bob-nvim"
+  success "finished installing rustup toolchain and bob-nvim"
 
   title "coding tools"
   uv_install
