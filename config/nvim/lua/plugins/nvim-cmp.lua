@@ -1,6 +1,7 @@
 return {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
+  enabled = false,
   dependencies = {
     "hrsh7th/cmp-buffer", -- source for text in buffer
     "hrsh7th/cmp-path", -- source for file system paths
@@ -118,17 +119,5 @@ return {
       end,
       group = autocomplete_group,
     })
-
-    -- highlight overrides
-    vim.api.nvim_set_hl(
-      0,
-      "CmpItemKindVariable",
-      { bg = "NONE", fg = "#deb887" }
-    )
-    vim.api.nvim_set_hl(
-      0,
-      "CmpItemKindInterface",
-      { link = "CmpItemKindVariable" }
-    )
   end,
 }

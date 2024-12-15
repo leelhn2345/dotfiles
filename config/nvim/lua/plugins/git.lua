@@ -53,6 +53,10 @@ return {
         projects_v2 = true,
       },
     },
+    config = function(_, opts)
+      require("octo").setup(opts)
+      vim.treesitter.language.register("markdown", "octo")
+    end,
     keys = {
       { "<leader>O", ":Octo<CR>", desc = "Octo", silent = true },
     },
