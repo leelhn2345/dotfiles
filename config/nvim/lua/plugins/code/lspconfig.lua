@@ -2,7 +2,7 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
+    "saghen/blink.cmp",
     "SmiteshP/nvim-navbuddy",
     "b0o/schemastore.nvim",
     "Hoffs/omnisharp-extended-lsp.nvim",
@@ -12,7 +12,7 @@ return {
     local lspconfig = require("lspconfig")
 
     -- used to enable autocompletion (assign to every lsp server config)
-    local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    local capabilities = require("blink.cmp").get_lsp_capabilities()
 
     -- configure html server
     lspconfig["html"].setup({
