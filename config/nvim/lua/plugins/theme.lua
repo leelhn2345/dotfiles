@@ -12,7 +12,7 @@ return {
     })
     vim.cmd("colorscheme tokyonight-night")
 
-    -- blink highligt overrides
+    -- blink.cmp highlight overrides
     vim.api.nvim_set_hl(
       0,
       "BlinkCmpKindVariable",
@@ -24,7 +24,7 @@ return {
       { link = "BlinkCmpKindVariable" }
     )
 
-    -- cmp highligt overrides
+    -- nvim-cmp highlight overrides
     vim.api.nvim_set_hl(
       0,
       "CmpItemKindVariable",
