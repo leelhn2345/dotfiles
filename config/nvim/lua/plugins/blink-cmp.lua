@@ -33,8 +33,8 @@ return {
     },
     completion = {
       trigger = {
-        -- disable cmp on insert
-        show_on_insert_on_trigger_character = false,
+        -- disabled because too much completion
+        show_on_trigger_character = false,
       },
       -- experimental auto-brackets support
       accept = {
