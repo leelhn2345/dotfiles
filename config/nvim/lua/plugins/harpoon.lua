@@ -7,6 +7,7 @@ return {
   },
   config = function()
     local harpoon = require("harpoon")
+    local extensions = require("harpoon.extensions")
 
     -- harpoon:setup({ settings = { save_on_toggle = true } })
     harpoon:setup()
@@ -23,22 +24,6 @@ return {
       harpoon.ui:toggle_quick_menu(harpoon:list())
     end, { desc = "Harpoon List" })
 
-    -- vim.keymap.set("n", "<leader>h1", function()
-    --   harpoon:list():select(1)
-    -- end, { desc = "Harpoon Mark 1" })
-    --
-    -- vim.keymap.set("n", "<leader>h2", function()
-    --   harpoon:list():select(2)
-    -- end, { desc = "Harpoon Mark 2" })
-    --
-    -- vim.keymap.set("n", "<leader>h3", function()
-    --   harpoon:list():select(3)
-    -- end, { desc = "Harpoon Mark 3" })
-    --
-    -- vim.keymap.set("n", "<leader>h4", function()
-    --   harpoon:list():select(4)
-    -- end, { desc = "Harpoon Mark 4" })
-
     -- Toggle previous & next buffers stored within Harpoon list
     vim.keymap.set("n", "<C-p>", function()
       harpoon:list():prev()
@@ -47,5 +32,8 @@ return {
     vim.keymap.set("n", "<C-n>", function()
       harpoon:list():next()
     end, { desc = "Harpoon Next" })
+
+    -- https://github.com/kevinhwang91/nvim-ufo/issues/210#issuecomment-2072497039
+    harpoon:extend(extensions.builtins.command_on_nav("UfoEnableFold"))
   end,
 }
