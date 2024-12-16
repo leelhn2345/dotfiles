@@ -12,6 +12,9 @@ return {
     })
     vim.cmd("colorscheme tokyonight-night")
 
+    -- cmp highlight overrides
+    vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE" })
+
     -- blink.cmp highlight overrides
     vim.api.nvim_set_hl(
       0,
