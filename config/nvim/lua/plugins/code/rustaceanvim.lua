@@ -2,51 +2,55 @@ return {
   "mrcjkb/rustaceanvim",
   version = "^5", -- Recommended
   ft = { "rust" },
-  config = function()
-    vim.g.rustaceanvim = {
-      tools = {
-        hover_actions = {
-          replace_builtin_hover = false,
-        },
-        float_win_config = {
-          auto_focus = true,
-        },
+  opts = {
+    tools = {
+      float_win_config = {
+        auto_focus = true,
       },
-      server = {
-        on_attach = function(_, bufnr)
-          vim.keymap.set("n", "<leader>ce", ":RustLsp explainError<CR>", {
-            silent = true,
-            buffer = bufnr,
-            desc = "explain Code Error",
-          })
-        end,
-        settings = {
-          -- rust-analyzer language server configuration
-          ["rust-analyzer"] = {
-            cargo = {
-              allFeatures = true,
-              loadOutDirsFromCheck = true,
-              buildScripts = {
-                enable = true,
-              },
-            },
-            -- Add clippy lints for Rust.
-            checkOnSave = {
-              allFeatures = true,
-              command = "clippy",
-              extraArgs = { "--no-deps" },
-            },
-            procMacro = {
+    },
+    server = {
+      -- on_attach = function(_, bufnr)
+      --   vim.keymap.set("n", "<leader>ce", ":RustLsp explainError<CR>", {
+      --     silent = true,
+      --     buffer = bufnr,
+      --     desc = "Explain code error",
+      --   })
+      -- end,
+      default_settings = {
+        ["rust-analyzer"] = {
+          cargo = {
+            allFeatures = true,
+            loadOutDirsFromCheck = true,
+            buildScripts = {
               enable = true,
-              ignored = {
-                ["async-trait"] = { "async_trait" },
-                ["napi-derive"] = { "napi" },
-                ["async-recursion"] = { "async_recursion" },
-              },
+            },
+          },
+          procMacro = {
+            enable = true,
+            ignored = {
+              ["async-trait"] = { "async_trait" },
+              ["napi-derive"] = { "napi" },
+              ["async-recursion"] = { "async_recursion" },
+            },
+          },
+          files = {
+            excludeDirs = {
+              ".direnv",
+              ".git",
+              ".github",
+              ".gitlab",
+              "bin",
+              "node_modules",
+              "target",
+              "venv",
+              ".venv",
             },
           },
         },
       },
-    }
+    },
+  },
+  config = function(_, opts)
+    vim.g.rustaceanvim = opts
   end,
 }
