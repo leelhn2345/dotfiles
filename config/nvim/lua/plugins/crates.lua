@@ -1,22 +1,21 @@
 return {
   "saecki/crates.nvim",
   event = { "BufRead Cargo.toml" },
-  dependencies = { "nvim-lua/plenary.nvim" },
-  config = function()
-    local crates = require("crates")
-    crates.setup({
-      popup = {
-        autofocus = true,
-        border = "rounded",
+  opts = {
+    popup = {
+      autofocus = true,
+      border = "rounded",
+    },
+    completion = {
+      crates = {
+        enabled = true,
       },
-      on_attach = function(bufnr)
-        vim.keymap.set(
-          "n",
-          "<leader>cf",
-          crates.show_features_popup,
-          { silent = true, desc = "Show crate features popup", buffer = bufnr }
-        )
-      end,
-    })
-  end,
+    },
+    lsp = {
+      enabled = true,
+      actions = true,
+      completion = true,
+      hover = true,
+    },
+  },
 }
