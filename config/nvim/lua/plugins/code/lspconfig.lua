@@ -125,24 +125,6 @@ return {
     -- configure toml server
     lspconfig["taplo"].setup({
       capabilities = capabilities,
-      on_attach = function(_, bufnr)
-        local bufopts = {
-          noremap = true,
-          silent = true,
-          buffer = bufnr,
-          desc = "Show crate popup",
-        }
-        vim.keymap.set("n", "K", function()
-          if
-            vim.fn.expand("%:t") == "Cargo.toml"
-            and require("crates").popup_available()
-          then
-            require("crates").show_popup()
-          else
-            vim.lsp.buf.hover()
-          end
-        end, bufopts)
-      end,
     })
 
     -- configure yaml server
