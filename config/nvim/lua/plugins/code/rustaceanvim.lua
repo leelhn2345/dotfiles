@@ -9,13 +9,11 @@ return {
       },
     },
     server = {
-      -- on_attach = function(_, bufnr)
-      --   vim.keymap.set("n", "<leader>ce", ":RustLsp explainError<CR>", {
-      --     silent = true,
-      --     buffer = bufnr,
-      --     desc = "Explain code error",
-      --   })
-      -- end,
+      on_attach = function(_, bufnr)
+        vim.keymap.set("n", "<leader>rs", function()
+          vim.cmd.RustAnalyzer("restart")
+        end, { desc = "Restart rust-analzyer", buffer = bufnr })
+      end,
       default_settings = {
         ["rust-analyzer"] = {
           cargo = {
