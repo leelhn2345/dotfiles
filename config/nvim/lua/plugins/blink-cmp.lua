@@ -34,8 +34,7 @@ return {
     },
     completion = {
       trigger = {
-        -- disabled because too much completion
-        show_on_trigger_character = false,
+        show_on_trigger_character_on_insert = false,
       },
       -- experimental auto-brackets support
       accept = {
