@@ -1,6 +1,21 @@
-local config = function()
-  local telescope = require("telescope")
-  telescope.setup({
+return {
+  "nvim-telescope/telescope.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-tree/nvim-web-devicons",
+  },
+  keys = {
+    { "<leader>ff", ":Telescope find_files<CR>", silent = true },
+    { "<leader>fK", ":Telescope keymaps<CR>", silent = true },
+    { "<leader>fh", ":Telescope help_tags<CR>", silent = true },
+    { "<leader>fa", ":Telescope <CR>", silent = true },
+    { "<leader>fg", ":Telescope live_grep<CR>", silent = true },
+    { "<leader>fb", ":Telescope buffers<CR>", silent = true },
+    -- { "<leader>gb", ":Telescope git_branches<CR>", silent = true },
+  },
+  opts = {
     defaults = {
       layout_strategy = "flex",
       layout_config = {
@@ -45,27 +60,11 @@ local config = function()
         },
       },
     },
-  })
-
-  telescope.load_extension("fzf")
-end
-
-return {
-  "nvim-telescope/telescope.nvim",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-    "nvim-treesitter/nvim-treesitter",
-    "nvim-tree/nvim-web-devicons",
   },
-  config = config,
-  keys = {
-    { "<leader>ff", ":Telescope find_files<CR>", silent = true },
-    { "<leader>fK", ":Telescope keymaps<CR>", silent = true },
-    { "<leader>fh", ":Telescope help_tags<CR>", silent = true },
-    { "<leader>fa", ":Telescope <CR>", silent = true },
-    { "<leader>fg", ":Telescope live_grep<CR>", silent = true },
-    { "<leader>fb", ":Telescope buffers<CR>", silent = true },
-    -- { "<leader>gb", ":Telescope git_branches<CR>", silent = true },
-  },
+  config = function(_, opts)
+    local telescope = require("telescope")
+    telescope.setup(opts)
+
+    telescope.load_extension("fzf")
+  end,
 }
