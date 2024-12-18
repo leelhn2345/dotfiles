@@ -33,6 +33,9 @@ return {
       table.insert(newVirtText, { suffix, "MoreMsg" })
       return newVirtText
     end,
+    provider_selector = function()
+      return { "lsp", "indent" }
+    end,
   },
   config = function(_, opts)
     vim.o.foldcolumn = "0" -- '0' to disable foldcolumn
