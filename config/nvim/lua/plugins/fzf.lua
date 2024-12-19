@@ -35,6 +35,7 @@ return {
     fzf_opts = {
       ["--layout"] = "default",
       ["--no-scrollbar"] = true,
+      ["--cycle"] = true,
     },
     files = {
       cwd_prompt = false,
