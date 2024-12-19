@@ -31,8 +31,10 @@ return {
         ["<C-d>"] = "preview-page-down",
       },
     },
+    fzf_colors = true,
     fzf_opts = {
       ["--layout"] = "default",
+      ["--no-scrollbar"] = true,
     },
     files = {
       cwd_prompt = false,
@@ -42,8 +44,11 @@ return {
     grep = { actions = false },
     lsp = {
       code_actions = {
-        previewer = "codeaction_native",
-        preview_pager = "delta --width=$FZF_PREVIEW_COLUMNS --hunk-header-style='omit' --file-style='omit'",
+        previewer = vim.fn.executable("delta") == 1 and "codeaction_native"
+          or nil,
+        preview_pager = vim.fn.executable("delta") == 1
+            and "delta --width=$FZF_PREVIEW_COLUMNS --hunk-header-style='omit' --file-style='omit'"
+          or nil,
       },
     },
   },
