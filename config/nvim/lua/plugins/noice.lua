@@ -1,6 +1,7 @@
 return {
   {
     "rcarriga/nvim-notify",
+    dependencies = { "nvim-telescope/telescope.nvim" },
     lazy = true, -- loads only when noice.nvim requires it
     keys = {
       {

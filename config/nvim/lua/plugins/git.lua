@@ -4,8 +4,9 @@ return {
     "NeogitOrg/neogit",
     cmd = { "Neogit" },
     dependencies = {
+      "nvim-telescope/telescope.nvim", -- preferred
       "nvim-lua/plenary.nvim", -- required
-      "sindrets/diffview.nvim", -- optional - Diff integration
+      "sindrets/diffview.nvim", -- diff integration
     },
     keys = {
       {
@@ -41,9 +42,9 @@ return {
   -- Github pull requests
   {
     "pwntester/octo.nvim",
-    requires = {
+    dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
+      "nvim-telescope/telescope.nvim", -- preferred
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
