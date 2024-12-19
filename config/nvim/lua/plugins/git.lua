@@ -5,7 +5,7 @@ return {
     cmd = { "Neogit" },
     dependencies = {
       "nvim-lua/plenary.nvim", -- required
-      "sindrets/diffview.nvim", -- optional - Diff integration
+      "sindrets/diffview.nvim", -- diff integration
     },
     keys = {
       {
@@ -19,6 +19,7 @@ return {
       console_timeout = 5000,
       integrations = {
         diffview = true,
+        fzf_lua = false, -- use vim.ui.select
       },
       status = {
         recent_commit_count = 50,
