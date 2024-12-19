@@ -15,7 +15,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set(
       "n",
       "gr",
-      "<cmd>FzfLua lsp_references jump_to_single_result=true<CR>",
+      "<cmd>FzfLua lsp_references jump_to_single_result=true ignore_current_line=true<CR>",
       opts
     ) -- show definition, references
 
