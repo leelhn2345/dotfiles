@@ -44,17 +44,28 @@ return {
     },
   },
   opts = {
-    files = { cwd_prompt = false },
+    winopts = {
+      preview = {
+        horizontal = "right:45%",
+        winopts = { number = false },
+      },
+    },
     keymap = {
       builtin = {
         ["<C-u>"] = "preview-page-up",
         ["<C-d>"] = "preview-page-down",
       },
     },
-    winopts = {
-      preview = {
-        horizontal = "right:50%",
+    fzf_opts = {
+      ["--layout"] = "default",
+    },
+    files = { cwd_prompt = false, actions = false },
+    grep = { actions = false },
+    lsp = {
+      code_actions = {
+        previewer = "codeaction_native",
       },
     },
+    -- keymaps = { show_details = false },
   },
 }
