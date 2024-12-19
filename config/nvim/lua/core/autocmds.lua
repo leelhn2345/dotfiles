@@ -47,7 +47,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
     ) -- show lsp type definitions
 
     opts.desc = "See available code actions"
-    vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+    vim.keymap.set(
+      { "n", "v" },
+      "<leader>ca",
+      -- vim.lsp.buf.code_action,
+      function()
+        require("fzf-lua").lsp_code_actions({
+          winopts = { preview = { layout = "vertical" } },
+        })
+      end,
+      opts
+    ) -- see available code actions, in visual mode will apply to selection
 
     opts.desc = "Smart rename"
     vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
