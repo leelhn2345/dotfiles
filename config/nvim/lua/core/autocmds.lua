@@ -52,17 +52,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
       "<leader>ca",
       -- vim.lsp.buf.code_action,
       function()
-        require("fzf-lua").lsp_code_actions({
-          winopts = {
-            -- height is number of items minus 15 lines for the preview, with a max of 70% screen height
-            height = 0.7,
-            width = 0.5,
-            preview = {
-              layout = "vertical",
-              vertical = "down:15,border-top",
-            },
-          },
-        })
+        require("fzf-lua").lsp_code_actions()
       end,
       opts
     ) -- see available code actions, in visual mode will apply to selection

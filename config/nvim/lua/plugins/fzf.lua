@@ -20,6 +20,10 @@ return {
   },
   opts = {
     winopts = {
+      width = 0.8,
+      height = 0.8,
+      row = 0.5,
+      col = 0.5,
       preview = {
         horizontal = "right:45%",
         winopts = { number = false },
@@ -36,6 +40,7 @@ return {
       ["--layout"] = "default",
       ["--no-scrollbar"] = true,
       ["--cycle"] = true,
+      ["--wrap"] = true,
     },
     files = {
       cwd_prompt = false,
@@ -43,8 +48,25 @@ return {
       git_icons = false,
     },
     grep = { actions = false },
+    keymaps = {
+      winopts = {
+        preview = {
+          hidden = "hidden",
+        },
+      },
+    },
     lsp = {
       code_actions = {
+        winopts = {
+          row = 0.7,
+          height = 0.6,
+          width = 0.6,
+          preview = {
+            layout = "vertical",
+            vertical = "down:10,border-top",
+          },
+        },
+        fzf_opts = { ["--layout"] = "reverse" },
         previewer = vim.fn.executable("delta") == 1 and "codeaction_native"
           or nil,
         preview_pager = vim.fn.executable("delta") == 1

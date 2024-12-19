@@ -18,4 +18,6 @@ PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 # the path given below is the default installer location
 export DOTNET_ROOT=/usr/local/share/dotnet
 export PATH=$PATH:$DOTNET_ROOT
+
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
+export FZF_DEFAULT_OPTS='--cycle'

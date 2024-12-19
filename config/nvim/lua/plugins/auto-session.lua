@@ -28,7 +28,7 @@ return {
       "Neotree close",
       "lua require('trouble').close()",
       "lua require('neogit').close()",
-      "lua require('spectre').close()",
+      -- "lua require('spectre').close()",
       "DBUIClose",
     },
   },
