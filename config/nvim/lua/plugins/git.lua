@@ -4,6 +4,7 @@ return {
     "NeogitOrg/neogit",
     cmd = { "Neogit" },
     dependencies = {
+      "nvim-telescope/telescope.nvim", -- preferred
       "nvim-lua/plenary.nvim", -- required
       "sindrets/diffview.nvim", -- diff integration
     },
@@ -19,7 +20,6 @@ return {
       console_timeout = 5000,
       integrations = {
         diffview = true,
-        fzf_lua = false, -- use vim.ui.select
       },
       status = {
         recent_commit_count = 50,
@@ -44,13 +44,12 @@ return {
     "pwntester/octo.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "ibhagwan/fzf-lua",
+      "nvim-telescope/telescope.nvim", -- preferred
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
       default_merge_method = "squash",
       enable_builtin = true,
-      picker = "fzf-lua",
       suppress_missing_scope = {
         projects_v2 = true,
       },
