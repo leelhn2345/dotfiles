@@ -1,5 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
+  enabled = false,
   dependencies = {
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
@@ -7,12 +8,12 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   keys = {
-    { "<leader>ff", ":Telescope find_files<CR>", silent = true },
-    { "<leader>fK", ":Telescope keymaps<CR>", silent = true },
-    { "<leader>fh", ":Telescope help_tags<CR>", silent = true },
-    { "<leader>fa", ":Telescope <CR>", silent = true },
-    { "<leader>fg", ":Telescope live_grep<CR>", silent = true },
-    { "<leader>fb", ":Telescope buffers<CR>", silent = true },
+    -- { "<leader>ff", ":Telescope find_files<CR>", silent = true },
+    -- { "<leader>fK", ":Telescope keymaps<CR>", silent = true },
+    -- { "<leader>fh", ":Telescope help_tags<CR>", silent = true },
+    -- { "<leader>fa", ":Telescope <CR>", silent = true },
+    -- { "<leader>fg", ":Telescope live_grep<CR>", silent = true },
+    -- { "<leader>fb", ":Telescope buffers<CR>", silent = true },
     -- { "<leader>gb", ":Telescope git_branches<CR>", silent = true },
   },
   opts = {
