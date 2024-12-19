@@ -2,14 +2,6 @@ return {
   {
     "rcarriga/nvim-notify",
     lazy = true, -- loads only when noice.nvim requires it
-    keys = {
-      {
-        "<leader>fn",
-        ":Telescope notify<CR>",
-        silent = true,
-        desc = "Notification logs",
-      },
-    },
     opts = {
       background_color = "#000000",
     },
