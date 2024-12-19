@@ -6,42 +6,17 @@ return {
     "MeanderingProgrammer/render-markdown.nvim",
   },
   keys = {
-    {
-      "<leader>ff",
-      ":FzfLua files<CR>",
-      silent = true,
-      desc = "Find files",
-    },
-    {
-      "<leader>fh",
-      ":FzfLua helptags<CR>",
-      silent = true,
-      desc = "Help tags",
-    },
-    {
-      "<leader>fa",
-      ":FzfLua<CR>",
-      silent = true,
-      desc = "Help tags",
-    },
+    { "<leader>ff", ":FzfLua files<CR>", silent = true, desc = "Find files" },
+    { "<leader>fh", ":FzfLua helptags<CR>", silent = true, desc = "Help tags" },
+    { "<leader>fa", ":FzfLua<CR>", silent = true, desc = "Help tags" },
     {
       "<leader>fg",
       ":FzfLua live_grep<CR>",
       silent = true,
       desc = "Live grep",
     },
-    {
-      "<leader>fK",
-      ":FzfLua keymaps<CR>",
-      silent = true,
-      desc = "Keymaps",
-    },
-    {
-      "<leader>fb",
-      ":FzfLua buffers<CR>",
-      silent = true,
-      desc = "Buffers",
-    },
+    { "<leader>fK", ":FzfLua keymaps<CR>", silent = true, desc = "Keymaps" },
+    { "<leader>fb", ":FzfLua buffers<CR>", silent = true, desc = "Buffers" },
   },
   opts = {
     winopts = {
@@ -59,7 +34,11 @@ return {
     fzf_opts = {
       ["--layout"] = "default",
     },
-    files = { cwd_prompt = false, actions = false },
+    files = {
+      cwd_prompt = false,
+      actions = false,
+      git_icons = false,
+    },
     grep = { actions = false },
     lsp = {
       code_actions = {

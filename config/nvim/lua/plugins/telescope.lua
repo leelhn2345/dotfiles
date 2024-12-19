@@ -6,15 +6,15 @@ return {
     "nvim-treesitter/nvim-treesitter",
     "nvim-tree/nvim-web-devicons",
   },
-  keys = {
-    -- { "<leader>ff", ":Telescope find_files<CR>", silent = true },
-    -- { "<leader>fK", ":Telescope keymaps<CR>", silent = true },
-    -- { "<leader>fh", ":Telescope help_tags<CR>", silent = true },
-    -- { "<leader>fa", ":Telescope <CR>", silent = true },
-    -- { "<leader>fg", ":Telescope live_grep<CR>", silent = true },
-    -- { "<leader>fb", ":Telescope buffers<CR>", silent = true },
-    -- { "<leader>gb", ":Telescope git_branches<CR>", silent = true },
-  },
+  -- keys = {
+  -- { "<leader>ff", ":Telescope find_files<CR>", silent = true },
+  -- { "<leader>fK", ":Telescope keymaps<CR>", silent = true },
+  -- { "<leader>fh", ":Telescope help_tags<CR>", silent = true },
+  -- { "<leader>fa", ":Telescope <CR>", silent = true },
+  -- { "<leader>fg", ":Telescope live_grep<CR>", silent = true },
+  -- { "<leader>fb", ":Telescope buffers<CR>", silent = true },
+  -- { "<leader>gb", ":Telescope git_branches<CR>", silent = true },
+  -- },
   opts = {
     defaults = {
       layout_strategy = "flex",
