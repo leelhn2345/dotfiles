@@ -64,8 +64,8 @@ return {
     lsp = {
       code_actions = {
         previewer = "codeaction_native",
+        preview_pager = "delta --width=$FZF_PREVIEW_COLUMNS --hunk-header-style='omit' --file-style='omit'",
       },
     },
-    -- keymaps = { show_details = false },
   },
 }
