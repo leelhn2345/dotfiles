@@ -42,7 +42,7 @@ return {
   -- Github pull requests
   {
     "pwntester/octo.nvim",
-    requires = {
+    dependencies = {
       "nvim-lua/plenary.nvim",
       "ibhagwan/fzf-lua",
       "nvim-tree/nvim-web-devicons",
