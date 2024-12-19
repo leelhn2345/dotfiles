@@ -110,6 +110,10 @@ alias port='netstat -tuln'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
 alias jq='jaq'
 
+# fzf aliases
+alias fzf="fzf --preview 'bat --style=numbers --color=always {}'"
+alias vf='nvim $(fzf --preview="bat --color=always {}")'
+
 # theme/plugins
 source "$ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
 source "$ZSH_PLUGINS_DIR/fzf-tab/fzf-tab.plugin.zsh"

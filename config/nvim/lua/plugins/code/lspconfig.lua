@@ -92,7 +92,7 @@ return {
           buffer = bufnr,
         }
         vim.keymap.set("n", "gd", function()
-          require("omnisharp_extended").telescope_lsp_definitions()
+          require("omnisharp_extended").lsp_definitions()
         end, bufopts)
       end,
       cmd = {

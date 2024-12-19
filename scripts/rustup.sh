@@ -25,6 +25,7 @@ cargo_crates=(
   "cargo-autoinherit"
   "cargo-machete"
   "jaq"
+  "git-delta"
 )
 
 #######################################
