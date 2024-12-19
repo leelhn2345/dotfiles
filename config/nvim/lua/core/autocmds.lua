@@ -53,7 +53,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
       -- vim.lsp.buf.code_action,
       function()
         require("fzf-lua").lsp_code_actions({
-          winopts = { preview = { layout = "vertical" } },
+          winopts = {
+            -- height is number of items minus 15 lines for the preview, with a max of 70% screen height
+            height = 0.7,
+            width = 0.5,
+            preview = {
+              layout = "vertical",
+              vertical = "down:15,border-top",
+            },
+          },
         })
       end,
       opts
