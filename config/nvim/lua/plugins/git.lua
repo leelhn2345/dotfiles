@@ -43,12 +43,13 @@ return {
     "pwntester/octo.nvim",
     requires = {
       "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
+      "ibhagwan/fzf-lua",
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
       default_merge_method = "squash",
       enable_builtin = true,
+      picker = "fzf-lua",
       suppress_missing_scope = {
         projects_v2 = true,
       },
