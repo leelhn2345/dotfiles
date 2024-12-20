@@ -1,7 +1,10 @@
 return {
   "saghen/blink.cmp",
   event = "InsertEnter",
-  dependencies = { "rafamadriz/friendly-snippets" },
+  dependencies = {
+    "rafamadriz/friendly-snippets",
+    { "saghen/blink.compat", opts = {} },
+  },
   -- use a release tag to download pre-built binaries
   version = "v0.*",
   opts = {
@@ -18,23 +21,13 @@ return {
       nerd_font_variant = "normal",
     },
     sources = {
-      completion = {
-        enabled_providers = {
-          "lsp",
-          "path",
-          "snippets",
-          "buffer",
-          "dadbod",
-        },
-      },
+      default = { "lsp", "path", "snippets", "buffer", "dadbod" },
+      cmdline = {},
       providers = {
         dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
       },
     },
     completion = {
-      trigger = {
-        show_on_trigger_character_on_insert = false,
-      },
       -- experimental auto-brackets support
       accept = {
         auto_brackets = {
