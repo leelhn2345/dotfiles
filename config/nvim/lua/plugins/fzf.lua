@@ -57,15 +57,6 @@ return {
     },
     lsp = {
       code_actions = {
-        winopts = {
-          row = 0.7,
-          height = 0.6,
-          width = 80,
-          preview = {
-            layout = "vertical",
-            vertical = "down:10,border-top",
-          },
-        },
         fzf_opts = { ["--layout"] = "reverse" },
         previewer = vim.fn.executable("delta") == 1 and "codeaction_native"
           or nil,
@@ -75,4 +66,41 @@ return {
       },
     },
   },
+  config = function(_, opts)
+    local fzf_lua = require("fzf-lua")
+
+    fzf_lua.setup(opts)
+
+    fzf_lua.register_ui_select(function(fzf_opts, items)
+      return fzf_opts.kind == "codeaction"
+          and {
+            winopts = {
+              row = 0.7,
+              -- height is number of items minus 15 lines for the preview, with a max of 80% screen height
+              height = math.floor(
+                math.min(vim.o.lines * 0.8 - 16, #items + 2) + 0.5
+              ) + 16,
+              width = 80,
+              preview = not vim.tbl_isempty(
+                    vim.lsp.get_clients({ bufnr = 0, name = "vtsls" })
+                  )
+                  and {
+                    layout = "vertical",
+                    vertical = "down:15,border-top",
+                    hidden = "hidden",
+                  }
+                or {
+                  layout = "vertical",
+                  vertical = "down:15,border-top",
+                },
+            },
+          }
+        or {
+          winopts = {
+            width = 80,
+            height = math.floor(math.min(vim.o.lines * 0.8, #items + 2) + 0.5),
+          },
+        }
+    end)
+  end,
 }
