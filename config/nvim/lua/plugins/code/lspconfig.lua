@@ -7,7 +7,64 @@ return {
     "b0o/schemastore.nvim",
     "Hoffs/omnisharp-extended-lsp.nvim",
   },
-  config = function()
+  opts = {
+    servers = {
+      html = {},
+      emmet_language_server = {
+        filetypes = {
+          "html",
+          "htmldjango",
+          "pug",
+        },
+      },
+      tailwindcss = {},
+      vtsls = {},
+      eslint = {},
+      cssls = {
+        settings = {
+          css = {
+            lint = {
+              unknownAtRules = "ignore",
+            },
+          },
+        },
+      },
+      basedpyright = {
+        settings = {
+          basedpyright = {
+            analysis = {
+              -- using mypy for type-checking
+              typeCheckingMode = "basic",
+            },
+          },
+        },
+      },
+      ruff = {},
+      gopls = {},
+      taplo = {},
+      yamlls = {},
+      marksman = {},
+      bashls = {},
+      lua_ls = {
+        settings = { -- custom settings for lua
+          Lua = {
+            -- make the language server recognize "vim" global
+            diagnostics = {
+              globals = { "vim" },
+            },
+            workspace = {
+              -- make language server aware of runtime files
+              library = {
+                [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                [vim.fn.stdpath("config") .. "/lua"] = true,
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  config = function(_, opts)
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
 
@@ -21,65 +78,10 @@ return {
       lineFoldingOnly = true,
     }
 
-    -- configure html server
-    lspconfig["html"].setup({
-      capabilities = capabilities,
-    })
-
-    -- configure emmet server
-    lspconfig["emmet_language_server"].setup({
-      capabilities = capabilities,
-      filetypes = {
-        "html",
-        "htmldjango",
-        "pug",
-      },
-    })
-
-    -- configure tailwindcss server
-    lspconfig["tailwindcss"].setup({
-      capabilities = capabilities,
-    })
-
-    -- configure typescript server
-    lspconfig["vtsls"].setup({
-      capabilities = capabilities,
-    })
-
-    -- configure eslint server
-    lspconfig["eslint"].setup({
-      capabilities = capabilities,
-    })
-
-    -- configure css server
-    lspconfig["cssls"].setup({
-      capabilities = capabilities,
-      settings = {
-        css = {
-          lint = {
-            unknownAtRules = "ignore",
-          },
-        },
-      },
-    })
-
-    -- configure python server
-    lspconfig["basedpyright"].setup({
-      capabilities = capabilities,
-      settings = {
-        basedpyright = {
-          analysis = {
-            -- using mypy for type-checking
-            typeCheckingMode = "basic",
-          },
-        },
-      },
-    })
-
-    -- configure ruff server
-    lspconfig["ruff"].setup({
-      capabilities = capabilities,
-    })
+    for server, config in pairs(opts.servers) do
+      config.capabilities = capabilities
+      lspconfig[server].setup(config)
+    end
 
     -- configure csharp server
     lspconfig["omnisharp"].setup({
@@ -106,11 +108,6 @@ return {
       },
     })
 
-    -- configure go server
-    lspconfig["gopls"].setup({
-      capabilities = capabilities,
-    })
-
     -- configure json server
     lspconfig["jsonls"].setup({
       capabilities = capabilities,
@@ -118,46 +115,6 @@ return {
         json = {
           schemas = require("schemastore").json.schemas(),
           validate = { enable = true },
-        },
-      },
-    })
-
-    -- configure toml server
-    lspconfig["taplo"].setup({
-      capabilities = capabilities,
-    })
-
-    -- configure yaml server
-    lspconfig["yamlls"].setup({
-      capabilities = capabilities,
-    })
-
-    -- configure markdown server
-    lspconfig["marksman"].setup({
-      capabilities = capabilities,
-    })
-
-    -- configure bash server
-    lspconfig["bashls"].setup({
-      capabilities = capabilities,
-    })
-
-    -- configure lua server (with special settings)
-    lspconfig["lua_ls"].setup({
-      capabilities = capabilities,
-      settings = { -- custom settings for lua
-        Lua = {
-          -- make the language server recognize "vim" global
-          diagnostics = {
-            globals = { "vim" },
-          },
-          workspace = {
-            -- make language server aware of runtime files
-            library = {
-              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-              [vim.fn.stdpath("config") .. "/lua"] = true,
-            },
-          },
         },
       },
     })
