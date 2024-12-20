@@ -60,7 +60,7 @@ return {
         winopts = {
           row = 0.7,
           height = 0.6,
-          width = 0.5,
+          width = 80,
           preview = {
             layout = "vertical",
             vertical = "down:10,border-top",
