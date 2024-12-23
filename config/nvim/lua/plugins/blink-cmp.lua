@@ -3,8 +3,7 @@ return {
   event = "InsertEnter",
   dependencies = { "rafamadriz/friendly-snippets" },
   -- use a release tag to download pre-built binaries
-  -- BUG: v0.8.1 triggers cmp on prompt buffer. wait till v0.8.2 before update.
-  version = "v0.8.0",
+  version = "*",
   opts = {
     keymap = {
       ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
