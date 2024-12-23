@@ -60,7 +60,7 @@ return {
       vim.treesitter.language.register("markdown", "octo")
     end,
     keys = {
-      { "<leader>O", ":Octo<CR>", desc = "Octo", silent = true },
+      { "<leader>O", "<CMD>Octo<CR>", desc = "Octo", silent = true },
     },
   },
 
