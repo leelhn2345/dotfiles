@@ -49,6 +49,7 @@ return {
     },
     opts = {
       default_merge_method = "squash",
+      default_delete_branch = true,
       enable_builtin = true,
       suppress_missing_scope = {
         projects_v2 = true,
