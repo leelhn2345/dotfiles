@@ -47,7 +47,6 @@ return {
       actions = false,
       git_icons = false,
     },
-    grep = { actions = false },
     keymaps = {
       winopts = {
         preview = {
