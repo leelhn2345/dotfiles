@@ -26,5 +26,10 @@ export LS_COLORS
 
 export EDITOR=nvim
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
-export FZF_DEFAULT_OPTS='--cycle'
+# export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!{**/.git/*}'"
+export FZF_DEFAULT_COMMAND="fd --type file -E .git"
+export FZF_DEFAULT_OPTS="
+  --cycle
+  --bind='ctrl-u:preview-half-page-up'
+  --bind='ctrl-d:preview-half-page-down'
+"
