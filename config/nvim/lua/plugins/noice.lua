@@ -6,7 +6,7 @@ return {
     keys = {
       {
         "<leader>fn",
-        ":Telescope notify<CR>",
+        "<CMD>Telescope notify<CR>",
         silent = true,
         desc = "Notification logs",
       },
