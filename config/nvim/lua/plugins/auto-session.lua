@@ -25,7 +25,7 @@ return {
       "noice",
     },
     pre_save_cmds = {
-      "Neotree close",
+      -- "Neotree close",
       "lua require('trouble').close()",
       "lua require('neogit').close()",
       -- "lua require('spectre').close()",
