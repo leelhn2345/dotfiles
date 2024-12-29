@@ -26,6 +26,8 @@ cargo_crates=(
   "cargo-machete"
   "jaq"
   "git-delta"
+  "yazi-fm"
+  "yazi-cli"
 )
 
 #######################################

@@ -26,3 +26,5 @@ export FZF_DEFAULT_OPTS="
   --bind='ctrl-u:preview-half-page-up'
   --bind='ctrl-d:preview-half-page-down'
 "
+
+export EDITOR="nvim"
