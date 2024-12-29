@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# TODO: mac empty commands
-# need to fill up these functions
 . ./logging.sh
 . ./packages.sh
 . ./rustup.sh
