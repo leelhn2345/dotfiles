@@ -18,7 +18,15 @@ return {
         },
       },
       tailwindcss = {},
-      vtsls = {},
+      vtsls = {
+        settings = {
+          typescript = {
+            updateImportsOnFileMove = {
+              enabled = "always",
+            },
+          },
+        },
+      },
       eslint = {},
       cssls = {
         settings = {
