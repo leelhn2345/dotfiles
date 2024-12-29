@@ -5,3 +5,6 @@ prepend_keymap = [
   { on = "d", run = "remove --permanently", desc = "Permanently delete selected files" },
   { on = "D", run = "remove", desc = "Trash selected files" },
 ]
+
+[input]
+prepend_keymap = [{ on = "<Esc>", run = "close", desc = "Cancel input" }]
