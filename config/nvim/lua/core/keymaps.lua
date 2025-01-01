@@ -25,8 +25,8 @@ vim.keymap.set(
 )
 
 -- Quickfix
-vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>", { desc = "Next quickfix" })
-vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>", { desc = "Prev quickfix" })
+vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next quickfix" })
+vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Prev quickfix" })
 
 -- Indenting
 vim.keymap.set("v", "<", "<gv", { desc = "Outdent" })
