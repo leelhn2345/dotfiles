@@ -101,7 +101,6 @@ mac_packages=(
   direnv
   fzf
   tmux
-  ffmpeg
   sevenzip
   poppler
   imagemagick
