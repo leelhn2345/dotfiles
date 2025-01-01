@@ -24,6 +24,10 @@ vim.keymap.set(
   { silent = true, desc = "Split Horizontal" }
 )
 
+-- Quickfix
+vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>", { desc = "Next quickfix" })
+vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>", { desc = "Prev quickfix" })
+
 -- Indenting
 vim.keymap.set("v", "<", "<gv", { desc = "Outdent" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent" })
@@ -71,5 +75,5 @@ vim.keymap.set("n", "N", "Nzz", { desc = "Prev search result" })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Joins the line below" })
 
 -- tabs
-vim.keymap.set("n", "<leader>tn", ":tabnext<CR>", { desc = "Next tab" })
-vim.keymap.set("n", "<leader>tp", ":tabprevious<CR>", { desc = "Prev tab" })
+vim.keymap.set("n", "<leader>tn", "<cmd>tabnext<CR>", { desc = "Next tab" })
+vim.keymap.set("n", "<leader>tp", "<cmd>tabprevious<CR>", { desc = "Prev tab" })
