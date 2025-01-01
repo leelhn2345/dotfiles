@@ -31,6 +31,9 @@ return {
       },
     },
     keymap = {
+      fzf = {
+        ["ctrl-q"] = "select-all+accept",
+      },
       builtin = {
         ["<C-u>"] = "preview-page-up",
         ["<C-d>"] = "preview-page-down",
