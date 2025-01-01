@@ -2,16 +2,16 @@ return {
   -- Version Control
   {
     "NeogitOrg/neogit",
-    cmd = { "Neogit" },
     dependencies = {
       "nvim-telescope/telescope.nvim", -- preferred
       "nvim-lua/plenary.nvim", -- required
       "sindrets/diffview.nvim", -- diff integration
     },
+    cmd = { "Neogit" },
     keys = {
       {
         "gi",
-        ":Neogit<CR>",
+        "<CMD>Neogit<CR>",
         desc = "Neogit (Git Info)",
         silent = true,
       },
@@ -47,6 +47,10 @@ return {
       "nvim-telescope/telescope.nvim", -- preferred
       "nvim-tree/nvim-web-devicons",
     },
+    cmd = "Octo",
+    keys = {
+      { "<leader>O", "<CMD>Octo<CR>", desc = "Octo", silent = true },
+    },
     opts = {
       default_merge_method = "squash",
       default_delete_branch = true,
@@ -59,9 +63,6 @@ return {
       require("octo").setup(opts)
       vim.treesitter.language.register("markdown", "octo")
     end,
-    keys = {
-      { "<leader>O", "<CMD>Octo<CR>", desc = "Octo", silent = true },
-    },
   },
 
   -- Git Blame
