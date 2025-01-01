@@ -1,13 +1,16 @@
 return {
   {
     "rcarriga/nvim-notify",
-    dependencies = { "nvim-telescope/telescope.nvim" },
+    dependencies = {
+      "ibhagwan/fzf-lua",
+    },
     lazy = true, -- loads only when noice.nvim requires it
     keys = {
       {
         "<leader>fn",
-        "<CMD>Telescope notify<CR>",
-        silent = true,
+        function()
+          require("notify.integrations.fzf").open()
+        end,
         desc = "Notification logs",
       },
     },
