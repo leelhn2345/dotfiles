@@ -10,7 +10,7 @@ return {
       "rust",
       "markdown",
       "markdown_inline",
-      "json5",
+      "json",
       "javascript",
       "typescript",
       "yaml",
