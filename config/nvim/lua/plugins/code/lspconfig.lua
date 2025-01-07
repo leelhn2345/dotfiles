@@ -70,6 +70,21 @@ return {
           },
         },
       },
+      tinymist = {
+        settings = {
+          formatterMode = "typstfmt",
+          exportPdf = "onType",
+          outputPath = "$root/target/$dir/$name",
+        },
+        on_attach = function(_, bufnr)
+          vim.keymap.set(
+            "n",
+            "<leader>tp",
+            "<cmd>TypstPreview<CR>",
+            { desc = "Typst preview", buffer = bufnr }
+          )
+        end,
+      },
     },
   },
   config = function(_, opts)
