@@ -70,6 +70,12 @@ return {
           },
         },
       },
+      tinymist = {
+        settings = {
+          exportPdf = "onType",
+          outputPath = "$root/target/$dir/$name",
+        },
+      },
     },
   },
   config = function(_, opts)
