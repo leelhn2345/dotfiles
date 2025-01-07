@@ -34,6 +34,7 @@ return {
         "emmet_language_server",
         "omnisharp",
         "gopls",
+        "tinymist",
       },
       automatic_installation = true,
     },

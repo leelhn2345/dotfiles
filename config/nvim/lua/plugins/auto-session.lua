@@ -23,6 +23,7 @@ return {
       "",
       "no-neck-pain",
       "noice",
+      "typst",
     },
     pre_save_cmds = {
       -- "Neotree close",
