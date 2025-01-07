@@ -72,6 +72,7 @@ return {
       },
       tinymist = {
         settings = {
+          formatterMode = "typstfmt",
           exportPdf = "onType",
           outputPath = "$root/target/$dir/$name",
         },
