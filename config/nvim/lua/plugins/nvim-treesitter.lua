@@ -35,6 +35,7 @@ return {
       "gomod",
       "gosum",
       "http",
+      "typst",
     },
     auto_install = false,
     highlight = {
