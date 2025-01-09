@@ -36,6 +36,7 @@ return {
       "gosum",
       "http",
       "typst",
+      "make",
     },
     auto_install = false,
     highlight = {
