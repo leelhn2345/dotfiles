@@ -31,6 +31,12 @@ return {
           enabled = true,
         },
       },
+      list = {
+        selection = {
+          preselect = true,
+          auto_insert = false,
+        },
+      },
       menu = {
         border = "rounded",
         draw = {

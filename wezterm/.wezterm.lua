@@ -37,7 +37,8 @@ config.font = wezterm.font_with_fallback({
 	"Cascadia Code",
 })
 config.harfbuzz_features = {
-	"ss03",
+	"calt",
+	"ss01",
 	"ss02",
 	"ss03",
 	"ss04",
@@ -45,8 +46,8 @@ config.harfbuzz_features = {
 	"ss06",
 	"ss07",
 	"ss08",
-	"calt",
-	"dlig",
+	"ss09",
+	"liga",
 }
 
 -- keys
