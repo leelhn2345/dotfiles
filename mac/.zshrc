@@ -29,7 +29,7 @@ fpath=($ZSH_COMPLETIONS_DIR $fpath) # tab completion folder
 autoload -Uz compinit
 compinit
 
-# ! completion styling (depracated)
+# ! completion styling (deprecated)
 # zstyle ':completion:*' menu select                      # arrow key navigation
 # bindkey '^[[Z' reverse-menu-complete                    # shift-tab to reverse menu selection
 # zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # insensitive case match

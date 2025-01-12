@@ -29,7 +29,7 @@ fpath=($ZSH_COMPLETIONS_DIR $fpath) # tab completion folder
 autoload -Uz compinit
 compinit
 
-# ! completion styling (depracated)
+# ! completion styling (deprecated)
 # zstyle ':completion:*' menu select                      # arrow key navigation
 # bindkey '^[[Z' reverse-menu-complete                    # shift-tab to reverse menu selection
 # zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # insensitive case match
@@ -169,3 +169,11 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
