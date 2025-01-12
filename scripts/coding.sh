@@ -18,6 +18,13 @@ nvm_install() {
 }
 
 #######################################
+# installs pnpm, a npm alternative
+#######################################
+pnpm_install() {
+  curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=10.0.0 sh -
+}
+
+#######################################
 # installs bun, a nodeJS and npm alternative
 #######################################
 bun_install() {

@@ -26,7 +26,7 @@ main() {
   title "Coding Tools"
   uv_install
   nvm_install
-  bun_install
+  pnpm_install
   golang_install
   dotnet_install
   success "Finished installing coding tools."
