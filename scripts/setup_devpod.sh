@@ -32,7 +32,7 @@ main() {
   title "Coding Tools"
   uv_install
   nvm_install
-  bun_install
+  pnpm_install
   golang_install
   "$HOME/.bun/bin/bun" i -g @loopback/cli git-removed-branches
   success "Finished installing coding tools."

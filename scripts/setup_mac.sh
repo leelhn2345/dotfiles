@@ -24,7 +24,7 @@ main() {
   title "coding tools"
   uv_install
   nvm_install
-  bun_install
+  pnpm_install
   success "finished installing coding tools"
 
   title "zsh & tmux"
