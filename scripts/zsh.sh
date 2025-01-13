@@ -19,6 +19,9 @@ zsh_plugins() {
   git clone https://github.com/MichaelAquilina/zsh-you-should-use.git "$ZSH_PLUGINS_DIR/zsh-you-should-use"
 }
 
+#######################################
+# there is another function for **macOS** completion
+#######################################
 zsh_completions() {
   nala --install-completion zsh >"$ZSH_COMPLETIONS_DIR/_nala"
   rustup completions zsh cargo >"$ZSH_COMPLETIONS_DIR/_cargo"
@@ -27,12 +30,13 @@ zsh_completions() {
   uv generate-shell-completions zsh >"$ZSH_COMPLETIONS_DIR/_uv"
   pip3 completion --zsh >"$ZSH_COMPLETIONS_DIR/_pip3"
   rg --generate complete-zsh >"$ZSH_COMPLETIONS_DIR/_rg"
+  pnmp completion zsh >"$ZSH_COMPLETIONS_DIR/_pnpm"
 
   rm -rf ~/.zfunc
 }
 
 #######################################
-#   zsh completions for macOS
+#  zsh completions for macOS
 #######################################
 mac_zsh_completions() {
   rustup completions zsh cargo >"$ZSH_COMPLETIONS_DIR/_cargo"
@@ -41,4 +45,5 @@ mac_zsh_completions() {
   uv generate-shell-completions zsh >"$ZSH_COMPLETIONS_DIR/_uv"
   pip3 completion --zsh >"$ZSH_COMPLETIONS_DIR/_pip3"
   rg --generate complete-zsh >"$ZSH_COMPLETIONS_DIR/_rg"
+  pnmp completion zsh >"$ZSH_COMPLETIONS_DIR/_pnpm"
 }
