@@ -35,8 +35,8 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#simple
-    darwinConfigurations."simple" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#MacBook-Pro-M1
+    darwinConfigurations."MacBook-Pro-M1" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
   };
