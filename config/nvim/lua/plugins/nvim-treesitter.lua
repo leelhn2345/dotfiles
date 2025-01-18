@@ -37,6 +37,7 @@ return {
       "http",
       "typst",
       "make",
+      "nix",
     },
     auto_install = false,
     highlight = {
