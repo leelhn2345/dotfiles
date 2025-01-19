@@ -31,14 +31,19 @@ main() {
 
   title "stowing"
   cd ..
-  cp .ignore ~
+
+  # stow files
   stow --adopt common
   rm ~/.zshrc
   stow --adopt mac
   git checkout -- .
   stow config -t ~/.config
   stow .cargo -t ~/.cargo
-  ln -sf ~/dotfiles/.wezterm.lua ~/.wezterm.lua
+
+  # symlink files
+  # ln -sf ~/dotfiles/.ignore ~/.ignore
+  # ln -sf ~/dotfiles/.wezterm.lua ~/.wezterm.lua
+
   success "Finished stowing."
 
   success "Finished setting up. Please restart terminal."
