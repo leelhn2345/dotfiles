@@ -1,16 +1,25 @@
 #!/usr/bin/env bash
 
 . ./logging.sh
-. ./packages.sh
 . ./rustup.sh
-. ./coding.sh
 . ./zsh.sh
 . ./tmux.sh
+
+nix_darwin() {
+  sh <(curl -L https://nixos.org/nix/install)
+  nix flake init -t nix-darwin/master --extra-experimental-features "nix-command flakes"
+  nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/dotfiles/config/nix#mac
+  darwin-rebuild switch --flake ~/dotfiles/config/nix-darwin#mac
+}
 
 main() {
   info "setting up mac environment"
 
-  title "rustup toolchain & bob-nvim"
+  title "setup nix"
+  nix_darwin
+  success "finished setting up nix-darwin"
+
+  title "rustup toolchain"
   rustup_stable_toolchain
   success "finished installing rustup toolchain"
 
