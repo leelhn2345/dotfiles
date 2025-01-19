@@ -29,13 +29,20 @@ rustup_stable_toolchain() {
 }
 
 cargo_crates=(
+  # "ripgrep"
+  # "lsd"
+  # "zoxide"
   "cargo-update"
   # "tree-sitter-cli"
   # "cargo-makedocs"
   "cargo-watch"
   "cargo-nextest"
   "cargo-autoinherit"
-  "cargo-machete"
+  # "cargo-machete"
+  # "jaq"
+  # "git-delta"
+  # "yazi-fm"
+  # "yazi-cli"
 )
 
 #######################################
