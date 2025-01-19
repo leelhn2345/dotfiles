@@ -21,17 +21,44 @@
       configuration =
         { pkgs, ... }:
         {
+
+          homebrew = {
+            brews = [ ];
+            enable = true;
+            onActivation = {
+              autoUpdate = true;
+              cleanup = "zap";
+              upgrade = true;
+            };
+          };
           # allows for non-open-sourced programs to be downloaded
           nixpkgs.config.allowUnfree = true;
 
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
-          environment.systemPackages = [
-            pkgs.wezterm
-            pkgs.obsidian
-            pkgs.youtube-music
-            pkgs.neofetch
-            pkgs.nixfmt-rfc-style
+          environment.systemPackages = with pkgs; [
+            nixfmt-rfc-style
+
+            wezterm
+            obsidian
+            youtube-music
+
+            lld
+            htop
+            neofetch
+            bat
+            fd
+            mercurial
+            stow
+            fswatch
+            pkgconf
+            gh
+            direnv
+            fzf
+            tmux
+
+            neovim
+            azure-cli
 
             # terminal packages
           ];
