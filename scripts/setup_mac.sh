@@ -10,22 +10,9 @@
 main() {
   info "setting up mac environment"
 
-  title "packages"
-  install_brew
-  install_packages
-  success "finished installing packages"
-
   title "rustup toolchain & bob-nvim"
-  rustup_toolchain
-  cargo_binaries
-  bob_nvim
-  success "finished installing rustup toolchain and bob-nvim"
-
-  title "coding tools"
-  uv_install
-  nvm_install
-  pnpm_install
-  success "finished installing coding tools"
+  rustup_stable_toolchain
+  success "finished installing rustup toolchain"
 
   title "zsh & tmux"
   zsh_plugins
