@@ -19,6 +19,13 @@ rustup_toolchain() {
 rustup_stable_toolchain() {
   rustup default stable
   rustup component add rust-src rust-analyzer
+
+  curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+
+  for package in "${cargo_crates[@]}"; do
+    cargo binstall "$package" -y &
+  done
+  wait
 }
 
 cargo_crates=(

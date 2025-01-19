@@ -1,5 +1,5 @@
 {
-  description = "Example nix-darwin system flake";
+  description = "nix-darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -49,39 +49,36 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = with pkgs; [
-            nixfmt-rfc-style
-
             lld
             htop
+            neovim
             neofetch
             bat
             fd
+            fzf
             mercurial
             stow
             fswatch
             pkgconf
             gh
             direnv
-            fzf
             tmux
             poppler
             imagemagick
-
-            neovim
-            azure-cli
-            pnpm
-            fnm
-            uv
             ripgrep
             yazi
             delta
             jaq
             lsd
             zoxide
-            rustup
-            cargo-binstall
+            azure-cli
 
-            # terminal packages
+            # coding
+            nixfmt-rfc-style
+            fnm
+            pnpm
+            uv
+            rustup
           ];
 
           # Necessary for using flakes on this system.

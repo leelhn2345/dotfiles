@@ -38,8 +38,7 @@ main() {
   git checkout -- .
   stow config -t ~/.config
   stow .cargo -t ~/.cargo
-  stow --adopt wezterm
-
+  ln -sf ~/dotfiles/.wezterm.lua ~/.wezterm.lua
   success "Finished stowing."
 
   success "Finished setting up. Please restart terminal."
