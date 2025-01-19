@@ -20,10 +20,9 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
-            pkgs.vim
             pkgs.neofetch
             pkgs.nixfmt-rfc-style
-            pkgs.wezterm
+            pkgs.alacritty
           ];
 
           # Necessary for using flakes on this system.
@@ -46,8 +45,8 @@
     in
     {
       # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#mac
-      darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
+      # $ darwin-rebuild build --flake .#m1
+      darwinConfigurations."m1" = inputs.nix-darwin.lib.darwinSystem {
         modules = [ configuration ];
       };
     };
