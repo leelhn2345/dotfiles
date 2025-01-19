@@ -71,6 +71,15 @@
             azure-cli
             pnpm
             fnm
+            uv
+            ripgrep
+            yazi
+            delta
+            jaq
+            lsd
+            zoxide
+            rustup
+            cargo-binstall
 
             # terminal packages
           ];

@@ -13,10 +13,15 @@ rustup_toolchain() {
   rustup component add rust-src clippy rustfmt rust-analyzer
 }
 
+#######################################
+# nix rustup
+#######################################
+rustup_stable_toolchain() {
+  rustup default stable
+  rustup component add rust-src rust-analyzer
+}
+
 cargo_crates=(
-  "ripgrep"
-  "lsd"
-  "zoxide"
   "cargo-update"
   # "tree-sitter-cli"
   # "cargo-makedocs"
@@ -24,10 +29,6 @@ cargo_crates=(
   "cargo-nextest"
   "cargo-autoinherit"
   "cargo-machete"
-  "jaq"
-  "git-delta"
-  "yazi-fm"
-  "yazi-cli"
 )
 
 #######################################

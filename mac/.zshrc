@@ -131,8 +131,6 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 
-eval "$(zoxide init --cmd cd zsh)"
-
 # golang
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
@@ -140,9 +138,9 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
-# zsh
+# shell integrations
 source <(fzf --zsh)
-
+eval "$(zoxide init --cmd cd zsh)"
 eval "$(direnv hook zsh)"
 eval "$(fnm env --use-on-cd --shell zsh)"
 
