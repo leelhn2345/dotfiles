@@ -22,7 +22,7 @@ main() {
   success "finished setting up nix-darwin"
 
   title "rustup toolchain"
-  rustup_stable_toolchain
+  nix_stable_toolchain
   success "finished installing rustup toolchain"
 
   title "zsh & tmux"
