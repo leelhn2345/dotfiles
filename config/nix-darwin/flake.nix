@@ -69,6 +69,7 @@
 
             neovim
             azure-cli
+            pnpm
 
             # terminal packages
           ];
@@ -96,7 +97,7 @@
       # $ darwin-rebuild build --flake .#mac
       darwinConfigurations."mac" = inputs.nix-darwin.lib.darwinSystem {
         modules = [
-          inputs.mac-app-util.darwinModules.default
+          mac-app-util.darwinModules.default
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
