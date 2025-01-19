@@ -19,12 +19,16 @@
       configuration =
         { pkgs, ... }:
         {
+          # allows for non-open-sourced programs to be downloaded
+          nixpkgs.config.allowUnfree = true;
+
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
+            pkgs.wezterm
+            pkgs.obsidian
             pkgs.neofetch
             pkgs.nixfmt-rfc-style
-            pkgs.alacritty
 
             # terminal packages
           ];
