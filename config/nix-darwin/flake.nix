@@ -70,6 +70,7 @@
             neovim
             azure-cli
             pnpm
+            fnm
 
             # terminal packages
           ];
