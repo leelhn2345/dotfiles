@@ -12,8 +12,6 @@ if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
-
 # download dotnet install/binary from internet
 # the path given below is the default installer location
 export DOTNET_ROOT=/usr/local/share/dotnet
