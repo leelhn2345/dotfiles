@@ -23,7 +23,18 @@
         {
 
           homebrew = {
-            brews = [ ];
+            brews = [
+              "sevenzip"
+              {
+                name = "libpq";
+                link = true;
+              }
+            ];
+            taps = [ "th-ch/youtube-music" ];
+            casks = [
+              "wezterm"
+              "obsidian"
+            ];
             enable = true;
             onActivation = {
               autoUpdate = true;
@@ -31,6 +42,7 @@
               upgrade = true;
             };
           };
+
           # allows for non-open-sourced programs to be downloaded
           nixpkgs.config.allowUnfree = true;
 
@@ -38,10 +50,6 @@
           # $ nix-env -qaP | grep wget
           environment.systemPackages = with pkgs; [
             nixfmt-rfc-style
-
-            wezterm
-            obsidian
-            youtube-music
 
             lld
             htop
@@ -56,6 +64,8 @@
             direnv
             fzf
             tmux
+            poppler
+            imagemagick
 
             neovim
             azure-cli
