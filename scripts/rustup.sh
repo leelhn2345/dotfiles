@@ -13,25 +13,35 @@ rustup_toolchain() {
   rustup component add rust-src clippy rustfmt rust-analyzer
 }
 
+nix_cargo_crates=(
+  "cargo-update"
+  # "tree-sitter-cli"
+  # "cargo-makedocs"
+  "cargo-watch"
+  "cargo-nextest"
+  "cargo-autoinherit"
+  "cargo-machete"
+)
+
 #######################################
 # nix rustup
 #######################################
-rustup_stable_toolchain() {
+nix_stable_toolchain() {
   rustup default stable
   rustup component add rust-src rust-analyzer
 
   curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 
-  for package in "${cargo_crates[@]}"; do
+  for package in "${nix_cargo_crates[@]}"; do
     cargo binstall "$package" -y &
   done
   wait
 }
 
 cargo_crates=(
-  # "ripgrep"
-  # "lsd"
-  # "zoxide"
+  "ripgrep"
+  "lsd"
+  "zoxide"
   "cargo-update"
   # "tree-sitter-cli"
   # "cargo-makedocs"
@@ -39,10 +49,10 @@ cargo_crates=(
   "cargo-nextest"
   "cargo-autoinherit"
   # "cargo-machete"
-  # "jaq"
-  # "git-delta"
-  # "yazi-fm"
-  # "yazi-cli"
+  "jaq"
+  "git-delta"
+  "yazi-fm"
+  "yazi-cli"
 )
 
 #######################################
