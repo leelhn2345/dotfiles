@@ -86,6 +86,7 @@ return {
           )
         end,
       },
+      nil_ls = {},
     },
   },
   config = function(_, opts)

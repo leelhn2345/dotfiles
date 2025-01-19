@@ -11,6 +11,7 @@ bindkey -e
 # variables
 export ZSH_COMPLETIONS_DIR="$HOME/.config/zsh/completions"
 export ZSH_PLUGINS_DIR="$HOME/.config/zsh/plugins"
+export NIX_DARWIN_FLAKE="$HOME/dotfiles/nix-darwin"
 
 # history
 HISTFILE=~/.zsh_history
@@ -59,7 +60,9 @@ zle_highlight=('paste:none')  # no highlighting during paste
 alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
 
-alias update='brew update && brew upgrade'
+# alias update='brew update && brew upgrade'
+alias update='nix flake update --flake $NIX_DARWIN_FLAKE'
+alias build='darwin-rebuild switch --flake $NIX_DARWIN_FLAKE#mac'
 
 alias cdd='cd ~/dotfiles'
 alias vd='cd ~/dotfiles && nvim'
@@ -129,19 +132,6 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 
-eval "$(zoxide init --cmd cd zsh)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 # golang
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
@@ -149,10 +139,11 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
-# zsh
+# shell integrations
 source <(fzf --zsh)
-
+eval "$(zoxide init --cmd cd zsh)"
 eval "$(direnv hook zsh)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -162,11 +153,3 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end

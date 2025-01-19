@@ -30,7 +30,7 @@ Summary:
 - environments:
   1. WSL2
   2. devpod
-  3. macOS
+  3. macOS (nix)
 
 **Font used** is [Monaspace Neon](https://monaspace.githubnext.com/).
 Nerd font variant is `MonaspiceNe Nerd Font`.
