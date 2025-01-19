@@ -6,6 +6,7 @@
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     mac-app-util.url = "github:hraban/mac-app-util";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
   outputs =
@@ -14,6 +15,7 @@
       nix-darwin,
       nixpkgs,
       mac-app-util,
+      nix-homebrew,
     }:
     let
       configuration =
@@ -27,6 +29,7 @@
           environment.systemPackages = [
             pkgs.wezterm
             pkgs.obsidian
+            pkgs.youtube-music
             pkgs.neofetch
             pkgs.nixfmt-rfc-style
 
@@ -57,6 +60,22 @@
       darwinConfigurations."mac" = inputs.nix-darwin.lib.darwinSystem {
         modules = [
           inputs.mac-app-util.darwinModules.default
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              # Install Homebrew under the default prefix
+              enable = true;
+
+              # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+              enableRosetta = true;
+
+              # User owning the Homebrew prefix
+              user = "nelson";
+
+              # Automatically migrate existing Homebrew installations
+              autoMigrate = true;
+            };
+          }
           configuration
         ];
       };
