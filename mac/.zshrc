@@ -59,7 +59,8 @@ zle_highlight=('paste:none')  # no highlighting during paste
 alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
 
-alias update='brew update && brew upgrade'
+# alias update='brew update && brew upgrade'
+alias update='darwin-rebuild switch --flake ~/dotfiles/config/nix-darwin#mac'
 
 alias cdd='cd ~/dotfiles'
 alias vd='cd ~/dotfiles && nvim'

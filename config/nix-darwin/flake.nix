@@ -23,6 +23,8 @@
             pkgs.neofetch
             pkgs.nixfmt-rfc-style
             pkgs.alacritty
+
+            # terminal packages
           ];
 
           # Necessary for using flakes on this system.
@@ -45,8 +47,8 @@
     in
     {
       # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#m1
-      darwinConfigurations."m1" = inputs.nix-darwin.lib.darwinSystem {
+      # $ darwin-rebuild build --flake .#mac
+      darwinConfigurations."mac" = inputs.nix-darwin.lib.darwinSystem {
         modules = [ configuration ];
       };
     };
