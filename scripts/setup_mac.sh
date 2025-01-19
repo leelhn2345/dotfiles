@@ -1,31 +1,29 @@
 #!/usr/bin/env bash
 
 . ./logging.sh
-. ./packages.sh
 . ./rustup.sh
-. ./coding.sh
 . ./zsh.sh
 . ./tmux.sh
+
+NIX_DARWIN_FLAKE="$HOME/dotfiles/nix-darwin#mac"
+
+nix_darwin() {
+  sh <(curl -L https://nixos.org/nix/install)
+  nix flake init -t nix-darwin/master --extra-experimental-features "nix-command flakes"
+  nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake "$NIX_DARWIN_FLAKE"
+  darwin-rebuild switch --flake "$NIX_DARWIN_FLAKE"
+}
 
 main() {
   info "setting up mac environment"
 
-  title "packages"
-  install_brew
-  install_packages
-  success "finished installing packages"
+  title "setup nix"
+  nix_darwin
+  success "finished setting up nix-darwin"
 
-  title "rustup toolchain & bob-nvim"
-  rustup_toolchain
-  cargo_binaries
-  bob_nvim
-  success "finished installing rustup toolchain and bob-nvim"
-
-  title "coding tools"
-  uv_install
-  nvm_install
-  pnpm_install
-  success "finished installing coding tools"
+  title "rustup toolchain"
+  rustup_stable_toolchain
+  success "finished installing rustup toolchain"
 
   title "zsh & tmux"
   zsh_plugins
@@ -35,14 +33,18 @@ main() {
 
   title "stowing"
   cd ..
-  cp .ignore ~
+
+  # stow files
   stow --adopt common
   rm ~/.zshrc
   stow --adopt mac
   git checkout -- .
   stow config -t ~/.config
   stow .cargo -t ~/.cargo
-  stow --adopt wezterm
+
+  # symlink files
+  # ln -sf ~/dotfiles/.ignore ~/.ignore
+  # ln -sf ~/dotfiles/.wezterm.lua ~/.wezterm.lua
 
   success "Finished stowing."
 

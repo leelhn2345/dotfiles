@@ -39,11 +39,6 @@ zsh_completions() {
 #  zsh completions for macOS
 #######################################
 mac_zsh_completions() {
-  rustup completions zsh cargo >"$ZSH_COMPLETIONS_DIR/_cargo"
-  rustup completions zsh >"$ZSH_COMPLETIONS_DIR/_rustup"
   curl -o "$ZSH_COMPLETIONS_DIR/_golang" https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_golang
-  uv generate-shell-completions zsh >"$ZSH_COMPLETIONS_DIR/_uv"
   pip3 completion --zsh >"$ZSH_COMPLETIONS_DIR/_pip3"
-  rg --generate complete-zsh >"$ZSH_COMPLETIONS_DIR/_rg"
-  pnmp completion zsh >"$ZSH_COMPLETIONS_DIR/_pnpm"
 }

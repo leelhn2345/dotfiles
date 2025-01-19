@@ -33,6 +33,7 @@ return {
       sql = { "sql_formatter" },
       cs = { "csharpier" },
       go = { "goimports-reviser", "gofumpt", "golines" },
+      nix = { "nixfmt" },
       ["_"] = { "trim_whitespace" },
     },
     format_on_save = {
