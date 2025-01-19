@@ -5,11 +5,13 @@
 . ./zsh.sh
 . ./tmux.sh
 
+NIX_DARWIN_FLAKE="$HOME/dotfiles/nix-darwin#mac"
+
 nix_darwin() {
   sh <(curl -L https://nixos.org/nix/install)
   nix flake init -t nix-darwin/master --extra-experimental-features "nix-command flakes"
-  nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/dotfiles/config/nix#mac
-  darwin-rebuild switch --flake ~/dotfiles/config/nix-darwin#mac
+  nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake "$NIX_DARWIN_FLAKE"
+  darwin-rebuild switch --flake "$NIX_DARWIN_FLAKE"
 }
 
 main() {

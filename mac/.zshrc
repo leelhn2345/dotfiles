@@ -11,6 +11,7 @@ bindkey -e
 # variables
 export ZSH_COMPLETIONS_DIR="$HOME/.config/zsh/completions"
 export ZSH_PLUGINS_DIR="$HOME/.config/zsh/plugins"
+export NIX_DARWIN_FLAKE="$HOME/dotfiles/nix-darwin"
 
 # history
 HISTFILE=~/.zsh_history
@@ -60,8 +61,8 @@ alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
 
 # alias update='brew update && brew upgrade'
-alias update='nix flake update --flake ~/dotfiles/config/nix-darwin'
-alias build='darwin-rebuild switch --flake ~/dotfiles/config/nix-darwin#mac'
+alias update='nix flake update --flake $NIX_DARWIN_FLAKE'
+alias build='darwin-rebuild switch --flake $NIX_DARWIN_FLAKE#mac'
 
 alias cdd='cd ~/dotfiles'
 alias vd='cd ~/dotfiles && nvim'
