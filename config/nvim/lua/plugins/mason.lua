@@ -35,7 +35,6 @@ return {
         "omnisharp",
         "gopls",
         "tinymist",
-        "nil_ls",
       },
       automatic_installation = true,
     },
