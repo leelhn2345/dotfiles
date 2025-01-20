@@ -31,6 +31,7 @@ zsh_completions() {
   pip3 completion --zsh >"$ZSH_COMPLETIONS_DIR/_pip3"
   rg --generate complete-zsh >"$ZSH_COMPLETIONS_DIR/_rg"
   pnmp completion zsh >"$ZSH_COMPLETIONS_DIR/_pnpm"
+  fnm completions --shell zsh >"$ZSH_COMPLETIONS_DIR/_fnm"
 
   rm -rf ~/.zfunc
 }
