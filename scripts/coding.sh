@@ -17,6 +17,11 @@ nvm_install() {
   nvm install --lts
 }
 
+fnm_install() {
+  curl -fsSL https://fnm.vercel.app/install | bash
+  ./~/.local/share/fnm/fnm install --lts
+}
+
 #######################################
 # installs pnpm, a npm alternative
 #######################################
