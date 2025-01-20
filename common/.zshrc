@@ -133,8 +133,8 @@ bindkey -M emacs '^N' history-substring-search-down
 
 eval "$(zoxide init --cmd cd zsh)"
 
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+# # bun completions
+# [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
