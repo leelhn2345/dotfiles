@@ -29,6 +29,7 @@ return {
         horizontal = "right:45%",
         winopts = { number = false },
       },
+      title_flags = false,
     },
     keymap = {
       fzf = {
