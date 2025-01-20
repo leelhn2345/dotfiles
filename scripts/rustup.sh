@@ -28,10 +28,17 @@ rustup_stable_toolchain() {
   wait
 }
 
+terminal_crates=(
+  "ripgrep"
+  "lsd"
+  "zoxide"
+  "jaq"
+  "git-delta"
+  "yazi-fm"
+  "yazi-cli"
+)
+
 cargo_crates=(
-  # "ripgrep"
-  # "lsd"
-  # "zoxide"
   "cargo-update"
   # "tree-sitter-cli"
   # "cargo-makedocs"
@@ -39,10 +46,6 @@ cargo_crates=(
   "cargo-nextest"
   "cargo-autoinherit"
   # "cargo-machete"
-  # "jaq"
-  # "git-delta"
-  # "yazi-fm"
-  # "yazi-cli"
 )
 
 #######################################
@@ -59,7 +62,12 @@ cargo_binaries() {
 
   curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 
-  for package in "${cargo_crates[@]}"; do
+  rust_crates=(
+    "${terminal_crates[@]}"
+    "${cargo_crates[@]}"
+  )
+
+  for package in "${rust_crates[@]}"; do
     cargo binstall "$package" -y &
   done
   wait
