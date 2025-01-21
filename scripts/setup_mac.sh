@@ -12,6 +12,8 @@ nix_darwin() {
   nix flake init -t nix-darwin/master --extra-experimental-features "nix-command flakes"
   nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake "$NIX_DARWIN_FLAKE"
   darwin-rebuild switch --flake "$NIX_DARWIN_FLAKE"
+
+  fnm install --lts # installs node-lts
 }
 
 main() {
