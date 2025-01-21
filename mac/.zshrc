@@ -144,6 +144,7 @@ export PATH="$PATH:$GOPATH/bin"
 source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(direnv hook zsh)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -153,3 +154,11 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# pnpm
+export PNPM_HOME="/Users/nelson/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
