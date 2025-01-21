@@ -144,7 +144,6 @@ export PATH="$PATH:$GOPATH/bin"
 source <(fzf --zsh)
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(direnv hook zsh)"
-eval "$(fnm env --use-on-cd --shell zsh)"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
