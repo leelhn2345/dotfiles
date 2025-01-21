@@ -30,10 +30,13 @@
                 link = true;
               }
             ];
-            taps = [ "th-ch/youtube-music" ];
+            taps = [
+              "th-ch/youtube-music"
+            ];
             casks = [
               "wezterm"
               "obsidian"
+              "youtube-music"
             ];
             enable = true;
             onActivation = {
