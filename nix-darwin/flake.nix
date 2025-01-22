@@ -65,6 +65,7 @@
             fswatch
             pkgconf
             gh
+            glab
             direnv
             tmux
             poppler
