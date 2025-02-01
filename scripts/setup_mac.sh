@@ -28,6 +28,7 @@ main() {
   success "finished installing rustup toolchain"
 
   title "zsh & tmux"
+  zsh_setup
   zsh_plugins
   mac_zsh_completions
   tmux_tpm
