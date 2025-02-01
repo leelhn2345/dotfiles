@@ -29,6 +29,7 @@
                 name = "libpq";
                 link = true;
               }
+              "gpg2"
             ];
             taps = [
               "th-ch/youtube-music"
