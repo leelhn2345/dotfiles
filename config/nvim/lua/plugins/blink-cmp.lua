@@ -1,9 +1,14 @@
 return {
   "saghen/blink.cmp",
   event = "InsertEnter",
-  dependencies = { "rafamadriz/friendly-snippets" },
-  -- use a release tag to download pre-built binaries
-  version = "*",
+  dependencies = {
+    "rafamadriz/friendly-snippets",
+    {
+      "Kaiser-Yang/blink-cmp-git",
+      dependencies = { "nvim-lua/plenary.nvim" },
+    },
+  },
+  version = "*", -- use a release tag to download pre-built binaries
   opts = {
     keymap = {
       ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
@@ -18,10 +23,19 @@ return {
       nerd_font_variant = "normal",
     },
     sources = {
-      default = { "lsp", "path", "snippets", "buffer", "dadbod" },
+      default = { "lsp", "path", "snippets", "buffer", "dadbod", "git" },
       cmdline = {},
       providers = {
         dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+        git = {
+          module = "blink-cmp-git",
+          name = "Git",
+          opts = {
+            commit = {
+              enable = false,
+            },
+          },
+        },
       },
     },
     completion = {
