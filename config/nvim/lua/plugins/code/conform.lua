@@ -3,18 +3,6 @@ return {
   lazy = true,
   event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
   opts = {
-    formatters = {
-      sql_formatter = {
-        args = {
-          "-l",
-          "postgresql",
-          "-c", -- use json string for config
-          '{\
-            "keywordCase": "upper"\
-          }',
-        },
-      },
-    },
     formatters_by_ft = {
       javascript = { "prettierd" },
       typescript = { "prettierd" },
@@ -30,7 +18,7 @@ return {
       lua = { "stylua" },
       python = { "ruff_fix", "ruff_format" },
       sh = { "shfmt" },
-      sql = { "sql_formatter" },
+      sql = { "sql_formatter" }, -- use `.sql-formatter.json` to configure
       cs = { "csharpier" },
       go = { "goimports-reviser", "gofumpt", "golines" },
       nix = { "nixfmt" },
