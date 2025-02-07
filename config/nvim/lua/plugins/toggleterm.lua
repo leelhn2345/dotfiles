@@ -4,8 +4,12 @@ return {
   cmd = "ToggleTerm",
   keys = {
     { "\\", ":ToggleTerm", desc = "Toggle Terminal" },
-    { "<esc>", "<C-\\><C-n>", mode = "t" },
-    { "<leader>\\", ":TermSelect<CR>", mode = "n", desc = "Select Terminal" },
+    {
+      "<leader>\\",
+      "<CMD>TermSelect<CR>",
+      mode = "n",
+      desc = "Select Terminal",
+    },
   },
   opts = {
     size = function(term)
