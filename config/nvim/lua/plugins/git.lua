@@ -3,7 +3,6 @@ return {
   {
     "NeogitOrg/neogit",
     dependencies = {
-      "nvim-telescope/telescope.nvim", -- preferred
       "nvim-lua/plenary.nvim", -- required
       "sindrets/diffview.nvim", -- diff integration
     },
@@ -19,6 +18,7 @@ return {
     opts = {
       console_timeout = 5000,
       integrations = {
+        telescope = false,
         diffview = true,
       },
       status = {
@@ -49,7 +49,7 @@ return {
     },
     cmd = "Octo",
     keys = {
-      { "<leader>O", "<CMD>Octo<CR>", desc = "Octo", silent = true },
+      { "<leader>O", "<CMD>Octo<CR>", desc = "Octo" },
     },
     opts = {
       default_merge_method = "squash",
