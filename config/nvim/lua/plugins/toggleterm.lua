@@ -23,4 +23,19 @@ return {
     direction = "float",
     insert_mappings = false,
   },
+  config = function(_, opts)
+    require("toggleterm").setup(opts)
+
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "toggleterm",
+      callback = function()
+        vim.keymap.set(
+          "t",
+          "<esc>",
+          "<C-\\><C-n>",
+          { buffer = true, silent = true, desc = "Escape to normal mode" }
+        )
+      end,
+    })
+  end,
 }
