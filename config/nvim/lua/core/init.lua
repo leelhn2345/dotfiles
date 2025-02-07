@@ -11,12 +11,20 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("core.autocmds")
 require("core.diagnostics")
 require("core.filetypes")
 require("core.globals")
 require("core.keymaps")
 require("core.options")
+
+-- Load all autocommands from `core/autocmds/`
+local autocmd_path = vim.fn.stdpath("config") .. "/lua/core/autocmds"
+for _, file in ipairs(vim.fn.readdir(autocmd_path)) do
+  if file:match("%.lua$") then
+    local module_name = "core.autocmds." .. file:gsub("%.lua$", "")
+    require(module_name)
+  end
+end
 
 local plugins = {
   { import = "plugins" },
