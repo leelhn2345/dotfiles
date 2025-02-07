@@ -43,7 +43,7 @@ return {
     fzf_colors = true,
     fzf_opts = {
       ["--layout"] = "default",
-      ["--no-scrollbar"] = true,
+      -- ["--no-scrollbar"] = true,
       ["--cycle"] = true,
       ["--wrap"] = true,
     },
