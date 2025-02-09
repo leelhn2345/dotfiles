@@ -38,7 +38,6 @@ return {
       "typst",
       "make",
       "nix",
-      "gitcommit",
     },
     auto_install = false,
     highlight = {
