@@ -92,7 +92,6 @@ devpod up <workspace-git-url> --ide none --devcontainer-image mcr.microsoft.com/
 
 2 important things to take note:
 
-- download [dotnet](https://learn.microsoft.com/en-us/dotnet/core/install/macos).
 - download [nerd fonts](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Monaspace.zip)
   - use monaspice neon nerd font
 
