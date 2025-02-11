@@ -85,7 +85,12 @@
             pnpm
             uv
             rustup
+            dotnet-sdk
           ];
+
+          environment.variables = {
+            DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
+          };
 
           # Necessary for using flakes on this system.
           nix.settings.experimental-features = "nix-command flakes";
