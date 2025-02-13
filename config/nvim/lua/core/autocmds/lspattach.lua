@@ -15,7 +15,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set(
       "n",
       "gr",
-      "<cmd>FzfLua lsp_references jump_to_single_result=true ignore_current_line=true<CR>",
+      "<cmd>FzfLua lsp_references jump1=true ignore_current_line=true<CR>",
       opts
     ) -- show definition, references
 
@@ -26,7 +26,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set(
       "n",
       "gd",
-      "<cmd>FzfLua lsp_definitions jump_to_single_result=true ignore_current_line=true<cr>",
+      "<cmd>FzfLua lsp_definitions jump1=true ignore_current_line=true<cr>",
       opts
     ) -- show lsp definitions
 
@@ -34,7 +34,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set(
       "n",
       "gI",
-      "<cmd>FzfLua lsp_implementations jump_to_single_result=true ignore_current_line=true<cr>",
+      "<cmd>FzfLua lsp_implementations jump1=true ignore_current_line=true<cr>",
       opts
     ) -- show lsp implementations
 
@@ -42,7 +42,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set(
       "n",
       "gt",
-      "<cmd>FzfLua lsp_typedefs jump_to_single_result=true ignore_current_line=true<cr>",
+      "<cmd>FzfLua lsp_typedefs jump1=true ignore_current_line=true<cr>",
       opts
     ) -- show lsp type definitions
 
