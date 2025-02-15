@@ -17,7 +17,7 @@ return {
     },
     {
       "<leader>dh",
-      ":DiffviewFileHistory<CR>",
+      ":DiffviewFileHistory %<CR>",
       desc = "Diff History",
       silent = true,
     },
