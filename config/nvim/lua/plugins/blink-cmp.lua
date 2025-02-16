@@ -22,9 +22,11 @@ return {
       use_nvim_cmp_as_default = false,
       nerd_font_variant = "normal",
     },
+    cmdline = {
+      enabled = false,
+    },
     sources = {
       default = { "lsp", "path", "snippets", "buffer", "dadbod", "git" },
-      cmdline = {},
       providers = {
         dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
         git = {
