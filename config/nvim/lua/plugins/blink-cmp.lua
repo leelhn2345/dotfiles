@@ -19,7 +19,6 @@ return {
       ["<CR>"] = { "select_and_accept", "fallback" },
     },
     appearance = {
-      use_nvim_cmp_as_default = false,
       nerd_font_variant = "normal",
     },
     cmdline = {
@@ -41,15 +40,8 @@ return {
       },
     },
     completion = {
-      -- experimental auto-brackets support
-      accept = {
-        auto_brackets = {
-          enabled = true,
-        },
-      },
       list = {
         selection = {
-          preselect = true,
           auto_insert = false,
         },
       },
