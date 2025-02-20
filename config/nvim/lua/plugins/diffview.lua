@@ -23,11 +23,11 @@ return {
     },
   },
   opts = {
-    view = {
-      merge_tool = {
-        layout = "diff3_mixed",
-      },
-    },
+    -- view = {
+    --   merge_tool = {
+    --     layout = "diff3_mixed",
+    --   },
+    -- },
     keymaps = {
       view = { { "n", "q", ":tabc<CR>", { desc = "Quit diffview" } } },
       file_panel = { { "n", "q", ":tabc<CR>", { desc = "Quit diffview" } } },
