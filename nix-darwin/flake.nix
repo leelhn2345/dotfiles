@@ -80,6 +80,7 @@
             azure-cli
 
             # coding
+            nil
             nixfmt-rfc-style
             fnm
             pnpm

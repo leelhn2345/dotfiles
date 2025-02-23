@@ -44,14 +44,6 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     opts = {
       ensure_installed = {
-        -- lsp
-        {
-          "nil_ls",
-          condition = function()
-            return os.execute("nix --version")
-          end,
-        },
-
         -- dap
         "debugpy", -- python
         "js-debug-adapter", -- nodejs
