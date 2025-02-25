@@ -65,6 +65,7 @@ return {
         "goimports-reviser",
         "gofumpt",
         "golines",
+        "kulala-fmt",
       },
     },
   },
