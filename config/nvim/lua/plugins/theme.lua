@@ -10,7 +10,7 @@ return {
       floats = "transparent",
     },
     on_highlights = function(highlights, _)
-      highlights["Pmenu"] = { bg = "NONE" }
+      highlights["Pmenu"] = { bg = "NONE", fg = "#565f89" }
       highlights["BlinkCmpKindVariable"] = { bg = "NONE", fg = "#deb887" }
       highlights["BlinkCmpKindInterface"] = { bg = "NONE", fg = "#deb887" }
       highlights["CmpItemKindVariable"] = { bg = "NONE", fg = "#deb887" }
