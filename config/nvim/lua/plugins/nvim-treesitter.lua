@@ -38,6 +38,7 @@ return {
       "typst",
       "make",
       "nix",
+      "csv",
     },
     auto_install = false,
     highlight = {
