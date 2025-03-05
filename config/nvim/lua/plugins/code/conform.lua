@@ -3,13 +3,6 @@ return {
   lazy = true,
   event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
   opts = {
-    formatters = {
-      kulala = { -- NOTE: can be removed once `conform.nvim` updates kulala-fmt
-        command = "kulala-fmt",
-        args = { "format", "$FILENAME" },
-        stdin = false,
-      },
-    },
     formatters_by_ft = {
       javascript = { "prettierd" },
       typescript = { "prettierd" },
@@ -29,7 +22,7 @@ return {
       cs = { "csharpier" },
       go = { "goimports-reviser", "gofumpt", "golines" },
       nix = { "nixfmt" },
-      http = { "kulala" },
+      http = { "kulala-fmt" },
       ["_"] = { "trim_whitespace" },
     },
     format_on_save = {
