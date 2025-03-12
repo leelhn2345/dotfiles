@@ -43,7 +43,7 @@ main() {
   cp .ignore ~ # whitelisting for `.env` for ripgren and fd-find
   stow --adopt common
   stow --adopt home
-  git checkout -- .
+  git restore .
   stow config -t ~/.config
   stow .cargo -t ~/.cargo
 
