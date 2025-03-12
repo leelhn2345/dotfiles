@@ -41,7 +41,7 @@ main() {
   stow --adopt common
   rm ~/.zshrc
   stow --adopt mac
-  git checkout -- .
+  git restore .
   stow config -t ~/.config
   stow .cargo -t ~/.cargo
 

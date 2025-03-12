@@ -54,7 +54,7 @@ main() {
   cp .ignore ~ # whitelisting `.env` for ripgrep and fd-find
   stow --adopt common
   stow --adopt devpod
-  git checkout -- .
+  git restore .
   stow config -t ~/.config
   success "Finished stowing."
 
