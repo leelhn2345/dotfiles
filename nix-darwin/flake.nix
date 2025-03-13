@@ -21,7 +21,6 @@
       configuration =
         { pkgs, ... }:
         {
-
           homebrew = {
             brews = [
               "sevenzip"
@@ -87,6 +86,7 @@
             uv
             rustup
             dotnet-sdk
+            typst
           ];
 
           environment.variables = {
