@@ -38,6 +38,7 @@ return {
       "typst",
       "make",
       "nix",
+      "glimmer",
     },
     auto_install = false,
     highlight = {

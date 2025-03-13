@@ -55,6 +55,7 @@ return {
         "shellcheck",
         "hadolint",
         "golangci-lint",
+        "djlint",
 
         -- formatter
         "stylua",

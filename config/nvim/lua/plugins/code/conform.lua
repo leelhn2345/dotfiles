@@ -23,6 +23,7 @@ return {
       go = { "goimports-reviser", "gofumpt", "golines" },
       nix = { "nixfmt" },
       http = { "kulala-fmt" },
+      handlebars = { "djlint" },
       ["_"] = { "trim_whitespace" },
     },
     format_on_save = {
