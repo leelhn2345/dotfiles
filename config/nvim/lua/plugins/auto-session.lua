@@ -24,6 +24,7 @@ return {
       "no-neck-pain",
       "noice",
       "typst",
+      "kulala_ui.json",
     },
     pre_save_cmds = {
       -- "Neotree close",
@@ -31,6 +32,7 @@ return {
       "lua require('neogit').close()",
       -- "lua require('spectre').close()",
       "DBUIClose",
+      "bd kulala://ui",
     },
   },
 }
