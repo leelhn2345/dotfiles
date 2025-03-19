@@ -27,10 +27,11 @@ return {
     sources = {
       default = { "lsp", "path", "snippets", "buffer", "dadbod", "git" },
       providers = {
-        dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+        dadbod = {
+          module = "vim_dadbod_completion.blink",
+        },
         git = {
           module = "blink-cmp-git",
-          name = "Git",
           opts = {
             commit = {
               enable = false,
