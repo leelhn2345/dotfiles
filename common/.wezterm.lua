@@ -22,7 +22,7 @@ config = {
 	-- appearance
 	native_macos_fullscreen_mode = true, -- only has an effect when running on macOS
 	window_decorations = "RESIZE",
-	window_background_opacity = 0.9,
+	window_background_opacity = 0.8,
 	window_padding = {
 		bottom = 0,
 		right = 0,
