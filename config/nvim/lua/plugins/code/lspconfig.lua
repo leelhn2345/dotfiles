@@ -70,12 +70,13 @@ return {
           },
         },
       },
+      -- https://github.com/Myriad-Dreamin/tinymist/blob/main/editors/neovim/Configuration.md
       tinymist = {
         settings = {
           formatterMode = "typstfmt",
           formatterPrintWidth = 80,
-          exportPdf = "onType",
-          outputPath = "$root/target/$dir/$name",
+          -- exportPdf = "onType",
+          -- outputPath = "$root/target/$dir/$name",
         },
         on_attach = function(_, bufnr)
           vim.keymap.set(
