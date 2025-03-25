@@ -6,8 +6,8 @@ return {
       number = true,
       relativenumber = true,
     },
-    edit = {
-      enabled = false,
-    },
+    -- edit = {
+    --   enabled = false,
+    -- },
   },
 }
