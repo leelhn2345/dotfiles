@@ -18,16 +18,20 @@ vim.keymap.set(
   { silent = true, desc = "Split Horizontal" }
 )
 
--- Quickfix
-vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next quickfix" })
-vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Prev quickfix" })
+-- # Quickfix (default mappings as of v0.11.0)
+-- vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next quickfix" })
+-- vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Prev quickfix" })
 
 -- Indenting
 vim.keymap.set("v", "<", "<gv", { desc = "Outdent" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent" })
 
--- Unmap keys
-vim.keymap.set("n", "q", "<Nop>") -- I don't use macros at all... yet.
+-- # Unmap keys
+-- unmap default vim.lsp keys. these cause `gr` to have delays.
+vim.keymap.del("n", "grn")
+vim.keymap.del("n", "gra")
+vim.keymap.del("n", "grr")
+vim.keymap.del("n", "gri")
 
 -- Move selected lines with shift+j or shift+k
 vim.keymap.set(
