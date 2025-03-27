@@ -18,7 +18,6 @@ return {
     opts = {
       console_timeout = 5000,
       integrations = {
-        telescope = false,
         diffview = true,
       },
       status = {
@@ -44,7 +43,6 @@ return {
     "pwntester/octo.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim", -- preferred
       "nvim-tree/nvim-web-devicons",
     },
     cmd = "Octo",
@@ -52,6 +50,7 @@ return {
       { "<leader>O", "<CMD>Octo<CR>", desc = "Octo" },
     },
     opts = {
+      picker = "fzf-lua",
       default_merge_method = "squash",
       default_delete_branch = true,
       enable_builtin = true,

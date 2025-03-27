@@ -8,6 +8,16 @@ if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# add cargo bin
+if [ -d "$HOME/.cargo/bin" ]; then
+    PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+# add bob-nvim
+if [ -d "$HOME/.local/share/bob/nvim-bin" ]; then
+    PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+fi
+
 # export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!{**/.git/*}'"
 export FZF_DEFAULT_COMMAND="fd --type file -E .git"
 export FZF_DEFAULT_OPTS="
