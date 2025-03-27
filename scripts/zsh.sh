@@ -32,6 +32,7 @@ zsh_completions() {
   rg --generate complete-zsh >"$ZSH_COMPLETIONS_DIR/_rg"
   pnmp completion zsh >"$ZSH_COMPLETIONS_DIR/_pnpm"
   fnm completions --shell zsh >"$ZSH_COMPLETIONS_DIR/_fnm"
+  ~/.cargo/bin/bob complete zsh >"$ZSH_COMPLETIONS_DIR/_bob"
 
   rm -rf ~/.zfunc
 }
