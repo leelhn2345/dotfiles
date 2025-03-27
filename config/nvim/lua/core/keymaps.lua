@@ -1,6 +1,4 @@
--- Select all
-vim.keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
-
+-- # Comment
 vim.keymap.set("n", "<C-_>", "gcc", { remap = true })
 vim.keymap.set("v", "<C-_>", "gc", { remap = true })
 
@@ -72,6 +70,6 @@ vim.keymap.set("n", "N", "Nzz", { desc = "Prev search result" })
 -- Joins next line without moving cursor
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Joins the line below" })
 
--- tabs
+-- Tabs
 vim.keymap.set("n", "]t", "<cmd>tabnext<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "[t", "<cmd>tabprevious<CR>", { desc = "Prev tab" })
