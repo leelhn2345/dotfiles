@@ -1,4 +1,4 @@
-local opt = vim.opt
+local opt = vim.o
 
 -- Tab / Indentation
 opt.tabstop = 2 -- number of spaces per tab
@@ -23,6 +23,7 @@ opt.signcolumn = "yes"
 opt.cmdheight = 1
 opt.scrolloff = 10
 opt.completeopt = "menu,menuone,preview"
+-- opt.winborder = "rounded"
 
 -- Behaviour
 opt.swapfile = false
@@ -30,7 +31,7 @@ opt.undofile = true
 opt.undodir = vim.fn.expand("~/.vim/undodir")
 opt.splitright = true
 opt.splitbelow = true
-opt.iskeyword:append("-")
+vim.o.iskeyword = vim.o.iskeyword .. ",-"
 opt.mouse = "a"
 
 -- Clipboard for WSL2
