@@ -42,4 +42,5 @@ zsh_completions() {
 mac_zsh_completions() {
   curl -o "$ZSH_COMPLETIONS_DIR/_golang" https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_golang
   pip3 completion --zsh >"$ZSH_COMPLETIONS_DIR/_pip3"
+  ~/.cargo/bin/bob complete zsh >"$ZSH_COMPLETIONS_DIR/_bob"
 }
