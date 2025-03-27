@@ -22,7 +22,7 @@ opt.colorcolumn = "80"
 opt.signcolumn = "yes"
 opt.cmdheight = 1
 opt.scrolloff = 10
-opt.completeopt = "menu,menuone,preview"
+opt.completeopt = "menuone,popup,fuzzy"
 -- opt.winborder = "rounded"
 
 -- Behaviour
