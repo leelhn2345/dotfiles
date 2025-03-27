@@ -1,12 +1,4 @@
--- Select all
-vim.keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
-
--- Go to start/end of line
--- vim.keymap.set("n", "H", "0", { desc = "Start of line" })
--- vim.keymap.set("v", "H", "0", { desc = "Start of line" })
--- vim.keymap.set("n", "L", "$", { desc = "End of line" })
--- vim.keymap.set("v", "L", "$", { desc = "End of line" })
-
+-- # Comment
 vim.keymap.set("n", "<C-_>", "gcc", { remap = true })
 vim.keymap.set("v", "<C-_>", "gc", { remap = true })
 
@@ -24,16 +16,20 @@ vim.keymap.set(
   { silent = true, desc = "Split Horizontal" }
 )
 
--- Quickfix
-vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next quickfix" })
-vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Prev quickfix" })
+-- # Quickfix (default mappings as of v0.11.0)
+-- vim.keymap.set("n", "]q", "<cmd>cnext<CR>", { desc = "Next quickfix" })
+-- vim.keymap.set("n", "[q", "<cmd>cprev<CR>", { desc = "Prev quickfix" })
 
 -- Indenting
 vim.keymap.set("v", "<", "<gv", { desc = "Outdent" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent" })
 
--- Unmap keys
-vim.keymap.set("n", "q", "<Nop>") -- I don't use macros at all... yet.
+-- # Unmap keys
+-- unmap default vim.lsp keys. these cause `gr` to have delays.
+vim.keymap.del("n", "grn")
+vim.keymap.del("n", "gra")
+vim.keymap.del("n", "grr")
+vim.keymap.del("n", "gri")
 
 -- Move selected lines with shift+j or shift+k
 vim.keymap.set(
@@ -74,6 +70,6 @@ vim.keymap.set("n", "N", "Nzz", { desc = "Prev search result" })
 -- Joins next line without moving cursor
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Joins the line below" })
 
--- tabs
+-- Tabs
 vim.keymap.set("n", "]t", "<cmd>tabnext<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "[t", "<cmd>tabprevious<CR>", { desc = "Prev tab" })

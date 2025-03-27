@@ -79,6 +79,6 @@ cargo_binaries() {
 #######################################
 bob_nvim() {
   cargo binstall bob-nvim -y
-  bob install latest
-  bob use latest
+  ~/.cargo/bin/bob install latest
+  ~/.cargo/bin/bob use latest
 }
