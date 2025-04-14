@@ -68,7 +68,7 @@ return {
         previewer = vim.fn.executable("delta") == 1 and "codeaction_native"
           or nil,
         preview_pager = vim.fn.executable("delta") == 1
-            and "delta --width=$FZF_PREVIEW_COLUMNS --hunk-header-style='omit' --file-style='omit'"
+            and "delta --width=$FZF_PREVIEW_COLUMNS --hunk-header-style=omit --file-style=omit"
           or nil,
       },
     },
