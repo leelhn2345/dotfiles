@@ -24,7 +24,6 @@ return {
       nix = { "nixfmt" },
       http = { "kulala-fmt" },
       handlebars = { "djlint" },
-      ["_"] = { "trim_whitespace" },
     },
     format_on_save = {
       lsp_fallback = true,
