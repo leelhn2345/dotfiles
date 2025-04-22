@@ -37,6 +37,11 @@ return {
         "tinymist",
       },
       automatic_installation = true,
+      handlers = {
+        function(server)
+          vim.lsp.enable(server)
+        end,
+      },
     },
   },
   {
