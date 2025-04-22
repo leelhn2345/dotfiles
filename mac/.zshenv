@@ -14,9 +14,9 @@ if [ -d "$HOME/.cargo/bin" ]; then
 fi
 
 # add bob-nvim
-if [ -d "$HOME/.local/share/bob/nvim-bin" ]; then
-    PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
-fi
+# if [ -d "$HOME/.local/share/bob/nvim-bin" ]; then
+#     PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+# fi
 
 # export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!{**/.git/*}'"
 export FZF_DEFAULT_COMMAND="fd --type file -E .git"
