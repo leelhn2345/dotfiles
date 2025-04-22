@@ -43,8 +43,23 @@ return {
     vim.o.foldlevelstart = 99
     vim.o.foldenable = true
 
+    vim.lsp.config("*", {
+      capabilities = {
+        textDocument = {
+          -- Tell the server the capability of foldingRange,
+          -- Neovim hasn't added foldingRange to default capabilities,
+          -- users must add it manually
+          foldingRange = {
+            dynamicRegistration = false,
+            lineFoldingOnly = true,
+          },
+        },
+      },
+    })
+
     vim.keymap.set("n", "zR", require("ufo").openAllFolds)
     vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
+
     require("ufo").setup(opts)
   end,
 }
