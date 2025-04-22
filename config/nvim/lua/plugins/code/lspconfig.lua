@@ -3,7 +3,6 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "SmiteshP/nvim-navbuddy",
-    -- "Hoffs/omnisharp-extended-lsp.nvim",
   },
   opts = {},
   config = function(_, _)
