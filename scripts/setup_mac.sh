@@ -25,7 +25,7 @@ main() {
 
   title "rustup toolchain"
   rustup_stable_toolchain
-  bob_nvim
+  # bob_nvim
   success "finished installing rustup toolchain"
 
   title "zsh & tmux"

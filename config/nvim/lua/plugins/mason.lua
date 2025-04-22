@@ -32,7 +32,7 @@ return {
         "bashls",
         "tailwindcss",
         "emmet_language_server",
-        "omnisharp",
+        "omnisharp", -- :MasonInstall --target=darwin_arm64 omnisharp
         "gopls",
         "tinymist",
       },

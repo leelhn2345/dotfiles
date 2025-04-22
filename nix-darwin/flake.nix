@@ -55,7 +55,7 @@
             lld
             curl
             htop
-            # neovim
+            neovim
             neofetch
             bat
             fd
