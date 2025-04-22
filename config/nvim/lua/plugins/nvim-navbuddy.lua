@@ -1,7 +1,7 @@
 return {
   -- breadcrumbs
   "SmiteshP/nvim-navbuddy",
-  event = "VeryLazy",
+  lazy = true,
   dependencies = {
     "SmiteshP/nvim-navic",
     "MunifTanjim/nui.nvim",
