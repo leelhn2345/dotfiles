@@ -14,7 +14,7 @@ return {
       json = { "prettierd" },
       jsonc = { "prettierd" },
       yaml = { "prettierd" },
-      markdown = { "markdownlint" },
+      markdown = { "markdownlint-cli2" },
       lua = { "stylua" },
       python = { "ruff_fix", "ruff_format" },
       sh = { "shfmt" },

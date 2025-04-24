@@ -7,7 +7,7 @@ return {
 
     lint.linters_by_ft = {
       python = { "mypy" },
-      markdown = { "markdownlint" },
+      markdown = { "markdownlint-cli2" },
       dockerfile = { "hadolint" },
       go = { "golangcilint" },
       handlebars = { "djlint" },

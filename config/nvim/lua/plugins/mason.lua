@@ -56,7 +56,7 @@ return {
 
         -- linter
         -- "mypy",
-        "markdownlint",
+        "markdownlint-cli2",
         "shellcheck",
         "hadolint",
         "golangci-lint",
