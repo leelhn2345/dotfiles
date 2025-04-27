@@ -33,6 +33,7 @@ return {
       "java",
       "go",
       "gomod",
+      "gowork",
       "gosum",
       "http",
       "typst",
