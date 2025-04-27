@@ -85,6 +85,7 @@
             pnpm
             uv
             rustup
+            go
             dotnet-sdk
             typst
           ];
