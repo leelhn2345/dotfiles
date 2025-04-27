@@ -9,7 +9,6 @@ return {
       python = { "mypy" },
       markdown = { "markdownlint-cli2" },
       dockerfile = { "hadolint" },
-      go = { "golangcilint" },
       handlebars = { "djlint" },
     }
 

@@ -59,7 +59,6 @@ return {
         "markdownlint-cli2",
         "shellcheck",
         "hadolint",
-        "golangci-lint",
         "djlint",
 
         -- formatter
