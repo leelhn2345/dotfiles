@@ -20,7 +20,6 @@ return {
       sh = { "shfmt" },
       sql = { "sql_formatter" }, -- use `.sql-formatter.json` to configure
       cs = { "csharpier" },
-      go = { "goimports-reviser", "gofumpt", "golines" },
       nix = { "nixfmt" },
       http = { "kulala-fmt" },
       handlebars = { "djlint" },
