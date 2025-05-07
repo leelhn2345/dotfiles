@@ -1,6 +1,6 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     lazy = true,
     opts = {
       ui = {
@@ -13,8 +13,8 @@ return {
     },
   },
   {
-    "williamboman/mason-lspconfig.nvim",
-    dependencies = { "williamboman/mason.nvim" },
+    "mason-org/mason-lspconfig.nvim",
+    dependencies = { "mason-org/mason.nvim" },
     opts = {
       ensure_installed = {
         "eslint",
@@ -36,17 +36,11 @@ return {
         "gopls",
         "tinymist",
       },
-      automatic_installation = true,
-      handlers = {
-        function(server)
-          vim.lsp.enable(server)
-        end,
-      },
     },
   },
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
-    dependencies = { "williamboman/mason.nvim" },
+    dependencies = { "mason-org/mason.nvim" },
     opts = {
       ensure_installed = {
         -- dap
