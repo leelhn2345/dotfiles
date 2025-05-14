@@ -1,5 +1,5 @@
 return {
-  "SmiteshP/nvim-navbuddy",
+  "hasansujon786/nvim-navbuddy",
   event = "VeryLazy",
   dependencies = {
     "SmiteshP/nvim-navic",
