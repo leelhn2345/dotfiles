@@ -11,7 +11,8 @@ nix_darwin() {
   sh <(curl -L https://nixos.org/nix/install)
   nix flake init -t nix-darwin/master --extra-experimental-features "nix-command flakes"
   nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake "$NIX_DARWIN_FLAKE"
-  darwin-rebuild switch --flake "$NIX_DARWIN_FLAKE"
+  # the localhost name must be set in flake.nix!
+  sudo darwin-rebuild switch --flake "$NIX_DARWIN_FLAKE"
 
   fnm install --lts # installs node-lts
 }
