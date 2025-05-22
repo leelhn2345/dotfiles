@@ -36,16 +36,17 @@ terminal_crates=(
   "git-delta"
   "yazi-fm"
   "yazi-cli"
+  "watchexec-cli"
 )
 
 cargo_crates=(
   "cargo-update"
   # "tree-sitter-cli"
   # "cargo-makedocs"
-  "cargo-watch"
+  # "cargo-watch"
   "cargo-nextest"
   "cargo-autoinherit"
-  # "cargo-machete"
+  "cargo-machete"
   "oxipng"
 )
 

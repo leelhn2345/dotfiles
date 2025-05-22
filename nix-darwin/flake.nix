@@ -18,8 +18,26 @@
       nix-homebrew,
     }:
     let
+      username = "nelson";
+
+      nixHomebrewModule = {
+        nix-homebrew = {
+          # Install Homebrew under the default prefix
+          enable = true;
+
+          # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+          enableRosetta = true;
+
+          # User owning the Homebrew prefix
+          user = username;
+
+          # Automatically migrate existing Homebrew installations
+          autoMigrate = true;
+        };
+      };
+
       configuration =
-        { pkgs, ... }:
+        { pkgs, hostPlatform, ... }:
         {
           homebrew = {
             brews = [
@@ -85,6 +103,7 @@
             pnpm
             uv
             rustup
+            watchexec
             go
             dotnet-sdk
             typst
@@ -108,33 +127,25 @@
           # $ darwin-rebuild changelog
           system.stateVersion = 5;
 
+          system.primaryUser = username;
+
           # The platform the configuration will be used on.
-          nixpkgs.hostPlatform = "aarch64-darwin";
+          nixpkgs.hostPlatform = hostPlatform;
         };
+
+      configurationWithPlatform =
+        { hostPlatform }: { pkgs, ... }@args: configuration ({ inherit pkgs hostPlatform; } // args);
+
     in
     {
       # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#mac
-      darwinConfigurations."mac" = inputs.nix-darwin.lib.darwinSystem {
+      # $ darwin-rebuild build --flake .#kyaaa
+      darwinConfigurations."kyaaa" = inputs.nix-darwin.lib.darwinSystem {
         modules = [
           mac-app-util.darwinModules.default
           nix-homebrew.darwinModules.nix-homebrew
-          {
-            nix-homebrew = {
-              # Install Homebrew under the default prefix
-              enable = true;
-
-              # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
-              enableRosetta = true;
-
-              # User owning the Homebrew prefix
-              user = "nelson";
-
-              # Automatically migrate existing Homebrew installations
-              autoMigrate = true;
-            };
-          }
-          configuration
+          nixHomebrewModule
+          (configurationWithPlatform { hostPlatform = "aarch64-darwin"; })
         ];
       };
     };
