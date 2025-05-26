@@ -60,7 +60,7 @@ return {
         "stylua",
         "prettierd",
         "shfmt",
-        "sqruff",
+        "sql-formatter",
         "csharpier",
         "kulala-fmt",
       },
