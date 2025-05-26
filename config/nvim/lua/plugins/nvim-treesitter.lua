@@ -19,7 +19,6 @@ return {
       "scss",
       "bash",
       "lua",
-      "dockerfile",
       "python",
       "toml",
       "regex",
@@ -40,11 +39,11 @@ return {
       "make",
       "nix",
       "glimmer",
+      "editorconfig",
     },
     auto_install = false,
     highlight = {
       enable = true,
-      disable = { "dockerfile" },
     },
   },
 }
