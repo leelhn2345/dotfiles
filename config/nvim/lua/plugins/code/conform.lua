@@ -14,7 +14,7 @@ return {
       lua = { "stylua" },
       python = { "ruff_fix", "ruff_format" },
       sh = { "shfmt" },
-      sql = { "sql_formatter" }, -- use `.sql-formatter.json` to configure
+      sql = { "sqruff" },
       cs = { "csharpier" },
       nix = { "nixfmt" },
       http = { "kulala-fmt" },
