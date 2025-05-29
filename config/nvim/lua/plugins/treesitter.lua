@@ -1,49 +1,36 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPre", "BufNewFile" },
+  lazy = false,
+  branch = "main",
   build = ":TSUpdate",
-  opts = {
-    ensure_installed = {
-      "rust",
-      "markdown",
-      "markdown_inline",
-      "json5",
-      "javascript",
-      "typescript",
-      "yaml",
-      "html",
-      "css",
-      "scss",
-      "bash",
-      "lua",
-      "python",
-      "toml",
-      "regex",
-      "vim",
-      "vimdoc",
-      "query",
-      "c",
-      "sql",
-      "tsx",
-      "c_sharp",
-      "java",
-      "go",
-      "gomod",
-      "gowork",
-      "gosum",
-      "http",
-      "typst",
-      "make",
-      "nix",
-      "glimmer",
-      "editorconfig",
-    },
-    auto_install = false,
-    highlight = {
-      enable = true,
-    },
-  },
-  config = function(_, opts)
-    require("nvim-treesitter.configs").setup(opts)
+  init = function()
+    vim.api.nvim_create_autocmd("FileType", {
+      callback = function(args)
+        local filetype = args.match
+
+        local excluded_filetypes = {
+          "dockerfile",
+        }
+        if vim.tbl_contains(excluded_filetypes, filetype) then
+          return
+        end
+
+        local lang = vim.treesitter.language.get_lang(filetype)
+        local ts = require("nvim-treesitter")
+        local ts_config = require("nvim-treesitter.config")
+
+        if not vim.tbl_contains(ts_config.get_available(), lang) then
+          return
+        end
+
+        if vim.tbl_contains(ts_config.get_installed(), lang) then
+          vim.treesitter.start()
+        else
+          ts.install(lang):await(function()
+            vim.treesitter.start()
+          end)
+        end
+      end,
+    })
   end,
 }
