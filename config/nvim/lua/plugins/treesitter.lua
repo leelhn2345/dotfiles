@@ -10,6 +10,7 @@ return {
 
         local excluded_filetypes = {
           "dockerfile",
+          "tmux",
         }
         if vim.tbl_contains(excluded_filetypes, filetype) then
           return
