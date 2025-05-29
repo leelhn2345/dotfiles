@@ -74,6 +74,7 @@
             curl
             htop
             neovim
+            tree-sitter
             neofetch
             bat
             fd
