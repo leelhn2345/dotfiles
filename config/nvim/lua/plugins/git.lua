@@ -16,7 +16,6 @@ return {
       },
     },
     opts = {
-      console_timeout = 5000,
       integrations = {
         diffview = true,
       },
@@ -27,7 +26,6 @@ return {
         kind = "auto",
         show_staged_diff = false,
       },
-      process_spinner = false,
       graph_style = "unicode",
       mappings = {
         finder = {
