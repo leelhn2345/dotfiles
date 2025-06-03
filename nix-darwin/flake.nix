@@ -96,6 +96,7 @@
             lsd
             zoxide
             azure-cli
+            k6
 
             # coding
             nil
