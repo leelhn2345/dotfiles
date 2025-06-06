@@ -48,13 +48,13 @@
               }
               "gpg2"
             ];
-            taps = [
-              "th-ch/youtube-music"
-            ];
+            # taps = [
+            # "th-ch/youtube-music"
+            # ];
             casks = [
               "wezterm"
               "obsidian"
-              "youtube-music"
+              "th-ch/youtube-music/youtube-music"
             ];
             enable = true;
             onActivation = {
@@ -109,6 +109,7 @@
             go
             dotnet-sdk
             typst
+            claude-code
           ];
 
           environment.variables = {
