@@ -116,6 +116,8 @@ alias jq='jaq'
 alias fzf="fzf --preview 'bat --style=numbers --color=always {}'"
 alias vf='nvim $(fzf --preview="bat --color=always {}")'
 
+alias cl='claude'
+
 # theme/plugins
 source "$ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
 source "$ZSH_PLUGINS_DIR/fzf-tab/fzf-tab.plugin.zsh"
