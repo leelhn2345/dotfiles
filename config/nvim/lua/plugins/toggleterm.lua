@@ -30,22 +30,31 @@ return {
       pattern = "toggleterm",
       callback = function()
         local escape_timer = nil
-        vim.keymap.set("t", "<esc>", function()
-          if escape_timer then
-            vim.fn.timer_stop(escape_timer)
-            escape_timer = nil
-            vim.cmd("stopinsert")
-          else
-            escape_timer = vim.fn.timer_start(200, function()
+        vim.keymap.set(
+          "t",
+          "<esc>",
+          function()
+            if escape_timer then
+              vim.fn.timer_stop(escape_timer)
               escape_timer = nil
-              vim.api.nvim_feedkeys(vim.keycode("<Esc>"), "n", false)
-            end)
-          end
-        end, {
-          buffer = true,
-          silent = true,
-          desc = "Double escape to normal mode",
-        })
+              vim.cmd("stopinsert")
+            else
+              escape_timer = vim.fn.timer_start(
+                200, -- 200 milliseconds
+                function()
+                  escape_timer = nil
+                  vim.api.nvim_feedkeys(vim.keycode("<Esc>"), "n", false)
+                end
+              )
+            end
+          end,
+          -- <C-\\><C-n> -- previous keymap
+          {
+            buffer = true,
+            silent = true,
+            desc = "Double escape to normal mode",
+          }
+        )
       end,
     })
   end,
