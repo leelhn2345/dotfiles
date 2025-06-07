@@ -6,13 +6,13 @@ return {
   opts = {},
   keys = {
     {
-      "<leader>ac",
+      "<leader>cc",
       "<cmd>ClaudeCode<cr>",
       mode = { "t", "n" },
       desc = "Toggle Claude",
     },
     {
-      "<leader>as",
+      "<leader>cs",
       "<cmd>ClaudeCodeSend<cr>",
       mode = "v",
       desc = "Send to Claude",
