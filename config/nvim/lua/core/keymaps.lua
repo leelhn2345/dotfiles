@@ -60,8 +60,8 @@ vim.keymap.set(
 )
 
 -- Keep cursor centred while scrolling up and down
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Page down" })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Page up" })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Page down", buffer = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Page up", buffer = true })
 
 -- Keep cursor centred while searching
 vim.keymap.set("n", "n", "nzz", { desc = "Next search result" })
