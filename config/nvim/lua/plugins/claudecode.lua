@@ -17,5 +17,15 @@ return {
       mode = "v",
       desc = "Send to Claude",
     },
+    {
+      "<leader>cr",
+      "<cmd>ClaudeCode --resume<cr>",
+      desc = "Resume Claude",
+    },
+    {
+      "<leader>cC",
+      "<cmd>ClaudeCode --continue<cr>",
+      desc = "Continue Claude",
+    },
   },
 }
