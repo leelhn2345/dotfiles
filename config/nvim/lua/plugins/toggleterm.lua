@@ -29,30 +29,30 @@ return {
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "toggleterm",
       callback = function()
-        local escape_timer = nil
+        -- local escape_timer = nil
         vim.keymap.set(
           "t",
           "<esc>",
-          function()
-            if escape_timer then
-              vim.fn.timer_stop(escape_timer)
-              escape_timer = nil
-              vim.cmd("stopinsert")
-            else
-              escape_timer = vim.fn.timer_start(
-                200, -- 200 milliseconds
-                function()
-                  escape_timer = nil
-                  vim.api.nvim_feedkeys(vim.keycode("<Esc>"), "n", false)
-                end
-              )
-            end
-          end,
-          -- <C-\\><C-n> -- previous keymap
+          "<C-\\><C-n>",
+          -- function()
+          --   if escape_timer then
+          --     vim.fn.timer_stop(escape_timer)
+          --     escape_timer = nil
+          --     vim.cmd("stopinsert")
+          --   else
+          --     escape_timer = vim.fn.timer_start(
+          --       200, -- 200 milliseconds
+          --       function()
+          --         escape_timer = nil
+          --         vim.api.nvim_feedkeys(vim.keycode("<Esc>"), "n", false)
+          --       end
+          --     )
+          --   end
+          -- end,
           {
             buffer = true,
             silent = true,
-            desc = "Double escape to normal mode",
+            desc = "Escape to normal mode",
           }
         )
       end,

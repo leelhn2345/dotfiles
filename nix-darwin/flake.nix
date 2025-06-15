@@ -97,6 +97,7 @@
             zoxide
             azure-cli
             k6
+            coreutils
 
             # coding
             nil
