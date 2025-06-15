@@ -9,6 +9,21 @@ return {
     bigfile = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
+    terminal = {
+      win = {
+        keys = {
+          term_normal = {
+            "<esc>",
+            function()
+              vim.cmd("stopinsert")
+            end,
+            mode = "t",
+            expr = true,
+            desc = "Escape to normal",
+          },
+        },
+      },
+    },
 
     styles = {
       input = {
