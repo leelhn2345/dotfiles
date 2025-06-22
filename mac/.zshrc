@@ -110,6 +110,7 @@ alias explorer='explorer.exe `wslpath -w "$PWD"`'
 alias k='kubectl'
 alias port='netstat -tuln'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
+alias du='dust'
 alias jq='jaq'
 
 # fzf aliases

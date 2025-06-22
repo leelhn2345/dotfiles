@@ -91,13 +91,14 @@
             imagemagick
             ripgrep
             yazi
-            delta
-            jaq
+            delta # nicer git-diff
+            jaq # jq but better
             lsd
             zoxide
             azure-cli
             k6
-            coreutils
+            coreutils # for base32
+            dust # du but more interactive
 
             # coding
             nil
