@@ -31,6 +31,13 @@ return {
           module = "vim_dadbod_completion.blink",
         },
         git = {
+          -- only enable this source when filetype is gitcommit, markdown, or 'octo'
+          enabled = function()
+            return vim.tbl_contains(
+              { "octo", "gitcommit", "markdown" },
+              vim.bo.filetype
+            )
+          end,
           module = "blink-cmp-git",
           opts = {
             commit = {
