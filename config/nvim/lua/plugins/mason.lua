@@ -28,7 +28,7 @@ return {
         "ruff",
         -- "rust_analyzer",
         "yamlls",
-        "taplo",
+        "tombi",
         "marksman",
         "bashls",
         "tailwindcss",
