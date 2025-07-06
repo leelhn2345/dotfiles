@@ -51,9 +51,21 @@ return {
       cwd_prompt = false,
       actions = false,
       git_icons = false,
+      fd_opts = [[ \
+        --color=never --hidden --type f --type l \
+        --exclude .git \
+        --exclude '*.lock' \
+        --exclude '*-lock.{json,yaml}' \
+      ]],
     },
     grep = {
       hidden = true,
+      rg_opts = [[
+        --column --line-number --no-heading --color=always --smart-case --max-columns=4096 \
+        --glob=!'*.lock' \
+        --glob=!'*-lock.{json,yaml}' \
+        -e \
+      ]],
     },
     keymaps = {
       winopts = {
