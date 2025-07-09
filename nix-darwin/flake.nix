@@ -46,6 +46,10 @@
                 name = "libpq";
                 link = true;
               }
+              {
+                name = "python";
+                link = true;
+              }
               "gpg2"
             ];
             taps = [
