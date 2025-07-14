@@ -27,5 +27,10 @@ return {
       "<cmd>ClaudeCode --continue<cr>",
       desc = "Continue Claude",
     },
+    {
+      "<leader>cb",
+      "<cmd>ClaudeCodeAdd %<cr>",
+      desc = "Add current buffer to Claude",
+    },
   },
 }
