@@ -25,6 +25,7 @@ return {
       "noice",
       "typst",
       "kulala_ui.json",
+      "snacks_terminal",
     },
     pre_save_cmds = {
       -- "Neotree close",
