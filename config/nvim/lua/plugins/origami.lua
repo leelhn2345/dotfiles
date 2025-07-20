@@ -15,8 +15,5 @@ return {
         template = "󰁂 %d lines", -- `%d` is replaced with the number of folded lines
       },
     },
-    autoFold = {
-      enabled = false,
-    },
   },
 }
