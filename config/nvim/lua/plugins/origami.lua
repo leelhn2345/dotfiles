@@ -15,5 +15,8 @@ return {
         template = "󰁂 %d lines", -- `%d` is replaced with the number of folded lines
       },
     },
+    foldKeymaps = {
+      setup = false, -- modifies `h` and `l`
+    },
   },
 }
