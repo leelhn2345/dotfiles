@@ -4,6 +4,9 @@ return {
   branch = "main",
   build = ":TSUpdate",
   init = function()
+    -- register parser for dotenv
+    vim.treesitter.language.register("bash", { "dotenv" })
+
     vim.api.nvim_create_autocmd("FileType", {
       callback = function(args)
         local filetype = args.match
