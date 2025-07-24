@@ -103,6 +103,7 @@
             k6
             coreutils # for base32
             dust # du but more interactive
+            git-cliff
 
             # coding
             nil
