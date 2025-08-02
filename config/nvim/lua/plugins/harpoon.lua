@@ -7,7 +7,6 @@ return {
   },
   config = function()
     local harpoon = require("harpoon")
-    local extensions = require("harpoon.extensions")
 
     -- harpoon:setup({ settings = { save_on_toggle = true } })
     harpoon:setup()
@@ -32,8 +31,5 @@ return {
     vim.keymap.set("n", "<C-n>", function()
       harpoon:list():next()
     end, { desc = "Harpoon Next" })
-
-    -- https://github.com/kevinhwang91/nvim-ufo/issues/210#issuecomment-2072497039
-    harpoon:extend(extensions.builtins.command_on_nav("UfoEnableFold"))
   end,
 }
