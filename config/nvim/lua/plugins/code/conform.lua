@@ -4,11 +4,11 @@ return {
   event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
   opts = {
     formatters_by_ft = {
-      javascript = { "prettierd" },
-      typescript = { "prettierd" },
-      javascriptreact = { "prettierd" },
-      typescriptreact = { "prettierd" },
-      css = { "prettierd" },
+      javascript = { "biome" },
+      typescript = { "biome" },
+      javascriptreact = { "biome" },
+      typescriptreact = { "biome" },
+      css = { "biome" },
       scss = { "prettierd" },
       markdown = { "markdownlint-cli2" },
       lua = { "stylua" },
