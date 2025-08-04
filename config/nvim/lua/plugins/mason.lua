@@ -19,6 +19,7 @@ return {
     opts = {
       ensure_installed = {
         "eslint",
+        "biome",
         "vtsls",
         "cssls",
         "html",
