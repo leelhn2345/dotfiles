@@ -59,6 +59,7 @@
               "wezterm"
               "obsidian"
               "th-ch/youtube-music/youtube-music"
+              "pearcleaner"
             ];
             enable = true;
             onActivation = {
