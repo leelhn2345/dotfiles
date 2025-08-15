@@ -15,6 +15,8 @@ return {
       highlights["BlinkCmpKindInterface"] = { bg = "NONE", fg = "#deb887" }
       highlights["CmpItemKindVariable"] = { bg = "NONE", fg = "#deb887" }
       highlights["CmpItemKindInterface"] = { bg = "NONE", fg = "#deb887" }
+      highlights["StatusLine"] = { bg = "NONE" }
+      highlights["StatusLineNC"] = { bg = "NONE" }
     end,
   },
   config = function(_, opts)
