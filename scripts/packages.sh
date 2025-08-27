@@ -13,7 +13,7 @@ packages=(
   build-essential
   lld
   clang
-  htop
+  bottom
   neofetch
   bat
   jq

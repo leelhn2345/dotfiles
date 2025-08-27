@@ -77,7 +77,7 @@
           environment.systemPackages = with pkgs; [
             lld
             curl
-            htop
+            bottom # system monitoring
             neovim
             tree-sitter
             neofetch
