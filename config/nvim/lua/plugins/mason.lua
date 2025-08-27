@@ -64,6 +64,7 @@ return {
         "sql-formatter",
         "csharpier",
         "kulala-fmt",
+        "xmlformatter",
       },
     },
   },
