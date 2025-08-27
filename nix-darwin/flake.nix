@@ -118,6 +118,7 @@
             dotnet-sdk
             typst
             claude-code
+            hadolint # docker linter
           ];
 
           environment.variables = {
