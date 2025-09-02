@@ -34,7 +34,7 @@ return {
           -- only enable this source when filetype is gitcommit, markdown, or 'octo'
           enabled = function()
             return vim.tbl_contains(
-              { "octo", "gitcommit", "markdown" },
+              { "octo", "gitcommit", "markdown", "conf" },
               vim.bo.filetype
             )
           end,
