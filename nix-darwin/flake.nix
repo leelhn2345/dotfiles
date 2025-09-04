@@ -119,6 +119,7 @@
             typst
             claude-code
             hadolint # docker linter
+            natscli
           ];
 
           environment.variables = {
