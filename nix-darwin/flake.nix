@@ -100,7 +100,7 @@
             jaq # jq but better
             lsd
             zoxide
-            # azure-cli
+            azure-cli
             k6
             coreutils # for base32
             dust # du but more interactive
