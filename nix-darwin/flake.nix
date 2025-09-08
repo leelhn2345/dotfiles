@@ -105,6 +105,7 @@
             coreutils # for base32
             dust # du but more interactive
             git-cliff
+            kondo
 
             # coding
             nil
