@@ -54,7 +54,7 @@ return {
         -- "mypy",
         "markdownlint-cli2",
         "shellcheck",
-        -- "hadolint",
+        "hadolint",
         "djlint",
 
         -- formatter

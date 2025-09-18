@@ -119,8 +119,8 @@
             dotnet-sdk
             typst
             claude-code
-            hadolint # docker linter
-            natscli
+            natscli # NATS
+            kanidm # identity management
           ];
 
           environment.variables = {
