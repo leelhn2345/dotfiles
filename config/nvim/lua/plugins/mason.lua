@@ -37,6 +37,7 @@ return {
         "omnisharp", -- :MasonInstall --target=darwin_arm64 omnisharp
         "gopls",
         "tinymist",
+        "solidity_ls_nomicfoundation",
       },
     },
   },
@@ -56,6 +57,7 @@ return {
         "shellcheck",
         "hadolint",
         "djlint",
+        "solhint",
 
         -- formatter
         "stylua",
