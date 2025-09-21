@@ -120,7 +120,8 @@
             typst
             claude-code
             natscli # NATS
-            kanidm # identity management
+            kanidm_1_7 # identity management
+            foundry
           ];
 
           environment.variables = {
