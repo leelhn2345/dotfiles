@@ -120,7 +120,6 @@
             typst
             claude-code
             natscli # NATS
-            kanidm_1_7 # identity management
             foundry
           ];
 
