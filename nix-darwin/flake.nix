@@ -106,6 +106,7 @@
             dust # du but more interactive
             git-cliff
             kondo
+            terraform
 
             # coding
             nil
