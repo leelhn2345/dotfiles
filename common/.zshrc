@@ -109,6 +109,7 @@ alias k='kubectl'
 alias port='netstat -tuln'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
 alias jq='jaq'
+alias tf='terraform'
 
 # fzf aliases
 alias fzf="fzf --preview 'batcat --style=numbers --color=always {}'"
