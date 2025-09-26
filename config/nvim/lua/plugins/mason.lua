@@ -38,6 +38,7 @@ return {
         "gopls",
         "tinymist",
         "solidity_ls_nomicfoundation",
+        "terraformls",
       },
     },
   },
