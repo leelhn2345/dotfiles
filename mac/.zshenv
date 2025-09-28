@@ -8,7 +8,7 @@ if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# add cargo bin
+# add cargo binaries
 if [ -d "$HOME/.cargo/bin" ]; then
     PATH="$HOME/.cargo/bin:$PATH"
 fi
@@ -27,3 +27,8 @@ export FZF_DEFAULT_OPTS="
 "
 
 export EDITOR="nvim"
+
+# add foundry & foundry-zksync binaries
+if [ -d "$HOME/.foundry/bin" ]; then
+    PATH="$PATH:/Users/nelson/.foundry/bin"
+fi

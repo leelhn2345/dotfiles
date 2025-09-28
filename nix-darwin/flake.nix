@@ -121,7 +121,6 @@
             typst
             claude-code
             natscli # NATS
-            foundry
           ];
 
           environment.variables = {
