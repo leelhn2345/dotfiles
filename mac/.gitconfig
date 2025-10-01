@@ -24,5 +24,3 @@
   autoSetupRemote = true
 [gpg]
   program = /opt/homebrew/bin/gpg
-[includeIf "gitdir:~/code/amber/"]
-  path = /Users/nelson/.gitconfig-amber
