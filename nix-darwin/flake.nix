@@ -153,8 +153,19 @@
     in
     {
       # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#kyaaa
+      # $ sudo darwin-rebuild build --flake .#kyaaa
       darwinConfigurations."kyaaa" = inputs.nix-darwin.lib.darwinSystem {
+        modules = [
+          mac-app-util.darwinModules.default
+          nix-homebrew.darwinModules.nix-homebrew
+          nixHomebrewModule
+          (configurationWithPlatform { hostPlatform = "aarch64-darwin"; })
+        ];
+      };
+
+      # Build darwin flake using:
+      # $ sudo darwin-rebuild build --flake .#grimoire
+      darwinConfigurations."grimoire" = inputs.nix-darwin.lib.darwinSystem {
         modules = [
           mac-app-util.darwinModules.default
           nix-homebrew.darwinModules.nix-homebrew

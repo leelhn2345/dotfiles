@@ -1,24 +1,28 @@
 [user]
-	name = Nelson Lee
-	email = leelhn2345@outlook.com
+  name = Nelson Lee
+  email = leelhn2345@outlook.com
 [color]
-	ui = auto
+  ui = auto
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [credential "https://github.com"]
-	helper =
-	helper = !/run/current-system/sw/bin/gh auth git-credential
+  helper =
+  helper = !/run/current-system/sw/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper =
-	helper = !/run/current-system/sw/bin/gh auth git-credential
+  helper =
+  helper = !/run/current-system/sw/bin/gh auth git-credential
 [core]
-    pager = delta
+  pager = delta
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [delta]
-    navigate = true  # use n and N to move between diff sections
-    dark = true      # or light = true, or omit for auto-detection
+  navigate = true  # use n and N to move between diff sections
+  dark = true      # or light = true, or omit for auto-detection
 [merge]
-    conflictstyle = zdiff3
+  conflictstyle = zdiff3
 [push]
-    autoSetupRemote = true
+  autoSetupRemote = true
+[gpg]
+  program = /opt/homebrew/bin/gpg
+[includeIf "gitdir:~/code/amber/"]
+  path = /Users/nelson/.gitconfig-amber

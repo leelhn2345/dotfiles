@@ -12,6 +12,7 @@ bindkey -e
 export ZSH_COMPLETIONS_DIR="$HOME/.config/zsh/completions"
 export ZSH_PLUGINS_DIR="$HOME/.config/zsh/plugins"
 export NIX_DARWIN_FLAKE="$HOME/dotfiles/nix-darwin"
+export GPG_TTY=$TTY
 
 # history
 HISTFILE=~/.zsh_history
@@ -120,6 +121,8 @@ alias vf='nvim $(fzf --preview="bat --color=always {}")'
 
 alias cl='claude'
 
+alias azs='az account set --subscription $AZ_SUBSCRIPTION'
+
 # theme/plugins
 source "$ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
 source "$ZSH_PLUGINS_DIR/fzf-tab/fzf-tab.plugin.zsh"
@@ -159,3 +162,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/nelson/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
