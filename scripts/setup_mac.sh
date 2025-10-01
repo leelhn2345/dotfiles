@@ -5,24 +5,26 @@
 . ./zsh.sh
 . ./tmux.sh
 
-NIX_DARWIN_FLAKE="$HOME/dotfiles/nix-darwin#mac"
+NIX_DARWIN_FLAKE="$HOME/dotfiles/nix-darwin#grimoire"
 
 nix_darwin() {
   sh <(curl -L https://nixos.org/nix/install)
-  nix flake init -t nix-darwin/master --extra-experimental-features "nix-command flakes"
-  nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake "$NIX_DARWIN_FLAKE"
-  # the localhost name must be set in flake.nix!
-  sudo darwin-rebuild switch --flake "$NIX_DARWIN_FLAKE"
-
-  fnm install --lts # installs node-lts
+  # nix flake init -t nix-darwin/master --extra-experimental-features "nix-command flakes"
+  sudo nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake "$NIX_DARWIN_FLAKE"
+  # # the localhost name must be set in flake.nix!
+  # sudo darwin-rebuild switch --flake "$NIX_DARWIN_FLAKE"
 }
 
 main() {
+  warn "the script wouldn't work if nix wasn't setup properly."
+
+  softwareupdate --install-rosetta
+
   info "setting up mac environment"
 
-  title "setup nix"
-  nix_darwin
-  success "finished setting up nix-darwin"
+  info "installing nodejs"
+  fnm install --lts # installs node-lts
+  success "finished installing nodejs"
 
   title "rustup toolchain"
   rustup_stable_toolchain
