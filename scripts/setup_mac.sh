@@ -18,7 +18,7 @@ nix_darwin() {
 main() {
   warn "the script wouldn't work if nix wasn't setup properly."
 
-  softwareupdate --install-rosetta
+  softwareupdate --install-rosetta --agree-to-license
 
   info "setting up mac environment"
 
