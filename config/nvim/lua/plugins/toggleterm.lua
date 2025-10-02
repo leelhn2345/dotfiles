@@ -3,7 +3,7 @@ return {
   version = "*",
   cmd = "ToggleTerm",
   keys = {
-    { "\\", ":ToggleTerm", desc = "Toggle Terminal" },
+    { "\\", ":ToggleTerm<CR>", desc = "Toggle Terminal" }, -- this has to be same as `open_mapping`
     {
       "<leader>\\",
       "<CMD>TermSelect<CR>",
