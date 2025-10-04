@@ -94,10 +94,11 @@ return {
       return fzf_opts.kind == "codeaction"
           and {
             winopts = {
-              row = 0.7,
+              -- row = 0.7,
+              layout = "vertical",
               -- height is number of items minus 15 lines for the preview, with a max of 80% screen height
               height = math.floor(
-                math.min(vim.o.lines * 0.8 - 16, #items + 2) + 0.5
+                math.min(vim.o.lines * 0.8 - 16, #items + 4) + 0.5
               ) + 16,
               width = 80,
               preview = not vim.tbl_isempty(
@@ -117,7 +118,7 @@ return {
         or {
           winopts = {
             width = 80,
-            height = math.floor(math.min(vim.o.lines * 0.8, #items + 2) + 0.5),
+            height = math.floor(math.min(vim.o.lines * 0.8, #items + 4) + 0.5),
           },
         }
     end)
