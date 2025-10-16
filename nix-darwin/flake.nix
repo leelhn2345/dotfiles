@@ -51,6 +51,7 @@
                 link = true;
               }
               "gpg2"
+              "zrok"
             ];
             taps = [
               "th-ch/youtube-music"
