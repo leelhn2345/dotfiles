@@ -59,6 +59,7 @@
             casks = [
               "wezterm"
               "obsidian"
+              "spotify"
               "th-ch/youtube-music/youtube-music"
               "pearcleaner"
             ];
