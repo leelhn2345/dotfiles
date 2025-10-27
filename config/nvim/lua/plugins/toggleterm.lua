@@ -10,6 +10,13 @@ return {
       mode = "n",
       desc = "Select Terminal",
     },
+    {
+      "<esc>",
+      "<C-\\><C-n>",
+      mode = "t",
+      ft = { "toggleterm" },
+      desc = "Escape to normal mode",
+    },
   },
   opts = {
     size = function(term)
@@ -23,39 +30,4 @@ return {
     direction = "float",
     insert_mappings = false,
   },
-  config = function(_, opts)
-    require("toggleterm").setup(opts)
-
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = "toggleterm",
-      callback = function()
-        -- local escape_timer = nil
-        vim.keymap.set(
-          "t",
-          "<esc>",
-          "<C-\\><C-n>",
-          -- function()
-          --   if escape_timer then
-          --     vim.fn.timer_stop(escape_timer)
-          --     escape_timer = nil
-          --     vim.cmd("stopinsert")
-          --   else
-          --     escape_timer = vim.fn.timer_start(
-          --       200, -- 200 milliseconds
-          --       function()
-          --         escape_timer = nil
-          --         vim.api.nvim_feedkeys(vim.keycode("<Esc>"), "n", false)
-          --       end
-          --     )
-          --   end
-          -- end,
-          {
-            buffer = true,
-            silent = true,
-            desc = "Escape to normal mode",
-          }
-        )
-      end,
-    })
-  end,
 }
