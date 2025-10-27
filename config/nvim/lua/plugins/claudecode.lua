@@ -5,7 +5,7 @@ return {
   },
   opts = {},
   keys = {
-    { "<leader>a", nil, desc = "AI/Claude Code" },
+    { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
     { "<leader>ac", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
     { "<leader>af", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
     { "<leader>ar", "<cmd>ClaudeCode --resume<cr>", desc = "Resume Claude" },
@@ -13,11 +13,6 @@ return {
       "<leader>aC",
       "<cmd>ClaudeCode --continue<cr>",
       desc = "Continue Claude",
-    },
-    {
-      "<leader>am",
-      "<cmd>ClaudeCodeSelectModel<cr>",
-      desc = "Select Claude model",
     },
     { "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add current buffer" },
     {
@@ -30,7 +25,7 @@ return {
       "<leader>as",
       "<cmd>ClaudeCodeTreeAdd<cr>",
       desc = "Add file",
-      ft = { "NvimTree", "neo-tree", "oil", "minifiles", "netrw" },
+      ft = { "NvimTree", "neo-tree", "oil" },
     },
     -- Diff management
     { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
