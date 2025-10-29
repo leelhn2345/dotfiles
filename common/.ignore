@@ -3,3 +3,4 @@
 .git/
 !http/
 !.lazy.lua
+!terraform.tfvars
