@@ -1,0 +1,12 @@
+au BufRead,BufNewFile main.yml setlocal ft=yaml.ansible
+au BufRead,BufNewFile main.yaml setlocal ft=yaml.ansible
+au BufRead,BufNewFile site.yml setlocal ft=yaml.ansible
+au BufRead,BufNewFile site.yaml setlocal ft=yaml.ansible
+au BufRead,BufNewFile */ansible/*.yml setlocal ft=yaml.ansible
+au BufRead,BufNewFile */ansible/*.yaml setlocal ft=yaml.ansible
+au BufRead,BufNewFile */playbooks/*.yml setlocal ft=yaml.ansible
+au BufRead,BufNewFile */playbooks/*.yaml setlocal ft=yaml.ansible
+au BufRead,BufNewFile */roles/*.yml setlocal ft=yaml.ansible
+au BufRead,BufNewFile */roles/*.yml setlocal ft=yaml.ansible
+au BufRead,BufNewFile */tasks/*.yaml setlocal ft=yaml.ansible
+au BufRead,BufNewFile */tasks/*.yaml setlocal ft=yaml.ansible
