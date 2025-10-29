@@ -22,6 +22,7 @@ return {
     },
     float = {
       max_width = 90,
+      border = "rounded",
     },
   },
 }
