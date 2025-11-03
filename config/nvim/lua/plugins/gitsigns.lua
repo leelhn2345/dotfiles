@@ -11,7 +11,7 @@ return {
       current_line_blame_opts = {
         delay = 0,
         ignore_whitespace = true,
-        virt_text_priority = 5000,
+        virt_text_priority = 1024,
       },
       current_line_blame_formatter = blame_format,
     })
