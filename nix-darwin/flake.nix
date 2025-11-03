@@ -54,13 +54,13 @@
               "zrok"
             ];
             taps = [
-              "th-ch/youtube-music"
+              # "th-ch/youtube-music"
             ];
             casks = [
               "wezterm"
               "obsidian"
               "spotify"
-              "th-ch/youtube-music/youtube-music"
+              # "th-ch/youtube-music/youtube-music"
               "pearcleaner"
             ];
             enable = true;
