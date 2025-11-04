@@ -11,6 +11,10 @@ return {
       },
       -- Show all diagnostics on the cursor line.
       show_all_diags_on_cursorline = true,
+      virt_texts = {
+        -- preferably higher than gitsigns
+        priority = 5001,
+      },
     },
   },
 }
