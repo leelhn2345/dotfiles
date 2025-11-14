@@ -62,6 +62,7 @@
               "spotify"
               # "th-ch/youtube-music/youtube-music"
               "pearcleaner"
+              # "neved4/homebrew-tap/pear" # youtube-music new cask
             ];
             enable = true;
             onActivation = {
