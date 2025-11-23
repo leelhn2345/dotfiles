@@ -15,19 +15,18 @@ return {
           "dockerfile",
           "tmux",
         }
-        if vim.tbl_contains(excluded_filetypes, filetype) then
+        if vim.list_contains(excluded_filetypes, filetype) then
           return
         end
 
         local lang = vim.treesitter.language.get_lang(filetype)
         local ts = require("nvim-treesitter")
-        local ts_config = require("nvim-treesitter.config")
 
-        if not vim.tbl_contains(ts_config.get_available(), lang) then
+        if not vim.list_contains(ts.get_available(), lang) then
           return
         end
 
-        if vim.tbl_contains(ts_config.get_installed(), lang) then
+        if vim.list_contains(ts.get_installed(), lang) then
           vim.treesitter.start()
         else
           ts.install(lang):await(function()
