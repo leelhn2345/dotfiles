@@ -15,59 +15,61 @@ return {
   },
   {
     "mason-org/mason-lspconfig.nvim",
-    dependencies = { "mason-org/mason.nvim" },
-    opts = {
-      ensure_installed = {
-        "eslint",
-        "biome",
-        "vtsls",
-        "cssls",
-        "html",
-        "jsonls",
-        "lua_ls",
-        "basedpyright",
-        "ruff",
-        -- "rust_analyzer",
-        "yamlls",
-        "tombi",
-        "marksman",
-        "bashls",
-        "tailwindcss",
-        "emmet_language_server",
-        "omnisharp", -- :MasonInstall --target=darwin_arm64 omnisharp
-        "gopls",
-        "tinymist",
-        "solidity_ls_nomicfoundation",
-        "terraformls",
-      },
-    },
+    lazy = true,
+    dependencies = { "mason-org/mason.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
   },
   {
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-    dependencies = { "mason-org/mason.nvim" },
+    "owallb/mason-auto-install.nvim",
+    dependencies = { "mason-org/mason-lspconfig.nvim" },
     opts = {
-      ensure_installed = {
-        -- dap
-        "debugpy", -- python
-        "js-debug-adapter", -- nodejs
-        "codelldb", -- rust
-
-        -- linter
-        -- "mypy",
-        "markdownlint-cli2",
-        "shellcheck",
-        "hadolint",
-        "djlint",
-        "solhint",
-
-        -- formatter
+      packages = {
+        "lua-language-server",
         "stylua",
-        "prettierd",
-        "shfmt",
-        "sql-formatter",
-        "csharpier",
-        "kulala-fmt",
-        "xmlformatter",
+        {
+          "marksman",
+          dependencies = { "markdownlint-cli2" },
+        },
+        "json-lsp",
+        "yaml-language-server",
+        {
+          "bash-language-server",
+          dependencies = { "shellcheck", "shfmt" },
+          filetypes = { "sh", "zsh" },
+        },
+        {
+          "vtsls",
+          dependencies = {
+            "js-debug-adapter",
+            "prettierd",
+          },
+        },
+        "eslint-lsp",
+        "biome",
+        "tailwindcss-language-server",
+        "emmet-language-server",
+        "css-lsp",
+        "html-lsp",
+        {
+          "omnisharp", -- :MasonInstall --target=darwin_arm64 omnisharp
+          dependencies = { "csharpier" },
+        },
+        "tombi",
+        "gopls",
+        "tinymist",
+        "terraform-ls",
+        {
+          "nomicfoundation-solidity-language-server",
+          dependencies = { "solhint" },
+        },
+        { "hadolint", filetypes = { "dockerfile" } },
+        { "sql-formatter", filetypes = { "sql" } },
+        { "kulala-fmt", filetypes = { "http" } },
+        { "codelldb", filetypes = { "rust" } },
+        { "basedpyright", dependencies = { "debugpy" } },
+        "ruff",
+        { "djlint", filetypes = { "handlebars" } },
+        { "xmlformatter", filetypes = { "xml" } },
       },
     },
   },
