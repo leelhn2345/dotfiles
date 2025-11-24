@@ -35,7 +35,6 @@ return {
         {
           "bash-language-server",
           dependencies = { "shellcheck", "shfmt" },
-          filetypes = { "sh", "zsh" },
         },
         {
           "vtsls",
