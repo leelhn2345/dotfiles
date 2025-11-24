@@ -64,7 +64,7 @@ alias vc='cd ~/.config/nvim && nvim'
 # alias update='brew update && brew upgrade'
 alias update='nix flake update --flake $NIX_DARWIN_FLAKE'
 alias nixs='sudo darwin-rebuild switch --flake $NIX_DARWIN_FLAKE'
-alias nixd='sudo nix-collect-garbage -d'
+alias nixd='nix-collect-garbage -d'
 
 alias cdd='cd ~/dotfiles'
 alias vd='cd ~/dotfiles && nvim'
