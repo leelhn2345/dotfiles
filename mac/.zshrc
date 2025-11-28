@@ -60,6 +60,7 @@ zle_highlight=('paste:none')  # no highlighting during paste
 # aliases
 alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
+alias ps='procs'
 
 # alias update='brew update && brew upgrade'
 alias update='nix flake update --flake $NIX_DARWIN_FLAKE'

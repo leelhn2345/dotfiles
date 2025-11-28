@@ -58,6 +58,7 @@ zle_highlight=('paste:none')  # no highlighting during paste
 # aliases
 alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
+alias ps='procs'
 
 alias cdd='cd ~/dotfiles'
 alias vd='cd ~/dotfiles && nvim'

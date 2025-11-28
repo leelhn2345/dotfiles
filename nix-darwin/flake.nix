@@ -110,6 +110,8 @@
             git-cliff
             kondo
             terraform
+            ansible
+            procs
 
             # coding
             nil

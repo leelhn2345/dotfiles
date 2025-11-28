@@ -37,6 +37,7 @@ terminal_crates=(
   "yazi-fm"
   "yazi-cli"
   "watchexec-cli"
+  "procs"
 )
 
 cargo_crates=(
