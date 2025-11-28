@@ -33,6 +33,7 @@ zsh_completions() {
   pnmp completion zsh >"$ZSH_COMPLETIONS_DIR/_pnpm"
   fnm completions --shell zsh >"$ZSH_COMPLETIONS_DIR/_fnm"
   ~/.cargo/bin/bob complete zsh >"$ZSH_COMPLETIONS_DIR/_bob"
+  procs --gen-completion-out zsh >"$ZSH_COMPLETIONS_DIR/_procs"
 
   rm -rf ~/.zfunc
 }
@@ -44,5 +45,4 @@ mac_zsh_completions() {
   curl -o "$ZSH_COMPLETIONS_DIR/_golang" https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_golang
   pip3 completion --zsh >"$ZSH_COMPLETIONS_DIR/_pip3"
   # ~/.cargo/bin/bob complete zsh >"$ZSH_COMPLETIONS_DIR/_bob"
-  procs --gen-completion-out zsh >"$ZSH_COMPLETIONS_DIR/_procs"
 }
