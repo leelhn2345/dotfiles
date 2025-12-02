@@ -18,6 +18,15 @@ return {
     { "<leader>fr", ":FzfLua resume<CR>", silent = true, desc = "Fzf resume" },
     { "<leader>fK", ":FzfLua keymaps<CR>", silent = true, desc = "Keymaps" },
     { "<leader>fb", ":FzfLua buffers<CR>", silent = true, desc = "Buffers" },
+    {
+      "<leader>fl",
+      function()
+        require("fzf-lua").blines()
+      end,
+      mode = { "n", "v" },
+      silent = true,
+      desc = "Buffer lines",
+    },
   },
   opts = {
     winopts = {
@@ -57,6 +66,11 @@ return {
         --exclude '*.lock' \
         --exclude '*-lock.{json,yaml}' \
       ]],
+    },
+    blines = {
+      fzf_opts = {
+        ["--layout"] = "reverse-list",
+      },
     },
     grep = {
       hidden = true,
