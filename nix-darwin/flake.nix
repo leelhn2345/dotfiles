@@ -63,6 +63,7 @@
               # "th-ch/youtube-music/youtube-music"
               "pearcleaner"
               # "neved4/homebrew-tap/pear" # youtube-music new cask
+              "orbstack" # docker macOS alternative
             ];
             enable = true;
             onActivation = {
