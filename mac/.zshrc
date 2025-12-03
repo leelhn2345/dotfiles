@@ -109,7 +109,7 @@ alias cu='cargo install-update -a'
 alias cdo='cargo doc --no-deps --open'
 
 alias explorer='explorer.exe `wslpath -w "$PWD"`'
-alias k='kubectl'
+alias kc='kubectl'
 alias port='netstat -tuln'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
 alias du='dust'
