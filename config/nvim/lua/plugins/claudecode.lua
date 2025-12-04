@@ -3,7 +3,11 @@ return {
   dependencies = {
     "folke/snacks.nvim", -- Optional for enhanced terminal
   },
-  opts = {},
+  opts = {
+    diff_opts = {
+      vertical_split = false,
+    },
+  },
   keys = {
     { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
     {
