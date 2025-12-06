@@ -109,6 +109,11 @@ To use `make` command:
 xcode-select --install
 ```
 
+### Privacy & Security Settings
+
+- <https://nnethercote.github.io/2025/09/04/faster-rust-builds-on-mac.html>
+- <https://nexte.st/docs/installation/macos/#gatekeeper>
+
 ## License
 
 Do whatever you want license, © Nelson Lee 2024.
