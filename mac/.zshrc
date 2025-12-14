@@ -73,8 +73,8 @@ alias vd='cd ~/dotfiles && nvim'
 alias cat='bat'
 
 alias ls='lsd'
-alias ll='lsd -alF'
-alias la='lsd -a'
+alias ll='lsd -AlF'
+alias la='lsd -A'
 alias tree='lsd --tree'
 
 alias sz='source ~/.zshrc'
