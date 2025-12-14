@@ -18,6 +18,7 @@ return {
     { "<leader>fr", ":FzfLua resume<CR>", silent = true, desc = "Fzf resume" },
     { "<leader>fK", ":FzfLua keymaps<CR>", silent = true, desc = "Keymaps" },
     { "<leader>fb", ":FzfLua buffers<CR>", silent = true, desc = "Buffers" },
+    { "<leader>fu", ":FzfLua undotree<CR>", silent = true, desc = "Undotree" },
     {
       "<leader>fl",
       function()
@@ -55,6 +56,9 @@ return {
       -- ["--no-scrollbar"] = true,
       ["--cycle"] = true,
       ["--wrap"] = true,
+    },
+    undotree = {
+      previewer = "undotree_native",
     },
     files = {
       cwd_prompt = false,
