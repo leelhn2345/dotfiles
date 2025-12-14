@@ -27,7 +27,7 @@ main() {
   success "finished installing nodejs"
 
   title "rustup toolchain"
-  rustup_stable_toolchain
+  nix_cargo_binaries
   # bob_nvim
   success "finished installing rustup toolchain"
 

@@ -113,6 +113,7 @@
             terraform
             ansible
             procs
+            tealdeer
 
             # coding
             nil

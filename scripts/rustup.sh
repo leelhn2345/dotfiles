@@ -16,7 +16,7 @@ rustup_toolchain() {
 #######################################
 # nix rustup
 #######################################
-rustup_stable_toolchain() {
+nix_cargo_binaries() {
   rustup default stable
   rustup component add rust-src rust-analyzer
 
@@ -38,6 +38,7 @@ terminal_crates=(
   "yazi-cli"
   "watchexec-cli"
   "procs"
+  "tealdeer"
 )
 
 cargo_crates=(
