@@ -73,7 +73,7 @@ return {
     },
     blines = {
       fzf_opts = {
-        ["--layout"] = "reverse-list",
+        ["--layout"] = "reverse",
       },
     },
     grep = {
