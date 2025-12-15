@@ -27,6 +27,13 @@ return {
     sources = {
       default = { "lsp", "path", "snippets", "buffer", "dadbod", "git" },
       providers = {
+        snippets = {
+          opts = {
+            extended_filetypes = {
+              octo = { "markdown" },
+            },
+          },
+        },
         dadbod = {
           module = "vim_dadbod_completion.blink",
         },
