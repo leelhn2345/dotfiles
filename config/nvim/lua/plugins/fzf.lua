@@ -74,6 +74,7 @@ return {
     blines = {
       fzf_opts = {
         ["--layout"] = "reverse",
+        ["--wrap"] = false,
       },
     },
     grep = {
