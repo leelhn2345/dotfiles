@@ -39,6 +39,7 @@ terminal_crates=(
   "watchexec-cli"
   "procs"
   "tealdeer"
+  "oxipng"
 )
 
 cargo_crates=(
@@ -49,7 +50,6 @@ cargo_crates=(
   "cargo-nextest"
   "cargo-autoinherit"
   "cargo-machete"
-  "oxipng"
 )
 
 #######################################

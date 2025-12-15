@@ -114,6 +114,7 @@
             ansible
             procs
             tealdeer
+            oxipng
 
             # coding
             nil
