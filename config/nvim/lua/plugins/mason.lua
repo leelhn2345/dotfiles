@@ -17,7 +17,15 @@ return {
     "mason-org/mason-lspconfig.nvim",
     lazy = true,
     dependencies = { "mason-org/mason.nvim", "neovim/nvim-lspconfig" },
-    opts = {},
+    opts = {
+      automatic_enable = {
+        exclude = {
+          -- i want to decide the order the lsp is attached to.
+          "ruff",
+          "ty",
+        },
+      },
+    },
   },
   {
     "owallb/mason-auto-install.nvim",
