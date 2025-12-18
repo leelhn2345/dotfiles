@@ -65,7 +65,7 @@ return {
         { "sql-formatter", filetypes = { "sql" } },
         { "kulala-fmt", filetypes = { "http" } },
         { "codelldb", filetypes = { "rust" } },
-        { "basedpyright", dependencies = { "debugpy" } },
+        { "ty", dependencies = { "debugpy" } },
         "ruff",
         { "djlint", filetypes = { "handlebars" } },
         { "xmlformatter", filetypes = { "xml" } },
