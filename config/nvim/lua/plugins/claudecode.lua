@@ -13,7 +13,6 @@ return {
     {
       "<leader>ac",
       "<cmd>ClaudeCode<cr>",
-      mode = { "n", "t" },
       desc = "Toggle Claude",
     },
     { "<leader>af", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
