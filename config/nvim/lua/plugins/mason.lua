@@ -77,6 +77,7 @@ return {
         "ruff",
         { "djlint", filetypes = { "handlebars" } },
         { "xmlformatter", filetypes = { "xml" } },
+        "just-lsp",
       },
     },
   },

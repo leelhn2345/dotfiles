@@ -115,6 +115,7 @@
             procs
             tealdeer
             oxipng
+            just
 
             # coding
             nil
