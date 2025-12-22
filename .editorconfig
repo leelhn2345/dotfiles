@@ -7,7 +7,11 @@ indent_style = space
 indent_size = 2
 trim_trailing_whitespace = true
 
-[{Makefile,justfile}]
+[{Makefile,*.mk}]
+indent_style = tab
+indent_size = 4
+
+[{justfile,*.just}]
 indent_style = tab
 indent_size = 4
 
