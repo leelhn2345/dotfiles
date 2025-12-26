@@ -6,12 +6,12 @@ return {
     vim.o.sessionoptions =
       "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
-    vim.api.nvim_create_user_command("Session", "AutoSession <args>", {
-      nargs = "*",
-      complete = function(arg_lead)
-        return vim.fn.getcompletion("AutoSession " .. arg_lead, "cmdline")
-      end,
-    })
+    -- vim.api.nvim_create_user_command("Session", "AutoSession <args>", {
+    --   nargs = "*",
+    --   complete = function(arg_lead)
+    --     return vim.fn.getcompletion("AutoSession " .. arg_lead, "cmdline")
+    --   end,
+    -- })
   end,
   opts = {
     -- only automatically create new session files
@@ -43,6 +43,6 @@ return {
       "DBUIClose",
       "bd kulala://ui",
     },
-    legacy_cmds = false,
+    -- legacy_cmds = false,
   },
 }

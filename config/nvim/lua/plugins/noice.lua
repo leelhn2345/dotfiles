@@ -44,6 +44,13 @@ return {
           },
           opts = { skip = true },
         },
+        {
+          filter = {
+            event = "notify",
+            find = "SessionDelete",
+          },
+          opts = { skip = true },
+        },
       },
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
