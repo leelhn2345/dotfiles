@@ -34,6 +34,7 @@ return {
       "typst",
       "kulala_ui.json",
       "snacks_terminal",
+      "leetcode.nvim",
     },
     pre_save_cmds = {
       -- "Neotree close",
