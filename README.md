@@ -109,7 +109,7 @@ To use `make` command:
 xcode-select --install
 ```
 
-### Privacy & Security Settings
+#### Privacy & Security Settings
 
 - <https://nnethercote.github.io/2025/09/04/faster-rust-builds-on-mac.html>
 - <https://nexte.st/docs/installation/macos/#gatekeeper>

@@ -7,7 +7,6 @@ return {
   },
   opts = {
     bigfile = { enabled = true },
-    -- indent = { enabled = true },
     input = { enabled = true },
     terminal = {
       win = {
