@@ -102,6 +102,7 @@
             yazi
             delta # nicer git-diff
             jaq # jq but better
+            jless # jq + less
             lsd
             zoxide
             azure-cli
