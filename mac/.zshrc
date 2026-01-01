@@ -57,6 +57,39 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 # misc zsh settings
 zle_highlight=('paste:none')  # no highlighting during paste
 
+# zsh hooks
+# -------------------------------------------
+autoload -Uz add-zsh-hook
+
+function auto_venv() {
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    deactivate
+  fi
+
+  local dir="$PWD"
+  while [[ "$dir" != "$HOME" ]]; do
+    if [[ -f "$dir/.venv/bin/activate" ]]; then
+      source "$dir/.venv/bin/activate"
+      return
+    fi
+
+    dir="${dir:h}" # move up to parent directory
+  done
+}
+
+# register hooks
+add-zsh-hook chpwd auto_venv
+# -------------------------------------------
+
+# Edit Command Buffer
+# -------------------------------------------
+# Open the current command in your $EDITOR (e.g., neovim)
+# Press Ctrl+X followed by Ctrl+E to trigger
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+# -------------------------------------------
+
 # aliases
 alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
@@ -155,17 +188,3 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-
-# pnpm
-export PNPM_HOME="/Users/nelson/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/nelson/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
