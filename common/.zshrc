@@ -65,7 +65,7 @@ function auto_venv() {
   fi
 
   local dir="$PWD"
-  while [[ "$dir" != "$HOME" ]]; do
+  while [[ "$dir" != "$HOME" && "$dir" != "/" ]]; do
     if [[ -f "$dir/.venv/bin/activate" ]]; then
       source "$dir/.venv/bin/activate"
       return
