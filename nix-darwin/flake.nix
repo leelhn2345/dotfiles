@@ -60,9 +60,8 @@
               "wezterm"
               "obsidian"
               "spotify"
-              # "th-ch/youtube-music/youtube-music"
               "pearcleaner"
-              "pear-devs/pear/pear-desktop"
+              # "pear-devs/pear/pear-desktop"
               "orbstack" # docker macOS alternative
             ];
             enable = true;

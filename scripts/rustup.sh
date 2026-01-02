@@ -40,6 +40,7 @@ terminal_crates=(
   "procs"
   "tealdeer"
   "oxipng"
+  "jless"
 )
 
 cargo_crates=(
@@ -58,7 +59,7 @@ cargo_crates=(
 # debian/ubuntu derivatives take too long to update their packages.
 # some binaries are not available in apt.
 #######################################
-cargo_binaries() {
+non_nix_cargo_binaries() {
   if ! (which cargo >/dev/null); then
     # shellcheck disable=SC1091
     source "$HOME/.cargo/env"

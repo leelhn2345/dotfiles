@@ -25,7 +25,7 @@ main() {
 
   title "Rustup Toolchain & Bob-nvim"
   rustup_toolchain
-  cargo_binaries
+  non_nix_cargo_binaries
   bob_nvim
   success "Finished installing rustup toolchain and bob-nvim."
 

@@ -143,6 +143,7 @@ alias kc='kubectl'
 alias port='netstat -tuln'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
 alias jq='jaq'
+alias jl='jless'
 alias tf='terraform'
 
 # fzf aliases
