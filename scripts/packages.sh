@@ -32,7 +32,6 @@ packages=(
   net-tools
   gh
   direnv
-  jless
 
   # python packages
   python3-venv
