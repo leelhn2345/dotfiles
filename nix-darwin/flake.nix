@@ -116,6 +116,7 @@
             tealdeer
             oxipng
             just
+            cocoapods
 
             # coding
             nil
