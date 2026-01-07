@@ -5,6 +5,7 @@ return {
   init = function()
     -- register parser for dotenv
     vim.treesitter.language.register("bash", { "dotenv" })
+    vim.treesitter.language.register("markdown", { "mdx" })
 
     vim.api.nvim_create_autocmd("FileType", {
       callback = function(args)
