@@ -26,10 +26,13 @@ return {
     --   "~/dotfiles/config/nvim",
     --   "/data/*",
     -- },
-    purge_after_minutes = 14400, -- session(s) older than the stated minutes will be deleted.
+    purge_after_minutes = 14400,
     bypass_save_file_types = {
       "",
-      "no-neck-pain",
+    },
+    close_filetypes_on_save = {
+      "checkhealth",
+      "no-neck-pain", -- BUG: https://github.com/shortcuts/no-neck-pain.nvim/issues/500
       "noice",
       "typst",
       "kulala_ui.json",
@@ -40,8 +43,6 @@ return {
       -- "Neotree close",
       "lua require('trouble').close()",
       "lua require('neogit').close()",
-      -- "lua require('spectre').close()",
-      "DBUIClose",
       "bd kulala://ui",
     },
     -- legacy_cmds = false,
