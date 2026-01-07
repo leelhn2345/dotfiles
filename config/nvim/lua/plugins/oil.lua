@@ -24,5 +24,8 @@ return {
       max_width = 90,
       border = "rounded",
     },
+    confirmation = {
+      border = "rounded",
+    },
   },
 }
