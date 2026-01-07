@@ -117,7 +117,6 @@
             oxipng
             just
             cocoapods
-            lspmux
 
             # coding
             nil
