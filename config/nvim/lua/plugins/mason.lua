@@ -23,6 +23,8 @@ return {
           -- i want to decide the order the lsp is attached to.
           "ruff",
           "ty",
+          --
+          "yamlls",
         },
       },
     },
@@ -39,7 +41,6 @@ return {
           dependencies = { "markdownlint-cli2" },
         },
         "json-lsp",
-        "yaml-language-server",
         {
           "bash-language-server",
           dependencies = { "shellcheck", "shfmt" },
