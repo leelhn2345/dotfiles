@@ -1,6 +1,6 @@
 return {
   "mrcjkb/rustaceanvim",
-  version = "^7", -- Recommended
+  version = "*", -- Recommended
   ft = { "rust" },
   dependencies = {
     "rachartier/tiny-inline-diagnostic.nvim", -- load 1st for inline diagnostics
