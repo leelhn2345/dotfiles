@@ -24,7 +24,7 @@ return {
           "ruff",
           "ty",
           --
-          "yamlls",
+          "yamlls", -- yaml-companion,
         },
       },
     },
@@ -79,6 +79,7 @@ return {
         { "djlint", filetypes = { "handlebars" } },
         { "xmlformatter", filetypes = { "xml" } },
         "just-lsp",
+        "jdtls",
       },
     },
   },

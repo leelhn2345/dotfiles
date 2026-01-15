@@ -110,17 +110,14 @@
             dust # du but more interactive
             git-cliff
             kondo
-            terraform
-            ansible
             procs
             tealdeer
             oxipng
-            just
             cocoapods
 
             # coding
             nil
-            nixfmt-rfc-style
+            nixfmt
             fnm
             pnpm
             uv
@@ -128,9 +125,14 @@
             watchexec
             go
             dotnet-sdk
+            jdk
+            maven
             typst
             claude-code
             natscli # NATS
+            just
+            terraform
+            ansible
           ];
 
           environment.variables = {
