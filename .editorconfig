@@ -15,5 +15,5 @@ indent_size = 4
 indent_style = tab
 indent_size = 4
 
-[*.{rs.py}]
+[*.{rs,py,java}]
 indent_size = 4
