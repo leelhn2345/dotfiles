@@ -41,6 +41,7 @@ return {
           dependencies = { "markdownlint-cli2" },
         },
         "json-lsp",
+        "yaml-language-server",
         {
           "bash-language-server",
           dependencies = { "shellcheck", "shfmt" },
