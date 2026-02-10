@@ -25,6 +25,7 @@ return {
           "ty",
           --
           "yamlls", -- yaml-companion,
+          "jdtls",
         },
       },
     },
