@@ -8,6 +8,7 @@ return {
     vim.treesitter.language.register("markdown", { "mdx" })
 
     vim.api.nvim_create_autocmd("FileType", {
+      group = vim.api.nvim_create_augroup("TreeSitterHighlight", {}),
       callback = function(args)
         local filetype = args.match
 
