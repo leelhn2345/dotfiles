@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("BufWinEnter", {
-  group = vim.api.nvim_create_augroup("VerticalSplit", {}),
+  group = vim.api.nvim_create_augroup("vertical_split", {}),
   callback = function()
     if
       (vim.bo.buftype == "help" or vim.bo.filetype == "man")

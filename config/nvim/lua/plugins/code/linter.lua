@@ -12,7 +12,7 @@ return {
       solidity = { "solhint" },
     }
 
-    local lint_augroup = vim.api.nvim_create_augroup("Lint", { clear = true })
+    local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
     -- trigger linting on various vim events
     -- check out `:h event` to know the various events
