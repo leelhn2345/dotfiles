@@ -14,7 +14,7 @@ return {
     require("csvview").setup(opts)
 
     vim.api.nvim_create_autocmd("FileType", {
-      group = vim.api.nvim_create_augroup("CsvViewAuto", {}),
+      group = vim.api.nvim_create_augroup("csv_view_auto", {}),
       pattern = "csv",
       desc = "Enable CSV View on .csv files",
       callback = function()
