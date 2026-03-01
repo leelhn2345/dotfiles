@@ -38,6 +38,7 @@ return {
       "kulala_ui.json",
       "snacks_terminal",
       "leetcode.nvim",
+      "codediff-history",
     },
     pre_save_cmds = {
       -- "Neotree close",

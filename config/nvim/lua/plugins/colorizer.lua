@@ -2,10 +2,15 @@ return {
   "NvChad/nvim-colorizer.lua",
   event = { "BufReadPre", "BufNewFile" },
   opts = {
-    user_default_options = {
-      mode = "virtualtext",
-      virtualtext_inline = true,
-      tailwind = true,
+    options = {
+      parsers = {
+        -- css = true,
+        tailwind = { enable = true },
+      },
+      display = {
+        mode = "virtualtext",
+        virtualtext = { position = "after" },
+      },
     },
   },
 }
