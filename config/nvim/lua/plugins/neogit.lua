@@ -2,7 +2,7 @@ return {
   "NeogitOrg/neogit",
   dependencies = {
     "nvim-lua/plenary.nvim", -- required
-    "sindrets/diffview.nvim", -- diff integration
+    "esmuellert/codediff.nvim", -- diff integration
   },
   cmd = { "Neogit" },
   keys = {
@@ -14,9 +14,6 @@ return {
     },
   },
   opts = {
-    integrations = {
-      diffview = true,
-    },
     status = {
       recent_commit_count = 50,
     },
