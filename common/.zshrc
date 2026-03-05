@@ -135,10 +135,12 @@ alias cu='cargo install-update -a'
 alias cdo='cargo doc --no-deps --open'
 
 alias update='sudo nala update && sudo nala upgrade -y'
+alias add='sudo nala install'
+alias remove='sudo nala remove'
 alias autoremove='sudo nala autoremove -y'
-alias autopurge='sudo nala autopurge -y'
+alias autopurge='sudo nala autopurge -y' # autopurge is better than autoremove
 
-alias explorer='explorer.exe `wslpath -w "$PWD"`'
+alias open='explorer.exe `wslpath -w "$PWD"`'
 alias kc='kubectl'
 alias port='netstat -tuln'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
@@ -200,6 +202,12 @@ function y() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+}
+
+fzfu () {
+  git -C ~/.fzf pull
+  wait
+  ~/.fzf/install --key-bindings --no-completion --no-update-rc
 }
 
 # fnm
