@@ -30,6 +30,13 @@ pnpm_install() {
 }
 
 #######################################
+# installs sdkman, version manager for java
+#######################################
+sdkman_install() {
+  curl -s "https://get.sdkman.io" | bash
+}
+
+#######################################
 # installs bun, a nodeJS and npm alternative
 #######################################
 bun_install() {

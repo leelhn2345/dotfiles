@@ -30,6 +30,7 @@ packages=(
   libfuse2t64
   mercurial
   stow
+  zip
   unzip
   fswatch
   pkg-config

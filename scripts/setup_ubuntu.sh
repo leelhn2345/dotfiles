@@ -27,6 +27,7 @@ main() {
   uv_install
   fnm_install
   pnpm_install
+  sdkman_install
   # golang_install
   # dotnet_install
   success "Finished installing coding tools."
