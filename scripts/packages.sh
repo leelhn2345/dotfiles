@@ -6,6 +6,16 @@
 install_apt_wrapper() {
   sudo apt-get update && sudo apt-get upgrade-y
   sudo apt-get install nala -y
+
+  # this is to wrap all `apt` commands with `nala`.
+  sudo mv /usr/bin/apt /usr/bin/apt.bak
+  sudo tee /usr/bin/apt <<'EOF'
+#!/bin/bash
+exec nala "$@"
+EOF
+  sudo chmod +x /usr/bin/apt
+
+  # to undo the above, just remove existing /usr/bin/apt and restore the .bak file
 }
 
 packages=(
