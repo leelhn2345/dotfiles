@@ -27,8 +27,8 @@ main() {
   uv_install
   fnm_install
   pnpm_install
-  golang_install
-  dotnet_install
+  # golang_install
+  # dotnet_install
   success "Finished installing coding tools."
 
   title "Zsh & tmux"
@@ -40,7 +40,7 @@ main() {
 
   title "Stowing"
   cd ..
-  cp .ignore ~ # whitelisting for `.env` for ripgren and fd-find
+  cp ./common/.ignore ~ # whitelisting for `.env` for ripgren and fd-find
   stow --adopt common
   stow --adopt home
   git restore .

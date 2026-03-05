@@ -41,6 +41,8 @@ terminal_crates=(
   "tealdeer"
   "oxipng"
   "jless"
+  "bottom"
+  "tree-sitter-cli"
 )
 
 cargo_crates=(
