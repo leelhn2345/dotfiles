@@ -4,7 +4,7 @@
 # installs nala, an apt wrapper
 #######################################
 install_apt_wrapper() {
-  sudo apt-get update -y
+  sudo apt-get update && sudo apt-get upgrade-y
   sudo apt-get install nala -y
 }
 
@@ -13,17 +13,13 @@ packages=(
   build-essential
   lld
   clang
-  bottom
   neofetch
   bat
   jq
   fd-find
-  libfuse2
+  libfuse2t64
   mercurial
-  sed
   stow
-  tmux
-  vim
   unzip
   fswatch
   pkg-config
@@ -34,11 +30,11 @@ packages=(
   direnv
 
   # python packages
-  python3-venv
-  python3-pip
+  # python3-venv
+  # python3-pip
 
   # database
-  postgresql-client
+  # postgresql-client
 )
 
 #######################################
