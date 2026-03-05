@@ -28,6 +28,7 @@ main() {
   fnm_install
   pnpm_install
   sdkman_install
+  claude_code_install
   # golang_install
   # dotnet_install
   success "Finished installing coding tools."

@@ -36,6 +36,10 @@ sdkman_install() {
   curl -s "https://get.sdkman.io" | bash
 }
 
+claude_code_install() {
+  curl -fsSL https://claude.ai/install.sh | bash
+}
+
 #######################################
 # installs bun, a nodeJS and npm alternative
 #######################################
