@@ -90,6 +90,11 @@ zle -N edit-command-line
 bindkey '^X^E' edit-command-line
 # -------------------------------------------
 
+# automatically starts ssh-agent
+if [ -z "$SSH_AUTH_SOCK" ]; then
+  eval "$(ssh-agent -s)" > /dev/null 2>&1
+fi
+
 # aliases
 alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'

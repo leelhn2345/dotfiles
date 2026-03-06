@@ -43,6 +43,7 @@ terminal_crates=(
   "jless"
   "bottom"
   "tree-sitter-cli"
+  "du-dust"
 )
 
 cargo_crates=(

@@ -88,6 +88,11 @@ zle -N edit-command-line
 bindkey '^X^E' edit-command-line
 # -------------------------------------------
 
+# automatically starts ssh-agent
+if [ -z "$SSH_AUTH_SOCK" ]; then
+  eval "$(ssh-agent -s)" > /dev/null 2>&1
+fi
+
 # aliases
 alias v='nvim'
 alias vc='cd ~/.config/nvim && nvim'
@@ -144,6 +149,7 @@ alias open='explorer.exe `wslpath -w "$PWD"`'
 alias kc='kubectl'
 alias port='netstat -tuln'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
+alias du='dust'
 alias jq='jaq'
 alias jl='jless'
 alias tf='terraform'
