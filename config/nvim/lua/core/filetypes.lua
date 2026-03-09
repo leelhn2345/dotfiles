@@ -16,5 +16,7 @@ vim.filetype.add({
   pattern = {
     ["%.env%.[%w_.-]+"] = "dotenv",
     ["%.envrc%.[%w_.-]+"] = "sh",
+    ["%.gitconfig-[%w_.-]+"] = "gitconfig",
+    ["%.gitconfig%.[%w_.-]+"] = "gitconfig",
   },
 })
