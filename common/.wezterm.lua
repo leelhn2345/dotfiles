@@ -17,7 +17,7 @@ local act = wezterm.action
 config = {
   -- core settings
   window_close_confirmation = "NeverPrompt",
-  -- default_domain = "WSL:Ubuntu" -- uncomment if using WSL
+  -- default_domain = "WSL:Ubuntu", -- uncomment if using WSL
 
   -- appearance
   native_macos_fullscreen_mode = true, -- only has an effect when running on macOS
