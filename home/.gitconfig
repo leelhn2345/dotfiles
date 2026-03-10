@@ -1,6 +1,6 @@
 [user]
 	name = Nelson Lee
-	email = nelson.lee@reolink.sg
+	email = leelhn2345@outlook.com
 [color]
 	ui = auto
 [init]
@@ -22,7 +22,3 @@
     conflictstyle = zdiff3
 [push]
     autoSetupRemote = true
-[includeIf "gitdir:~/dotfiles/"]
-  path = /Users/nelson/.gitconfig-personal
-[includeIf "gitdir:~/code/personal/"]
-  path = /Users/nelson/.gitconfig-personal
