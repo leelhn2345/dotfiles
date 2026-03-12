@@ -45,7 +45,8 @@ packages=(
   # python3-pip
 
   # database
-  # postgresql-client
+  postgresql-client
+  mysql-client
 )
 
 #######################################
