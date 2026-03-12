@@ -31,6 +31,12 @@ pnpm_install() {
 
 #######################################
 # installs sdkman, version manager for java
+#
+# sdk list java
+# sdk install java
+#
+# sdk list maven
+# sdk install maven
 #######################################
 sdkman_install() {
   curl -s "https://get.sdkman.io" | bash
