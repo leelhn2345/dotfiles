@@ -17,3 +17,6 @@ indent_size = 4
 
 [*.{rs,py}]
 indent_size = 4
+
+[*.sql]
+indent_size = 4
