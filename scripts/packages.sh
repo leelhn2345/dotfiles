@@ -23,7 +23,7 @@ packages=(
   build-essential
   lld
   clang
-  neofetch
+  fastfetch
   bat
   jq
   fd-find

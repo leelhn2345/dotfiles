@@ -46,6 +46,7 @@
                 name = "libpq";
                 link = true;
               }
+              "mysql-client"
               {
                 name = "python";
                 link = true;
@@ -83,7 +84,7 @@
             bottom # system monitoring
             neovim
             tree-sitter
-            neofetch
+            fastfetch
             bat
             fd
             fzf
