@@ -2,6 +2,7 @@ return {
   "Bekaboo/dropbar.nvim",
   opts = {
     bar = {
+      -- https://github.com/Bekaboo/dropbar.nvim?tab=readme-ov-file#bar
       enable = function(buf, win, _)
         buf = vim._resolve_bufnr(buf)
         if
