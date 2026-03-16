@@ -6,7 +6,6 @@ return {
     local lint = require("lint")
 
     lint.linters_by_ft = {
-      markdown = { "markdownlint-cli2" },
       dockerfile = { "hadolint" },
       handlebars = { "djlint" },
       solidity = { "solhint" },

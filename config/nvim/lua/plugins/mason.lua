@@ -37,10 +37,7 @@ return {
       packages = {
         "lua-language-server",
         "stylua",
-        {
-          "marksman",
-          dependencies = { "markdownlint-cli2" },
-        },
+        "rumdl",
         "json-lsp",
         "yaml-language-server",
         {

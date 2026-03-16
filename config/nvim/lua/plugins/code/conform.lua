@@ -10,7 +10,6 @@ return {
       typescriptreact = { "biome" },
       css = { "biome" },
       scss = { "prettierd" },
-      markdown = { "markdownlint-cli2" },
       lua = { "stylua" },
       python = { "ruff_fix", "ruff_format" },
       sh = { "shfmt" },
