@@ -6,10 +6,12 @@ return {
         globals = { "vim" },
       },
       workspace = {
+        checkThirdParty = false,
         -- make language server aware of runtime files
         library = {
-          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-          [vim.fn.stdpath("config") .. "/lua"] = true,
+          vim.env.VIMRUNTIME,
+          "${3rd}/luv/library",
+          vim.fn.stdpath("config") .. "/lua",
         },
       },
     },
