@@ -11,6 +11,7 @@ vim.filetype.add({
   filename = {
     [".env"] = "dotenv",
     [".envrc"] = "sh",
+    [".sqruff"] = "ini",
   },
   -- detect and assign filetypes based on certain patterns
   pattern = {
