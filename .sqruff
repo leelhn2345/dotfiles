@@ -1,0 +1,4 @@
+# https://github.com/quarylabs/sqruff/blob/main/crates/lib/src/core/default_config.cfg
+[sqruff]
+dialect = postgres
+rules = all
