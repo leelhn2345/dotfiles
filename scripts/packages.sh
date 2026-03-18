@@ -41,7 +41,7 @@ packages=(
   direnv
 
   # python packages
-  # python3-venv
+  python3-venv
   # python3-pip
 
   # database
