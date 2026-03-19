@@ -210,6 +210,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+yu () {
+  ya pkg upgrade
+}
+
 fzfu () {
   git -C ~/.fzf pull
   wait
