@@ -194,3 +194,7 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+yu () {
+  ya pkg upgrade
+}
