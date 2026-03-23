@@ -3,7 +3,7 @@ return {
   version = "*",
   cmd = "ToggleTerm",
   keys = {
-    { "\\", ":ToggleTerm<CR>", desc = "Toggle Terminal" }, -- this has to be same as `open_mapping`
+    { "<C-\\>", ":ToggleTerm<CR>", desc = "Toggle Terminal" }, -- this has to be same as `open_mapping`
     {
       "<leader>\\",
       "<CMD>TermSelect<CR>",
@@ -26,7 +26,7 @@ return {
         return vim.o.columns * 0.4
       end
     end,
-    open_mapping = [[\]],
+    open_mapping = [[<C-\>]],
     direction = "float",
     insert_mappings = false,
   },
