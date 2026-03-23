@@ -3,7 +3,11 @@ return {
   version = "*",
   cmd = "ToggleTerm",
   keys = {
-    { "<C-\\>", ":ToggleTerm<CR>", desc = "Toggle Terminal" }, -- this has to be same as `open_mapping`
+    {
+      "<C-\\>",
+      ":ToggleTerm<CR>",
+      desc = "Toggle Terminal",
+    }, -- this has to be same as `open_mapping`
     {
       "<leader>\\",
       "<CMD>TermSelect<CR>",
@@ -16,6 +20,11 @@ return {
       mode = "t",
       ft = { "toggleterm" },
       desc = "Escape to normal mode",
+    },
+    {
+      "<leader>r\\",
+      "<CMD>ToggleTermSetName<CR>",
+      desc = "Rename Terminal",
     },
   },
   opts = {
