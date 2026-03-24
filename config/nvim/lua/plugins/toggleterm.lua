@@ -5,7 +5,7 @@ return {
   keys = {
     {
       "<C-\\>",
-      ":ToggleTerm<CR>",
+      "<CMD>ToggleTerm<CR>",
       desc = "Toggle Terminal",
     }, -- this has to be same as `open_mapping`
     {
