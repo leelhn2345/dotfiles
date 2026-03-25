@@ -17,7 +17,6 @@ return {
       nix = { "nixfmt" },
       http = { "kulala-fmt" },
       handlebars = { "djlint" },
-      xml = { "xmlformatter" },
     },
     format_on_save = {
       lsp_format = "fallback",
