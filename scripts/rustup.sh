@@ -45,6 +45,7 @@ terminal_crates=(
   "tree-sitter-cli"
   "du-dust"
   "fd-find"
+  "just"
 )
 
 cargo_crates=(
