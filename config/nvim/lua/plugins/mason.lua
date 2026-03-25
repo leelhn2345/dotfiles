@@ -76,7 +76,7 @@ return {
         { "ty", dependencies = { "debugpy" } },
         "ruff",
         { "djlint", filetypes = { "handlebars" } },
-        { "xmlformatter", filetypes = { "xml" } },
+        "lemminx",
         "just-lsp",
         "jdtls",
         "sqruff",
