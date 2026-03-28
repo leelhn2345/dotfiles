@@ -25,7 +25,12 @@ return {
       enabled = false,
     },
     sources = {
-      default = { "lsp", "path", "snippets", "buffer", "dadbod", "git" },
+      default = { "lsp", "path", "snippets", "buffer", "git" },
+      per_filetype = {
+        sql = { "snippets", "dadbod", "buffer" },
+        mysql = { "snippets", "dadbod", "buffer" },
+        plsql = { "snippets", "dadbod", "buffer" },
+      },
       providers = {
         snippets = {
           opts = {
