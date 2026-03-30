@@ -39,6 +39,7 @@ return {
       "snacks_terminal",
       "leetcode.nvim",
       "codediff-history",
+      "help",
     },
     pre_save_cmds = {
       -- "Neotree close",

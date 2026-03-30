@@ -1,6 +1,6 @@
 return {
   "shortcuts/no-neck-pain.nvim",
-  event = "UIEnter",
+  event = "BufWinEnter",
   cmd = { "NoNeckPain" },
   keys = {
     {
@@ -12,11 +12,8 @@ return {
   },
   opts = {
     autocmds = {
+      enableOnVimEnter = "safe",
       skipEnteringNoNeckPainBuffer = true,
     },
   },
-  config = function(_, opts)
-    require("no-neck-pain").setup(opts)
-    vim.cmd("NoNeckPain")
-  end,
 }
