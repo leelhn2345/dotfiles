@@ -1,3 +1,3 @@
 return {
-  filetypes = { "sql", "mysql", "psql" },
+  filetypes = { "sql", "mysql", "plsql" },
 }
