@@ -32,7 +32,7 @@ packages=(
   stow
   zip
   unzip
-  fswatch
+  inotify-tools
   pkg-config
   libssl-dev
   libxml2-utils
