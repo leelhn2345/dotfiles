@@ -25,7 +25,7 @@ local function get_platform_config()
         {
           name = "JavaSE-17",
           path = vim.fn.expand("~/.sdkman/candidates/java/17.0.18-tem/"),
-          default = true,
+          -- default = true,
         },
       },
     }
