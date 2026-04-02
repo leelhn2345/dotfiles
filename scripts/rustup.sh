@@ -46,6 +46,7 @@ terminal_crates=(
   "du-dust"
   "fd-find"
   "just"
+  "typst-cli"
 )
 
 cargo_crates=(
