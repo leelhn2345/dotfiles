@@ -14,7 +14,7 @@ main() {
   install_apt_wrapper
   install_packages
   # install_wsl_packages # uncomment if installing in wsl
-  post_process_packages
+  # post_process_packages
   success "Finished installing apt packages."
 
   title "Rustup Toolchain & Bob-nvim"
