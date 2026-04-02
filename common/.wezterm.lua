@@ -11,10 +11,9 @@ wezterm.on("update-status", function(window, _)
   window:set_config_overrides(overrides)
 end)
 
-local config = wezterm.config_builder()
 local act = wezterm.action
 
-config = {
+local config = {
   -- core settings
   window_close_confirmation = "NeverPrompt",
   -- default_domain = "WSL:Ubuntu", -- uncomment if using WSL
