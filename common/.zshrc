@@ -146,7 +146,7 @@ alias autoremove='sudo nala autoremove -y'
 alias autopurge='sudo nala autopurge -y' # autopurge is better than autoremove
 
 alias open='explorer.exe `wslpath -w "$PWD"`'
-alias kc='kubectl'
+alias k='kubectl'
 alias port='netstat -tuln'
 alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
 alias du='dust'
