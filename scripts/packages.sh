@@ -26,7 +26,6 @@ packages=(
   fastfetch # only works for ubuntu 25.04 or later. for earlier versions, use `neofetch`
   bat
   jq
-  fd-find
   libfuse2t64
   mercurial
   stow

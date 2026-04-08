@@ -42,7 +42,6 @@ main() {
 
   title "Stowing"
   cd ..
-  cp ./common/.ignore ~ # whitelisting for `.env` for ripgren and fd-find
   stow --adopt common
   stow --adopt home
   git restore .
