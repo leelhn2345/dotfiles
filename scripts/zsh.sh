@@ -36,6 +36,7 @@ zsh_completions() {
   procs --gen-completion-out zsh >"$ZSH_COMPLETIONS_DIR/_procs"
   typst completions zsh >"$ZSH_COMPLETIONS_DIR/_typst"
   just --completions zsh >"$ZSH_COMPLETIONS_DIR/_just"
+  watchexec --completions zsh >"$ZSH_COMPLETIONS_DIR/_watchexec"
 
   # no idea if this line is still needed
   rm -rf ~/.zfunc
