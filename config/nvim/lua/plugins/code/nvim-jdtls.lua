@@ -14,20 +14,30 @@ local function get_platform_config()
     )
 
   if uname == "Linux" then
+    local sdkman_java = vim.fn.expand("~/.sdkman/candidates/java")
+
+    -- Dynamically discover installed sdkman Java runtimes
+    local runtime_specs = {
+      { name = "JavaSE-17", glob = "17*" },
+      { name = "JavaSE-21", glob = "21*" },
+      { name = "JavaSE-25", glob = "25*" },
+    }
+    local runtimes = {}
+    for _, spec in ipairs(runtime_specs) do
+      local match = vim.fn.glob(sdkman_java .. "/" .. spec.glob, false, true)
+      if #match > 0 then
+        -- lua is 1-indexed
+        table.insert(runtimes, { name = spec.name, path = match[1] .. "/" })
+      end
+    end
+
     return {
       cmd = {
         "jdtls",
-        "--java-executable="
-          .. vim.fn.expand("~/.sdkman/candidates/java/25.0.2-tem/bin/java"),
+        "--java-executable=" .. sdkman_java .. "/current/bin/java",
         lombok_arg,
       },
-      runtimes = {
-        {
-          name = "JavaSE-17",
-          path = vim.fn.expand("~/.sdkman/candidates/java/17.0.18-tem/"),
-          -- default = true,
-        },
-      },
+      runtimes = runtimes,
     }
   else
     return {
