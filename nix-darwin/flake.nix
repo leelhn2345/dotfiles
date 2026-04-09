@@ -90,7 +90,6 @@
             fzf
             mercurial
             stow
-            fswatch
             pkgconf
             gh
             glab
