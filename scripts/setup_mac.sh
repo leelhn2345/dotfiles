@@ -4,6 +4,7 @@
 . ./rustup.sh
 . ./zsh.sh
 . ./tmux.sh
+. ./coding.sh
 
 NIX_DARWIN_FLAKE="$HOME/dotfiles/nix-darwin#grimoire"
 
@@ -25,6 +26,10 @@ main() {
   info "installing nodejs"
   fnm install --lts # installs node-lts
   success "finished installing nodejs"
+
+  info "installing sdkman"
+  sdkman_install
+  success "finished installing sdkman"
 
   title "rustup toolchain"
   nix_cargo_binaries
