@@ -3,10 +3,7 @@ return {
   event = "InsertEnter",
   dependencies = {
     "rafamadriz/friendly-snippets",
-    {
-      "Kaiser-Yang/blink-cmp-git",
-      dependencies = { "nvim-lua/plenary.nvim" },
-    },
+    "Kaiser-Yang/blink-cmp-git",
   },
   version = "*", -- use a release tag to download pre-built binaries
   opts = {
