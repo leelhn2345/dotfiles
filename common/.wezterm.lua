@@ -30,6 +30,7 @@ local config = {
   hide_tab_bar_if_only_one_tab = true,
   font = wezterm.font_with_fallback({
     "MonaspiceNe Nerd Font",
+    "Flog Symbols",
     "Monaspace Neon",
     "Cascadia Code",
   }),

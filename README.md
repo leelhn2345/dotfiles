@@ -34,6 +34,7 @@ Summary:
 
 **Font used** is [Monaspace Neon](https://monaspace.githubnext.com/).
 Nerd font variant is `MonaspiceNe Nerd Font`.
+Also download [Flog Symbols](https://github.com/rbong/flog-symbols/blob/main/FlogSymbols.ttf) for neogit's git graph.
 
 Remember to switch on ligatures.
 
