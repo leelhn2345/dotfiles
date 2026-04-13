@@ -25,7 +25,8 @@ return {
     code = {
       width = "block",
       right_pad = 1,
-      highlight = "",
+      style = "language",
+      language_border = "",
     },
   },
 }
