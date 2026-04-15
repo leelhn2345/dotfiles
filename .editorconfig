@@ -18,7 +18,7 @@ indent_size = 4
 [*.{rs,py}]
 indent_size = 4
 
-[*.sql]
+[*.{sql,mysql,plsql}]
 indent_size = 4
 
 [*.java]
