@@ -19,5 +19,6 @@ vim.filetype.add({
     ["%.envrc%.[%w_.-]+"] = "sh",
     ["%.gitconfig-[%w_.-]+"] = "gitconfig",
     ["%.gitconfig%.[%w_.-]+"] = "gitconfig",
+    [".+%.yml%-template"] = "yaml",
   },
 })
