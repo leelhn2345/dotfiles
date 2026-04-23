@@ -53,7 +53,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color $realpath'
 zstyle ':fzf-tab:*' switch-group '<' '>'
 
 # misc zsh settings
-zle_highlight=('paste:none')  # no highlighting during paste
+zle_highlight=('paste:none') # no highlighting during paste
 
 # zsh hooks
 # -------------------------------------------
@@ -90,7 +90,7 @@ bindkey '^X^E' edit-command-line
 
 # automatically starts ssh-agent
 if [ -z "$SSH_AUTH_SOCK" ]; then
-  eval "$(ssh-agent -s)" > /dev/null 2>&1
+  eval "$(ssh-agent -s)" >/dev/null 2>&1
 fi
 
 # aliases
@@ -202,19 +202,19 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(direnv hook zsh)"
 
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
 }
 
-yu () {
+yu() {
   ya pkg upgrade
 }
 
-fzfu () {
+fzfu() {
   git -C ~/.fzf pull
   wait
   ~/.fzf/install --key-bindings --no-completion --no-update-rc
@@ -237,4 +237,13 @@ FNM_PATH="/home/nelson/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "$(fnm env --shell zsh)"
+fi
+
+# golang
+GO_PATH="/usr/local/go/bin"
+if [ -d "$GO_PATH" ]; then
+  PATH="$GO_PATH:$PATH"
+
+  # verify what's the normal GOPATH with `go env GOPATH`
+  export PATH="$HOME/go/bin:$PATH"
 fi
