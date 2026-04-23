@@ -114,6 +114,7 @@
             tealdeer
             oxipng
             cocoapods
+            grpcurl
 
             # coding
             nil
