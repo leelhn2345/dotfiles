@@ -6,6 +6,7 @@
 . ./zsh.sh
 . ./tmux.sh
 . ./logging.sh
+. ./golang.sh
 
 main() {
   info "setting up ubuntu(wsl) terminal environment..."
@@ -23,13 +24,17 @@ main() {
   bob_nvim
   success "Finished installing rustup toolchain and bob-nvim."
 
+  title "Go Toolchain"
+  golang_install
+  golang_tools
+  success "Finished installing golang toolchain and tools."
+
   title "Coding Tools"
   uv_install
   fnm_install
   pnpm_install
   sdkman_install
   claude_code_install
-  # golang_install
   # dotnet_install
   success "Finished installing coding tools."
 

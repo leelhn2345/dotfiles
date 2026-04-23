@@ -60,23 +60,3 @@ bun_install() {
 dotnet_install() {
   sudo apt-get install -y dotnet-sdk-8.0
 }
-
-#######################################
-# golang version manager - https://github.com/go-nv/goenv
-#
-# uses `goenv` as cmd
-#######################################
-golang_install() {
-  git clone https://github.com/go-nv/goenv.git ~/.goenv
-
-  export GOENV_ROOT="$HOME/.goenv"
-  export PATH="$GOENV_ROOT/bin:$PATH"
-  eval "$(goenv init -)"
-  export PATH="$GOROOT/bin:$PATH"
-  export PATH="$PATH:$GOPATH/bin"
-
-  goenv install latest
-  LATEST_GOLANG_VERSION=$(goenv versions | awk '{print $1}')
-  info "installed latest golang version -- $LATEST_GOLANG_VERSION"
-  goenv global "$LATEST_GOLANG_VERSION"
-}
