@@ -47,6 +47,7 @@ terminal_crates=(
   "fd-find"
   "just"
   "typst-cli"
+  "kondo"
 )
 
 cargo_crates=(
