@@ -51,11 +51,16 @@ return {
               ".venv",
             },
           },
+          checkOnSave = false,
+          diagnostics = {
+            enable = false,
+          },
         },
       },
     },
   },
   config = function(_, opts)
     vim.g.rustaceanvim = opts
+    vim.lsp.enable("bacon_ls")
   end,
 }
