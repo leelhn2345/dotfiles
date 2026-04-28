@@ -8,4 +8,8 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = "󰠠 ",
     },
   },
+  float = {
+    border = "rounded",
+    source = true,
+  },
 })
