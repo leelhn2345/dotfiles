@@ -115,6 +115,7 @@
             oxipng
             cocoapods
             grpcurl
+            kubectl
 
             # coding
             nil
