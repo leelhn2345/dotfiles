@@ -77,3 +77,11 @@ vim.keymap.set("n", "J", "mzJ`z", { desc = "Joins the line below" })
 -- Tabs
 vim.keymap.set("n", "]t", "<cmd>tabnext<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "[t", "<cmd>tabprevious<CR>", { desc = "Prev tab" })
+
+-- diagnostics
+vim.keymap.set(
+  "n",
+  "D",
+  vim.diagnostic.open_float,
+  { desc = "Line Diagnostics" }
+)
