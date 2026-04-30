@@ -23,7 +23,7 @@ packages=(
   build-essential
   lld
   clang
-  fastfetch # only works for ubuntu 25.04 or later. for earlier versions, use `neofetch`
+  fastfetch # WARN: only works for ubuntu 25.04 or later. for earlier versions, use `neofetch`
   bat
   jq
   libfuse2t64
