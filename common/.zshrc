@@ -103,6 +103,8 @@ alias vd='cd ~/dotfiles && nvim'
 
 alias cat='batcat'
 
+alias ffetch='fastfetch'
+
 alias ls='lsd'
 alias ll='lsd -AlF'
 alias la='lsd -A'
