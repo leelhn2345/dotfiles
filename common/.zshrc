@@ -130,7 +130,7 @@ alias cb='cargo build'
 alias cr='cargo run'
 alias cwr='watchexec -e rs -c -q -r cargo run'
 # alias cwcr='cargo watch -c -q -w src -x clippy -x run'
-alias cwt='cargo watch -c -q -x -- cargo nextest run'
+alias cwt='watchexec -e rs -c -q -r cargo nextest run'
 # alias cwtr='cargo watch -c -q -x clippy -x -- cargo nextest run -x run'
 alias clw='cargo leptos watch'
 
