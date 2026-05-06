@@ -1,7 +1,6 @@
 return {
   "NeogitOrg/neogit",
   dependencies = {
-    "nvim-lua/plenary.nvim", -- required
     "esmuellert/codediff.nvim", -- diff integration
   },
   cmd = { "Neogit" },
