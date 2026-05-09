@@ -36,6 +36,7 @@ return {
       "noice",
       "typst",
       "kulala_ui.json",
+      "text.kulala_ui",
       "snacks_terminal",
       "leetcode.nvim",
       "codediff-history",
