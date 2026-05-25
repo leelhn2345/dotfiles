@@ -26,7 +26,7 @@ main() {
 
   title "Go Toolchain"
   golang_install
-  golang_tools
+  # golang_tools
   success "Finished installing golang toolchain and tools."
 
   title "Coding Tools"

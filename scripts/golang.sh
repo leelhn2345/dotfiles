@@ -2,7 +2,7 @@
 # installs golang-go
 #######################################
 golang_install() {
-  GO_VERSION=1.26.2.linux-amd64
+  GO_VERSION=1.26.3.linux-amd64
 
   curl -OL https://go.dev/dl/go${GO_VERSION}.tar.gz
 
