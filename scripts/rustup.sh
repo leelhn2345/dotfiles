@@ -48,6 +48,7 @@ terminal_crates=(
   "just"
   "typst-cli"
   "kondo"
+  "git-cliff"
 )
 
 cargo_crates=(

@@ -161,6 +161,10 @@ alias tf='terraform'
 alias fzf="fzf --preview 'batcat --style=numbers --color=always {}'"
 alias vf='nvim $(fzf --preview="batcat --color=always {}")'
 
+alias cl='claude'
+
+alias cliff='git-cliff'
+
 # theme/plugins
 source "$ZSH_PLUGINS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
 source "$ZSH_PLUGINS_DIR/fzf-tab/fzf-tab.plugin.zsh"
