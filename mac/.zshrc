@@ -164,6 +164,8 @@ alias vf='nvim $(fzf --preview="bat --color=always {}")'
 
 alias cl='claude'
 
+alias cliff='git-cliff'
+
 alias azs='az account set --subscription $AZ_SUBSCRIPTION'
 
 # theme/plugins
