@@ -114,8 +114,9 @@
             tealdeer
             oxipng
             cocoapods
-            grpcurl
+            # grpcurl
             kubectl
+            lspmux
 
             # coding
             nil

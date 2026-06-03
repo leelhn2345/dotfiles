@@ -49,6 +49,7 @@ terminal_crates=(
   "typst-cli"
   "kondo"
   "git-cliff"
+  "lspmux"
 )
 
 cargo_crates=(
