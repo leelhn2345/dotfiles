@@ -50,7 +50,7 @@ local config = {
 
   keys = {
     -- paste from the clipboard
-    -- { key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
+    { key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
   },
 }
 
