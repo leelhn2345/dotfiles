@@ -52,7 +52,7 @@ return {
     )
 
     -- match new cursors within visual selections by regex.
-    set("x", "M", mc.matchCursors, { desc = "Match new cursors by regex" })
+    set("x", "m", mc.matchCursors, { desc = "Match new cursors by regex" })
 
     -- Mappings defined in a keymap layer only apply when there are
     -- multiple cursors. This lets you have overlapping mappings.
