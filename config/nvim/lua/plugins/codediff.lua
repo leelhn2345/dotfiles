@@ -15,4 +15,9 @@ return {
       silent = true,
     },
   },
+  opts = {
+    explorer = {
+      view_mode = "tree",
+    },
+  },
 }
