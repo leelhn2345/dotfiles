@@ -14,20 +14,6 @@ return {
       { desc = "Toggle multi-cursor" }
     )
 
-    -- Add or skip cursor above/below the main cursor.
-    set({ "n", "x" }, "<up>", function()
-      mc.lineAddCursor(-1)
-    end)
-    set({ "n", "x" }, "<down>", function()
-      mc.lineAddCursor(1)
-    end)
-    set({ "n", "x" }, "<leader><up>", function()
-      mc.lineSkipCursor(-1)
-    end)
-    set({ "n", "x" }, "<leader><down>", function()
-      mc.lineSkipCursor(1)
-    end)
-
     -- Add a cursor for all matches of cursor word/selection in the document.
     set(
       { "n", "x" },
