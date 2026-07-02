@@ -64,6 +64,8 @@
               "pearcleaner"
               # "pear-devs/pear/pear-desktop"
               "orbstack" # docker macOS alternative
+              "redis-insight"
+              "dbeaver-community"
             ];
             enable = true;
             onActivation = {
