@@ -4,3 +4,4 @@
 !http/
 !.lazy.lua
 !terraform.tfvars
+!http-client.private.env.json
