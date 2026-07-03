@@ -7,8 +7,11 @@ return {
     { prefix, "", desc = "+Kulala", mode = { "n", "v" } },
   },
   opts = {
-    default_env = "dev",
     global_keymaps = true,
     global_keymaps_prefix = prefix,
+    kulala_keymaps = {
+      ["Previous tab"] = false,
+      ["Next tab"] = false,
+    },
   },
 }
