@@ -26,6 +26,7 @@ return {
           --
           "yamlls", -- yaml-companion,
           "jdtls",
+          "marksman",
         },
       },
     },
