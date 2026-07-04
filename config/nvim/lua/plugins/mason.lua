@@ -37,7 +37,7 @@ return {
       packages = {
         "lua-language-server",
         "stylua",
-        "marksman",
+        "markdown-oxide",
         "rumdl",
         "json-lsp",
         "yaml-language-server",
