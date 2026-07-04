@@ -66,6 +66,7 @@
               "orbstack" # docker macOS alternative
               "redis-insight"
               "dbeaver-community"
+              "mongodb-compass"
             ];
             enable = true;
             onActivation = {
