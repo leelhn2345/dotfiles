@@ -183,7 +183,7 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
 
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 
 # # bun completions
 # [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
