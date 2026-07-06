@@ -188,7 +188,7 @@ bindkey -M emacs '^N' history-substring-search-down
 
 # shell integrations
 source <(fzf --zsh)
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 eval "$(direnv hook zsh)"
 eval "$(fnm env --use-on-cd --shell zsh)"
 
