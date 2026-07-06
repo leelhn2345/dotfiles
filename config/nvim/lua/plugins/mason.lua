@@ -79,7 +79,7 @@ return {
         "lemminx",
         "just-lsp",
         "jdtls",
-        "sqruff",
+        "sql-formatter",
       },
     },
   },

@@ -17,6 +17,7 @@ return {
       cs = { "csharpier" },
       http = { "kulala-fmt" },
       handlebars = { "djlint" },
+      sql = { "sql_formatter" },
     }
 
     if vim.fn.executable("nixfmt") == 1 then
