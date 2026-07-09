@@ -112,6 +112,7 @@ return {
     fzf_lua.register_ui_select(function(fzf_opts, items)
       return fzf_opts.kind == "codeaction"
           and {
+            fzf_opts = { ["--layout"] = "reverse-list" },
             winopts = {
               -- row = 0.7,
               layout = "vertical",

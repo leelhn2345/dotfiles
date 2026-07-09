@@ -26,6 +26,7 @@ return {
           --
           "yamlls", -- yaml-companion,
           "jdtls",
+          "oxfmt",
         },
       },
     },
@@ -45,14 +46,14 @@ return {
           dependencies = { "shellcheck", "shfmt" },
         },
         {
-          "vtsls",
+          "tsgo",
           dependencies = {
             "js-debug-adapter",
-            "prettierd",
           },
         },
         "eslint-lsp",
-        "biome",
+        "oxlint",
+        "oxfmt",
         "tailwindcss-language-server",
         "emmet-language-server",
         "css-lsp",
