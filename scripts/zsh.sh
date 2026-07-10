@@ -37,6 +37,7 @@ zsh_completions() {
   typst completions zsh >"$ZSH_COMPLETIONS_DIR/_typst"
   just --completions zsh >"$ZSH_COMPLETIONS_DIR/_just"
   watchexec --completions zsh >"$ZSH_COMPLETIONS_DIR/_watchexec"
+  kubectl completion zsh >"$ZSH_COMPLETIONS_DIR/_kubectl"
 
   # no idea if this line is still needed
   rm -rf ~/.zfunc

@@ -35,6 +35,7 @@ main() {
   pnpm_install
   sdkman_install
   claude_code_install
+  k8s_install
   # dotnet_install
   success "Finished installing coding tools."
 
