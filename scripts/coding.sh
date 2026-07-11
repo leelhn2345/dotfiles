@@ -60,3 +60,12 @@ bun_install() {
 dotnet_install() {
   sudo apt-get install -y dotnet-sdk-8.0
 }
+
+#######################################
+# installs `kubectl`
+#######################################
+k8s_install() {
+  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+}
