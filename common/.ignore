@@ -5,3 +5,5 @@
 !.lazy.lua
 !terraform.tfvars
 !http-client.private.env.json
+.obsidian/
+.*cache/

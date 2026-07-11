@@ -18,6 +18,7 @@ return {
       http = { "kulala-fmt" },
       handlebars = { "djlint" },
       sql = { "sql_formatter" },
+      markdown = { "rumdl" },
     }
 
     if vim.fn.executable("nixfmt") == 1 then

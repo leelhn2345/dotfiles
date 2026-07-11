@@ -8,7 +8,7 @@ return {
   keys = {
     { "<leader>ff", ":FzfLua files<CR>", silent = true, desc = "Find files" },
     { "<leader>fh", ":FzfLua helptags<CR>", silent = true, desc = "Help tags" },
-    { "<leader>fa", ":FzfLua<CR>", silent = true, desc = "Help tags" },
+    { "<leader>fa", ":FzfLua<CR>", silent = true, desc = "Fzf commands" },
     {
       "<leader>fg",
       ":FzfLua live_grep<CR>",
@@ -121,7 +121,7 @@ return {
               ) + 16,
               width = 80,
               preview = not vim.tbl_isempty(
-                    vim.lsp.get_clients({ bufnr = 0, name = "vtsls" })
+                    vim.lsp.get_clients({ bufnr = 0, name = "obsidian-ls" })
                   )
                   and {
                     layout = "vertical",
