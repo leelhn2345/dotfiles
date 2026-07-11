@@ -28,7 +28,10 @@ return {
       legacy_commands = false, -- this will be removed in 4.0.0
       note_id_func = require("obsidian.builtin").title_id,
       workspaces = {
+
         {
+          -- docs: https://obsidian.md/help/sync/headless
+          -- run till `ob sync`
           name = "notes",
           path = "~/vaults/notes",
         },
