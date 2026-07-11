@@ -51,7 +51,7 @@
                 name = "python";
                 link = true;
               }
-              "gpg2"
+              "gnupg" # also known as gpg2
               "zrok"
             ];
             taps = [

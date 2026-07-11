@@ -1,0 +1,170 @@
+{
+  "summary": {
+    "prefix": "summary",
+    "body": [
+      "> [!SUMMARY]",
+      "> "
+    ],
+    "description": "Insert Summary"
+  },
+  "abstract": {
+    "prefix": "abstract",
+    "body": [
+      "> [!ABSTRACT]",
+      "> "
+    ],
+    "description": "Insert Abstract"
+  },
+  "tldr": {
+    "prefix": "tldr",
+    "body": [
+      "> [!TLDR]",
+      "> "
+    ],
+    "description": "Insert TLDR"
+  },
+  "info": {
+    "prefix": "info",
+    "body": [
+      "> [!INFO]",
+      "> "
+    ],
+    "description": "Insert Info"
+  },
+  "hint": {
+    "prefix": "hint",
+    "body": [
+      "> [!HINT]",
+      "> "
+    ],
+    "description": "Insert Hint"
+  },
+  "success": {
+    "prefix": "success",
+    "body": [
+      "> [!SUCCESS]",
+      "> "
+    ],
+    "description": "Insert Success"
+  },
+  "check": {
+    "prefix": "check",
+    "body": [
+      "> [!CHECK]",
+      "> "
+    ],
+    "description": "Insert Check"
+  },
+  "done": {
+    "prefix": "done",
+    "body": [
+      "> [!DONE]",
+      "> "
+    ],
+    "description": "Insert Done"
+  },
+  "question": {
+    "prefix": "question",
+    "body": [
+      "> [!QUESTION]",
+      "> "
+    ],
+    "description": "Insert Question"
+  },
+  "help": {
+    "prefix": "help",
+    "body": [
+      "> [!HELP]",
+      "> "
+    ],
+    "description": "Insert Help"
+  },
+  "faq": {
+    "prefix": "faq",
+    "body": [
+      "> [!FAQ]",
+      "> "
+    ],
+    "description": "Insert FAQ"
+  },
+  "attention": {
+    "prefix": "attention",
+    "body": [
+      "> [!ATTENTION]",
+      "> "
+    ],
+    "description": "Insert Attention"
+  },
+  "failure": {
+    "prefix": "failure",
+    "body": [
+      "> [!FAILURE]",
+      "> "
+    ],
+    "description": "Insert Failure"
+  },
+  "fail": {
+    "prefix": "fail",
+    "body": [
+      "> [!FAIL]",
+      "> "
+    ],
+    "description": "Insert Fail"
+  },
+  "missing": {
+    "prefix": "missing",
+    "body": [
+      "> [!MISSING]",
+      "> "
+    ],
+    "description": "Insert Missing"
+  },
+  "danger": {
+    "prefix": "danger",
+    "body": [
+      "> [!DANGER]",
+      "> "
+    ],
+    "description": "Insert Danger"
+  },
+  "error": {
+    "prefix": "error",
+    "body": [
+      "> [!ERROR]",
+      "> "
+    ],
+    "description": "Insert Error"
+  },
+  "bug": {
+    "prefix": "bug",
+    "body": [
+      "> [!BUG]",
+      "> "
+    ],
+    "description": "Insert Bug"
+  },
+  "example": {
+    "prefix": "example",
+    "body": [
+      "> [!EXAMPLE]",
+      "> "
+    ],
+    "description": "Insert Example"
+  },
+  "cite": {
+    "prefix": "cite",
+    "body": [
+      "> [!CITE]",
+      "> "
+    ],
+    "description": "Insert Cite"
+  },
+  "quote": {
+    "prefix": "quote",
+    "body": [
+      "> [!QUOTE]",
+      "> "
+    ],
+    "description": "Insert Quote"
+  }
+}
