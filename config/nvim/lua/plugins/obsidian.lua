@@ -33,12 +33,20 @@ return {
       ":Obsidian extract_note<CR>",
       desc = "Obsidian extract note",
       mode = { "x" },
+      silent = true,
     },
     {
       "<leader>oc",
-      ":Obsidian toggle_checkbox<CR>",
+      "<CMD>Obsidian toggle_checkbox<CR>",
       desc = "Obsidian toggle checkbox",
-      mode = { "n", "x" },
+      mode = { "n" },
+    },
+    {
+      "<leader>oc",
+      ":Obsidian toggle_checkbox<CR>gv",
+      desc = "Obsidian toggle checkbox",
+      mode = { "x" },
+      silent = true,
     },
   },
   opts = function()
