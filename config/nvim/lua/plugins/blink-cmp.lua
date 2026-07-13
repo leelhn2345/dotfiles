@@ -27,6 +27,7 @@ return {
         sql = { "snippets", "dadbod", "buffer" },
         mysql = { "snippets", "dadbod", "buffer" },
         plsql = { "snippets", "dadbod", "buffer" },
+        markdown = { "obsidian-tasks", inherit_defaults = true },
       },
       providers = {
         snippets = {
@@ -53,6 +54,9 @@ return {
               enable = false,
             },
           },
+        },
+        ["obsidian-tasks"] = {
+          module = "obsidian-tasks.cmp.source",
         },
       },
     },
