@@ -1,3 +1,5 @@
+local vaults = vim.fn.expand("~/vaults")
+
 return {
   "obsidian-nvim/obsidian.nvim",
   version = "*", -- use latest release, remove to use latest commit
@@ -6,8 +8,8 @@ return {
     "snapwich/obsidian-tasks.nvim",
   },
   event = {
-    "BufReadPre " .. vim.fn.expand("~") .. "/vault*/**.md",
-    "BufNewFile " .. vim.fn.expand("~") .. "/vault*/**.md",
+    "BufReadPre " .. vaults .. "/**.md",
+    "BufNewFile " .. vaults .. "/**.md",
   },
   keys = {
     { "<leader>o", "", desc = "+obsidian", mode = { "n", "v" } },
@@ -46,6 +48,11 @@ return {
       ft = "markdown",
       silent = true,
     },
+    {
+      "<leader>ol",
+      "<CMD>edit" .. vaults .. "/notes/todo list.md<CR>",
+      desc = "Obsidian todolist",
+    },
   },
   opts = function()
     return {
@@ -56,7 +63,7 @@ return {
           -- docs: https://obsidian.md/help/sync/headless
           -- run till `ob sync`
           name = "notes",
-          path = "~/vaults/notes",
+          path = vaults .. "/notes",
         },
         -- {
         --   name = "local",
