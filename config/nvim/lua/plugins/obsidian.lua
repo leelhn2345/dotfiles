@@ -1,7 +1,10 @@
 return {
   "obsidian-nvim/obsidian.nvim",
   version = "*", -- use latest release, remove to use latest commit
-  dependencies = { "ibhagwan/fzf-lua" },
+  dependencies = {
+    "ibhagwan/fzf-lua",
+    "snapwich/obsidian-tasks.nvim",
+  },
   event = {
     "BufReadPre " .. vim.fn.expand("~") .. "/vault*/**.md",
     "BufNewFile " .. vim.fn.expand("~") .. "/vault*/**.md",
@@ -36,16 +39,11 @@ return {
       silent = true,
     },
     {
-      "<leader>oc",
-      "<CMD>Obsidian toggle_checkbox<CR>",
-      desc = "Obsidian toggle checkbox",
-      mode = { "n" },
-    },
-    {
-      "<leader>oc",
+      "<CR>",
       ":Obsidian toggle_checkbox<CR>gv",
       desc = "Obsidian toggle checkbox",
       mode = { "x" },
+      ft = "markdown",
       silent = true,
     },
   },
@@ -81,6 +79,9 @@ return {
       },
       -- footer = { enabled = false }, -- reduce rg calls, which are slow for large vaults
       -- search = { sort = false }, -- avoid rg sorting, which is slow for large vaults
+      checkbox = {
+        order = { "", " ", "/", "x" },
+      },
       frontmatter = {
         func = function(note)
           local out = {
