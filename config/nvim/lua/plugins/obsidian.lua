@@ -49,7 +49,7 @@ return {
       silent = true,
     },
     {
-      "<leader>ol",
+      "<leader>oq",
       "<CMD>edit" .. vaults .. "/notes/todo list.md<CR>",
       desc = "Obsidian todolist",
     },
