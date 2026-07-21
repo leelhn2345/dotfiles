@@ -70,11 +70,11 @@ install_packages() {
 #######################################
 # installs wsl system packages
 #
-# addition of `wslu`
+# addition of `xdg-utils`
 #######################################
 install_wsl_packages() {
   wsl_packages=(
-    wslu
+    xdg-utils
     ppa-purge
   )
   sudo nala install "${wsl_packages[@]}" -y
