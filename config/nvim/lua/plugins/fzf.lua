@@ -121,9 +121,12 @@ return {
                 math.min(vim.o.lines * 0.8 - 16, #items + 4) + 0.5
               ) + 16,
               width = 80,
-              preview = not vim.tbl_isempty(
-                    vim.lsp.get_clients({ bufnr = 0, name = "obsidian-ls" })
-                  )
+              preview = not vim.tbl_isempty(vim.tbl_filter(function(client)
+                    return vim.tbl_contains(
+                      { "obsidian-ls", "ts_ls" },
+                      client.name
+                    )
+                  end, vim.lsp.get_clients({ bufnr = 0 })))
                   and {
                     layout = "vertical",
                     vertical = "down:15,border-top",

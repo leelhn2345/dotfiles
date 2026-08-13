@@ -46,7 +46,7 @@ return {
           dependencies = { "shellcheck", "shfmt" },
         },
         {
-          "tsgo",
+          "typescript-language-server",
           dependencies = {
             "js-debug-adapter",
           },

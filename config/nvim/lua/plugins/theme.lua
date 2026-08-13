@@ -25,21 +25,21 @@ return {
       highlights["StatusLineNC"] = { bg = t.none }
 
       -- flash.nvim
-      highlights["FlashMatch"] = {
-        fg = "#1a1b26",
-        bg = "#7aa2f7",
-        bold = true,
-      }
-      highlights["FlashCurrent"] = {
-        fg = "#1a1b26",
-        bg = "#f7768e",
-        bold = true,
-      }
-      highlights["FlashLabel"] = {
-        fg = "#c0caf5",
-        bg = "#414868",
-        bold = true,
-      }
+      -- highlights["FlashMatch"] = {
+      --   fg = "#1a1b26",
+      --   bg = "#7aa2f7",
+      --   bold = true,
+      -- }
+      -- highlights["FlashCurrent"] = {
+      --   fg = "#1a1b26",
+      --   bg = "#f7768e",
+      --   bold = true,
+      -- }
+      -- highlights["FlashLabel"] = {
+      --   fg = "#c0caf5",
+      --   bg = "#414868",
+      --   bold = true,
+      -- }
     end,
   },
   config = function(_, opts)
