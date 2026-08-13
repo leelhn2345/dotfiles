@@ -137,7 +137,7 @@
             claude-code
             natscli # NATS
             just
-            terraform
+            # terraform
             ansible
           ];
 
