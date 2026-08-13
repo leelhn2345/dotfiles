@@ -123,7 +123,7 @@ return {
               width = 80,
               preview = not vim.tbl_isempty(vim.tbl_filter(function(client)
                     return vim.tbl_contains(
-                      { "obsidian-ls", "ts_ls" },
+                      { "obsidian-ls", "vtsls" },
                       client.name
                     )
                   end, vim.lsp.get_clients({ bufnr = 0 })))
