@@ -145,6 +145,34 @@
             DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
           };
 
+          # lspmux: one shared rust-analyzer instance per workspace across editors.
+          # launchd agents get a bare PATH, so spell it out - lspmux spawns
+          # rust-analyzer itself, via the rustup shim in the system profile.
+          launchd.user.agents.lspmux = {
+            serviceConfig = {
+              ProgramArguments = [
+                "${pkgs.lspmux}/bin/lspmux"
+                "server"
+              ];
+              RunAtLoad = true;
+              KeepAlive = true;
+              StandardOutPath = "/tmp/lspmux.log";
+              StandardErrorPath = "/tmp/lspmux.log";
+              EnvironmentVariables = {
+                PATH = builtins.concatStringsSep ":" [
+                  "/run/current-system/sw/bin"
+                  "/Users/${username}/.cargo/bin"
+                  "/etc/profiles/per-user/${username}/bin"
+                  "/opt/homebrew/bin"
+                  "/usr/bin"
+                  "/bin"
+                  "/usr/sbin"
+                  "/sbin"
+                ];
+              };
+            };
+          };
+
           # Necessary for using flakes on this system.
           nix.settings.experimental-features = "nix-command flakes";
 
