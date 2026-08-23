@@ -58,6 +58,12 @@ main() {
 
   success "Finished stowing."
 
+  title "setting up lspmux"
+  systemctl --user daemon-reload
+  systemctl --user enable --now lspmux.service
+  systemctl --user status lspmux
+  success "finished setting up lspmux"
+
   success "Finished setting up. Please restart terminal."
 }
 

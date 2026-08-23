@@ -1,0 +1,16 @@
+[Unit]
+Description=lspmux - LSP multiplexer server
+Documentation=https://codeberg.org/p2502/lspmux
+
+[Service]
+Type=simple
+ExecStart=%h/.cargo/bin/lspmux server
+Restart=on-failure
+RestartSec=3
+# make sure cargo/rustup shims and any other LSP binaries are findable
+Environment=PATH=%h/.cargo/bin:%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+# optional: override the config's log_filters
+Environment=RUST_LOG=info
+
+[Install]
+WantedBy=default.target
