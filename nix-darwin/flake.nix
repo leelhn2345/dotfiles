@@ -67,6 +67,7 @@
               "redis-insight"
               "dbeaver-community"
               "mongodb-compass"
+              "skim"
             ];
             enable = true;
             onActivation = {
