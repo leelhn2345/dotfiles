@@ -3,5 +3,6 @@ return {
   event = "VeryLazy",
   opts = {
     max_lines = 10,
+    multiwindow = true,
   },
 }
