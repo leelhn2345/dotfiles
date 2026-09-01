@@ -20,5 +20,6 @@ vim.filetype.add({
     ["%.gitconfig-[%w_.-]+"] = "gitconfig",
     ["%.gitconfig%.[%w_.-]+"] = "gitconfig",
     [".+%.yml%-template"] = "yaml",
+    [".+%.yml%-tmpl"] = "yaml",
   },
 })
