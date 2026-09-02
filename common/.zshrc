@@ -219,6 +219,10 @@ function y() {
 }
 
 yu() {
+  if [[ "$1" == "-a" ]]; then
+    cargo binstall --git https://github.com/sxyazi/yazi.git yazi-fm -y
+    cargo binstall --git https://github.com/sxyazi/yazi.git yazi-cli -y
+  fi
   ya pkg upgrade
 }
 
