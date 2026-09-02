@@ -34,8 +34,8 @@ terminal_crates=(
   "zoxide"
   "jaq"
   "git-delta"
-  "yazi-fm"
-  "yazi-cli"
+  # "yazi-fm" # crates.io no longer has the latest updates
+  # "yazi-cli" # crates.io no longer has the latest updates
   "watchexec-cli"
   "procs"
   "tealdeer"
@@ -63,6 +63,15 @@ cargo_crates=(
 )
 
 #######################################
+# latest yazi crates are no longer published to crates.io, hence this workaround.
+#######################################
+build_yazi() {
+  cargo binstall --git https://github.com/sxyazi/yazi.git yazi-fm -y
+  cargo binstall --git https://github.com/sxyazi/yazi.git yazi-cli -y
+  wait
+}
+
+#######################################
 # installs cargo binaries.
 #
 # debian/ubuntu derivatives take too long to update their packages.
@@ -85,6 +94,8 @@ non_nix_cargo_binaries() {
     cargo binstall "$package" -y &
   done
   wait
+
+  build_yazi
 }
 
 #######################################
