@@ -46,7 +46,7 @@ return {
           dependencies = { "shellcheck", "shfmt" },
         },
         {
-          "tsc",
+          "vtsls", -- TODO: change to `tsc` when most projects uses typescript 7.
           dependencies = {
             "js-debug-adapter",
           },
