@@ -18,6 +18,7 @@ return {
       http = { "kulala-fmt" },
       handlebars = { "djlint" },
       sql = { "sql_formatter" },
+      mysql = { "sql_formatter" },
       markdown = { "rumdl" },
     }
 

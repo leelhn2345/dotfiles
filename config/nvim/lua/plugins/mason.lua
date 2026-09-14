@@ -46,7 +46,7 @@ return {
           dependencies = { "shellcheck", "shfmt" },
         },
         {
-          "vtsls", -- TODO: change to `tsc` when it's out on mason
+          "tsc",
           dependencies = {
             "js-debug-adapter",
           },
