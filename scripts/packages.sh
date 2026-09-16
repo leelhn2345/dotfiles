@@ -38,6 +38,7 @@ packages=(
   net-tools
   gh
   direnv
+  dnsutils
 
   # python packages
   python3-venv
