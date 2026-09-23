@@ -128,6 +128,7 @@ alias tkss='tmux kill-session -t'
 
 alias ccf='cargo clippy --fix --allow-dirty --allow-staged && cargo fmt'
 alias cai='cargo autoinherit'
+alias cfp='cargo features prune'
 
 alias cc='cargo clippy'
 alias cw='watchexec -e rs -c -q -r cargo clippy'
