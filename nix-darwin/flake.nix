@@ -5,7 +5,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    mac-app-util.url = "github:hraban/mac-app-util";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
@@ -14,7 +13,6 @@
       self,
       nix-darwin,
       nixpkgs,
-      mac-app-util,
       nix-homebrew,
     }:
     let
@@ -68,6 +66,7 @@
               "dbeaver-community"
               "mongodb-compass"
               "skim"
+              "shottr"
             ];
             enable = true;
             onActivation = {
@@ -121,6 +120,7 @@
             # grpcurl
             kubectl
             lspmux
+            protobuf
 
             # coding
             nil
@@ -203,7 +203,6 @@
       # $ sudo darwin-rebuild build --flake .#kyaaa
       darwinConfigurations."kyaaa" = inputs.nix-darwin.lib.darwinSystem {
         modules = [
-          mac-app-util.darwinModules.default
           nix-homebrew.darwinModules.nix-homebrew
           nixHomebrewModule
           (configurationWithPlatform { hostPlatform = "aarch64-darwin"; })
@@ -214,7 +213,6 @@
       # $ sudo darwin-rebuild build --flake .#grimoire
       darwinConfigurations."grimoire" = inputs.nix-darwin.lib.darwinSystem {
         modules = [
-          mac-app-util.darwinModules.default
           nix-homebrew.darwinModules.nix-homebrew
           nixHomebrewModule
           (configurationWithPlatform { hostPlatform = "aarch64-darwin"; })
