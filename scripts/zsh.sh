@@ -38,6 +38,7 @@ zsh_completions() {
   just --completions zsh >"$ZSH_COMPLETIONS_DIR/_just"
   watchexec --completions zsh >"$ZSH_COMPLETIONS_DIR/_watchexec"
   kubectl completion zsh >"$ZSH_COMPLETIONS_DIR/_kubectl"
+  dx completions zsh >"$ZSH_COMPLETIONS_DIR/_dx"
 
   # no idea if this line is still needed
   rm -rf ~/.zfunc
@@ -50,4 +51,5 @@ mac_zsh_completions() {
   curl -o "$ZSH_COMPLETIONS_DIR/_golang" https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_golang
   # pip3 completion --zsh >"$ZSH_COMPLETIONS_DIR/_pip3"
   # ~/.cargo/bin/bob complete zsh >"$ZSH_COMPLETIONS_DIR/_bob"
+  dx completions zsh >"$ZSH_COMPLETIONS_DIR/_dx"
 }

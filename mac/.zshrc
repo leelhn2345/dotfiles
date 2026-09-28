@@ -141,7 +141,7 @@ alias cwr='watchexec -e rs -c -q -r cargo run'
 # alias cwcr='cargo watch -c -q -w src -x clippy -x run'
 alias cwt='watchexec -e rs -c -q -r cargo nextest run'
 # alias cwtr='cargo watch -c -q -x clippy -x -- cargo nextest run -x run'
-alias clw='cargo leptos watch'
+# alias clw='cargo leptos watch'
 
 alias rustdoc='rustup doc'
 alias rustbook='rustup doc --book'

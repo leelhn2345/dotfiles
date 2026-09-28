@@ -62,6 +62,7 @@ cargo_crates=(
   "cargo-machete"
   "cargo-features-manager"
   "sqlx-cli"
+  "dioxus-cli"
 )
 
 #######################################
