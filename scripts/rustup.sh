@@ -61,6 +61,7 @@ cargo_crates=(
   "cargo-autoinherit"
   "cargo-machete"
   "cargo-features-manager"
+  "sqlx-cli"
 )
 
 #######################################

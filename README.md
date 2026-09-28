@@ -19,8 +19,8 @@ Dotfiles to set up various development environments.
 Summary:
 
 - Automated installation of all the packages and apps I use
-- Setup all my preferred configurations
-- stows all my config files
+- Set up all my preferred configurations
+- stows all my configuration files
 
 ## Apps
 
@@ -51,15 +51,15 @@ cd ~/dotfiles/scripts
 source setup_ubuntu.sh
 ```
 
-afterwards, to log in into github
+Afterward, to log in into github
 
 ```sh
 gh auth login
 ```
 
 > [!NOTE]
-> if using WSL, may want to install wsl packages in `./scripts/packages.sh`.
-> checkout the `install_wsl_packages` function.
+> If using WSL, may want to install wsl packages in `./scripts/packages.sh`.
+> Checkout the `install_wsl_packages` function.
 
 ### Devpod
 
