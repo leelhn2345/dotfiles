@@ -1,7 +1,7 @@
 local prefix = "<leader>K"
 
 return {
-  "mistweaverco/kulala.nvim",
+  "dont-be-evil-company/kulala.nvim",
   ft = { "http" },
   keys = {
     { prefix, "", desc = "+Kulala", mode = { "n", "v" } },
