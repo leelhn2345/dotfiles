@@ -20,14 +20,5 @@ return {
         wrap = true,
       },
     },
-    keys = {
-      m = { -- example of a custom action that toggles the active view filter
-        action = function(view)
-          view.state.filter_buffer = not view.state.filter_buffer
-          view:filter(view.state.filter_buffer and { buf = 0 } or nil)
-        end,
-        desc = "Toggle Current Buffer Filter",
-      },
-    },
   },
 }
