@@ -63,18 +63,18 @@ vim.keymap.set(
 )
 
 -- Paste from system clipboard
-vim.keymap.set(
-  { "n", "v" },
-  "<leader>p",
-  [["+p]],
-  { desc = "Paste from system clipboard to after cursor" }
-)
-vim.keymap.set(
-  "n",
-  "<leader>P",
-  [["+P]],
-  { desc = "Yank line to system clipboard to before cursor" }
-)
+-- vim.keymap.set(
+--   { "n", "v" },
+--   "<leader>p",
+--   [["+p]],
+--   { desc = "Paste from system clipboard to after cursor" }
+-- )
+-- vim.keymap.set(
+--   "n",
+--   "<leader>P",
+--   [["+P]],
+--   { desc = "Yank line to system clipboard to before cursor" }
+-- )
 
 -- Keep cursor centred while scrolling up and down
 -- ! commented out because it interferes with which-key's scrolling
