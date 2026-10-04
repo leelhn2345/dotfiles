@@ -13,7 +13,7 @@ return {
     },
   },
   opts = {
-    auto_close = true,
+    -- auto_close = true,
     focus = true,
     win = {
       wo = {

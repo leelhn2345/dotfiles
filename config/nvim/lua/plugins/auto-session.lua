@@ -32,7 +32,6 @@ return {
     },
     close_filetypes_on_save = {
       "checkhealth",
-      "no-neck-pain", -- BUG: https://github.com/shortcuts/no-neck-pain.nvim/issues/500
       "noice",
       "typst",
       "kulala_ui.json",
