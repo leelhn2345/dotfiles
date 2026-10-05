@@ -24,9 +24,11 @@ return {
           "ruff",
           "ty",
           --
-          "yamlls", -- yaml-companion,
+          "yamlls", -- yaml-companion
           "jdtls",
           "oxfmt",
+
+          "vtsls", -- global exclude (for legacy reasons).
         },
       },
     },
@@ -46,7 +48,7 @@ return {
           dependencies = { "shellcheck", "shfmt" },
         },
         {
-          "vtsls", -- TODO: change to `tsc` when most projects uses typescript 7.
+          "tsc",
           dependencies = {
             "js-debug-adapter",
           },

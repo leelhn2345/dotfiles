@@ -13,8 +13,12 @@ return {
     },
   },
   opts = {
-    -- auto_close = true,
     focus = true,
+    modes = {
+      diagnostics = {
+        auto_close = true,
+      },
+    },
     win = {
       wo = {
         wrap = true,
