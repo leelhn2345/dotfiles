@@ -99,3 +99,8 @@ vim.keymap.set(
   vim.diagnostic.open_float,
   { desc = "Line Diagnostics" }
 )
+
+-- codelens
+vim.keymap.set("n", "<leader>cL", function()
+  vim.lsp.codelens.enable(not vim.lsp.codelens.is_enabled())
+end, { desc = "Toggle code lens" })

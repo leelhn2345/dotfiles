@@ -16,10 +16,6 @@ return {
         vim.keymap.set("n", "<leader>rs", function()
           vim.cmd.RustAnalyzer("restart")
         end, { desc = "Restart rust-analzyer", buffer = bufnr })
-
-        vim.keymap.set("n", "<leader>rt", function()
-          vim.lsp.codelens.run()
-        end, { desc = "Run code lens", buffer = bufnr })
       end,
       default_settings = {
         ["rust-analyzer"] = {

@@ -57,5 +57,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     opts.desc = "Restart LSP"
     vim.keymap.set("n", "<leader>rs", ":lsp restart<CR>", opts) -- mapping to restart lsp if necessary
+
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+
+    -- code lens
+    if client and client:supports_method("textDocument/codeLens") then
+      -- vim.lsp.codelens.enable(true, { bufnr = ev.buf })
+
+      opts.desc = "Run code lens"
+      vim.keymap.set("n", "<leader>cl", vim.lsp.codelens.run, opts)
+    end
   end,
 })

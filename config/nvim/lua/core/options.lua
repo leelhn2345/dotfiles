@@ -24,6 +24,7 @@ opt.cmdheight = 1
 opt.scrolloff = 10
 opt.completeopt = "menuone,popup,fuzzy"
 -- opt.winborder = "rounded"
+vim.lsp.codelens.enable(true)
 
 -- Behaviour
 opt.swapfile = false
