@@ -50,6 +50,7 @@ terminal_crates=(
   "kondo"
   "git-cliff"
   "lspmux"
+  'wild-linker'
 )
 
 cargo_crates=(
