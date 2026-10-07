@@ -29,19 +29,6 @@ pnpm_install() {
   curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=10.0.0 sh -
 }
 
-#######################################
-# installs sdkman, version manager for java
-#
-# sdk list java
-# sdk install java
-#
-# sdk list maven
-# sdk install maven
-#######################################
-sdkman_install() {
-  curl -s "https://get.sdkman.io" | bash
-}
-
 claude_code_install() {
   curl -fsSL https://claude.ai/install.sh | bash
 }

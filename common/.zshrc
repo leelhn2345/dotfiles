@@ -241,10 +241,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 # fnm
 FNM_PATH="/home/nelson/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
@@ -260,3 +256,6 @@ if [ -d "$GO_PATH" ]; then
   # verify what's the normal GOPATH with `go env GOPATH`
   export PATH="$HOME/go/bin:$PATH"
 fi
+
+# mise
+eval "$(mise activate zsh)"

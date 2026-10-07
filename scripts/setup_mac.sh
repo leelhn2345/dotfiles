@@ -27,10 +27,6 @@ main() {
   fnm install --lts # installs node-lts
   success "finished installing nodejs"
 
-  info "installing sdkman"
-  sdkman_install
-  success "finished installing sdkman"
-
   title "rustup toolchain"
   nix_cargo_binaries
   # bob_nvim
