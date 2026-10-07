@@ -192,6 +192,7 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh --cmd cd)"
 eval "$(direnv hook zsh)"
 eval "$(fnm env --use-on-cd --shell zsh)"
+eval "$(mise activate zsh)"
 
 function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

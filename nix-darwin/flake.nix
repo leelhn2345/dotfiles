@@ -121,6 +121,7 @@
             kubectl
             lspmux
             protobuf
+            mise
 
             # coding
             nil

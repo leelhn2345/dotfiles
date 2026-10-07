@@ -11,27 +11,51 @@ local function get_jdtls_config()
       vim.fn.expand("$HOME/.local/share/nvim/mason/share/jdtls/lombok.jar")
     )
 
-  local sdkman_java = vim.fn.expand("~/.sdkman/candidates/java")
+  local mise_data = vim.env.MISE_DATA_DIR
+    or vim.fn.expand("~/.local/share/mise")
 
-  -- Dynamically discover installed sdkman Java runtimes
+  local mise_java = mise_data .. "/installs/java"
+
+  -- Dynamically discover installed mise Java runtimes
+  -- dirs look like "temurin-17.0.20+101", "corretto-21.0.5", "21.0.2"
   local runtime_specs = {
-    { name = "JavaSE-17", glob = "17*" },
-    { name = "JavaSE-21", glob = "21*" },
-    { name = "JavaSE-25", glob = "25*" },
+    { name = "JavaSE-17", major = "17" },
+    { name = "JavaSE-21", major = "21" },
+    { name = "JavaSE-25", major = "25" },
   }
+
+  local entries = vim.fn.isdirectory(mise_java) == 1
+      and vim.fn.readdir(mise_java)
+    or {}
+  table.sort(entries, function(a, b)
+    return a > b
+  end)
+
   local runtimes = {}
   for _, spec in ipairs(runtime_specs) do
-    local match = vim.fn.glob(sdkman_java .. "/" .. spec.glob, false, true)
-    if #match > 0 then
-      -- lua is 1-indexed
-      table.insert(runtimes, { name = spec.name, path = match[1] })
+    for _, entry in ipairs(entries) do
+      if entry:match("^%a*%-?" .. spec.major .. "%f[^%d]") then
+        -- resolve aliases like "temurin-17" -> "temurin-17.0.20+101"
+        local path = vim.uv.fs_realpath(mise_java .. "/" .. entry)
+        if path then
+          table.insert(runtimes, { name = spec.name, path = path })
+          break
+        end
+      end
     end
+  end
+
+  -- jdtls itself needs java 21+, so run it with the newest runtime found
+  local java_bin = "java"
+  if #runtimes > 0 then
+    runtimes[#runtimes].default = true
+    java_bin = runtimes[#runtimes].path .. "/bin/java"
   end
 
   return {
     cmd = {
       "jdtls",
-      "--java-executable=" .. sdkman_java .. "/current/bin/java",
+      "--java-executable=" .. java_bin,
       lombok_arg,
     },
     runtimes = runtimes,

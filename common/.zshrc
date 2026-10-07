@@ -258,4 +258,7 @@ if [ -d "$GO_PATH" ]; then
 fi
 
 # mise
-eval "$(mise activate zsh)"
+MISE_PATH="$HOME/.cargo/bin/mise"
+if [ -x "$MISE_PATH" ]; then
+  eval "$(mise activate zsh)"
+fi

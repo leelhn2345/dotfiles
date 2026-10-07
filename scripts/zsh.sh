@@ -39,6 +39,7 @@ zsh_completions() {
   watchexec --completions zsh >"$ZSH_COMPLETIONS_DIR/_watchexec"
   kubectl completion zsh >"$ZSH_COMPLETIONS_DIR/_kubectl"
   dx completions zsh >"$ZSH_COMPLETIONS_DIR/_dx"
+  mise completion zsh >"$ZSH_COMPLETIONS_DIR/_mise"
 
   # no idea if this line is still needed
   rm -rf ~/.zfunc

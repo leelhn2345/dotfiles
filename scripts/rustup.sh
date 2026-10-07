@@ -51,6 +51,7 @@ terminal_crates=(
   "git-cliff"
   "lspmux"
   'wild-linker'
+  'mise'
 )
 
 cargo_crates=(
