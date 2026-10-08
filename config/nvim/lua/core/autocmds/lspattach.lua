@@ -46,7 +46,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
       opts
     ) -- show lsp type definitions
 
-    opts.desc = "See available code actions"
+    opts.desc = "Code actions"
     vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
     opts.desc = "Smart rename"
@@ -64,7 +64,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     if client and client:supports_method("textDocument/codeLens") then
       -- vim.lsp.codelens.enable(true, { bufnr = ev.buf })
 
-      opts.desc = "Run code lens"
+      opts.desc = "Code lens"
       vim.keymap.set("n", "<leader>cl", vim.lsp.codelens.run, opts)
     end
   end,
