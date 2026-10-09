@@ -13,5 +13,8 @@ return {
       ["Previous tab"] = false,
       ["Next tab"] = false,
     },
+    ui = {
+      max_response_size = 1000000,
+    },
   },
 }
