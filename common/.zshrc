@@ -241,13 +241,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# fnm
-FNM_PATH="/home/nelson/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "$(fnm env --shell zsh)"
-fi
-
 # golang
 GO_PATH="/usr/local/go/bin"
 if [ -d "$GO_PATH" ]; then

@@ -23,9 +23,9 @@ main() {
 
   info "setting up mac environment"
 
-  info "installing nodejs"
-  fnm install --lts # installs node-lts
-  success "finished installing nodejs"
+  title "mise installs"
+  mise install
+  success "finished installing mise tools"
 
   title "rustup toolchain"
   nix_cargo_binaries

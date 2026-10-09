@@ -191,7 +191,6 @@ bindkey -M emacs '^N' history-substring-search-down
 source <(fzf --zsh)
 eval "$(zoxide init zsh --cmd cd)"
 eval "$(direnv hook zsh)"
-eval "$(fnm env --use-on-cd --shell zsh)"
 eval "$(mise activate zsh)"
 
 function y() {

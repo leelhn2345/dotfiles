@@ -117,7 +117,6 @@
             tealdeer
             oxipng
             cocoapods
-            # grpcurl
             kubectl
             lspmux
             protobuf
@@ -126,15 +125,12 @@
             # coding
             nil
             nixfmt
-            fnm
             pnpm
             uv
             rustup
             watchexec
             go
             dotnet-sdk
-            jdk
-            maven
             typst
             claude-code
             natscli # NATS

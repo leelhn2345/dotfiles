@@ -24,6 +24,10 @@ main() {
   bob_nvim
   success "Finished installing rustup toolchain and bob-nvim."
 
+  title "Mise installs"
+  mise install
+  success "Finished installing mise tools."
+
   title "Go Toolchain"
   golang_install
   # golang_tools
@@ -31,7 +35,6 @@ main() {
 
   title "Coding Tools"
   uv_install
-  fnm_install
   pnpm_install
   claude_code_install
   k8s_install

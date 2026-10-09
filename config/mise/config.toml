@@ -7,4 +7,6 @@ status.missing_tools = "always"
 # not_found_auto_install = true
 
 [tools]
-java = "temurin-21"
+java = "lts"
+maven = "latest"
+node = "lts"

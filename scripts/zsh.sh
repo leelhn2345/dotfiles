@@ -27,11 +27,11 @@ zsh_completions() {
   rustup completions zsh cargo >"$ZSH_COMPLETIONS_DIR/_cargo"
   rustup completions zsh >"$ZSH_COMPLETIONS_DIR/_rustup"
   curl -o "$ZSH_COMPLETIONS_DIR/_golang" https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_golang
+  curl -o "$ZSH_COMPLETIONS_DIR/_node" https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_node
   uv generate-shell-completion zsh >"$ZSH_COMPLETIONS_DIR/_uv"
   # pip3 completion --zsh >"$ZSH_COMPLETIONS_DIR/_pip3"
   rg --generate complete-zsh >"$ZSH_COMPLETIONS_DIR/_rg"
   pnpm completion zsh >"$ZSH_COMPLETIONS_DIR/_pnpm"
-  fnm completions --shell zsh >"$ZSH_COMPLETIONS_DIR/_fnm"
   ~/.cargo/bin/bob complete zsh >"$ZSH_COMPLETIONS_DIR/_bob"
   procs --gen-completion-out zsh >"$ZSH_COMPLETIONS_DIR/_procs"
   typst completions zsh >"$ZSH_COMPLETIONS_DIR/_typst"
@@ -50,6 +50,7 @@ zsh_completions() {
 #######################################
 mac_zsh_completions() {
   curl -o "$ZSH_COMPLETIONS_DIR/_golang" https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_golang
+  curl -o "$ZSH_COMPLETIONS_DIR/_node" https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_node
   # pip3 completion --zsh >"$ZSH_COMPLETIONS_DIR/_pip3"
   # ~/.cargo/bin/bob complete zsh >"$ZSH_COMPLETIONS_DIR/_bob"
   dx completions zsh >"$ZSH_COMPLETIONS_DIR/_dx"
