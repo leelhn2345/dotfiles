@@ -17,6 +17,10 @@ require("core.globals")
 require("core.keymaps")
 require("core.options")
 
+-- NOTE: nvim v0.12 codelens positioning.
+-- delete file after this has been rectified.
+require("core.codelens")
+
 -- Load all autocommands from `core/autocmds/`
 local autocmd_path = vim.fn.stdpath("config") .. "/lua/core/autocmds"
 for _, file in ipairs(vim.fn.readdir(autocmd_path)) do
