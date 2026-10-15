@@ -1,6 +1,7 @@
 {
   "arrow.nvim": { "branch": "master", "commit": "6e0f726f55f99332dd726a53effd6813786b6d49" },
   "auto-session": { "branch": "main", "commit": "02a5588f677970a9bc784115c62bef9e5855499b" },
+  "backend-tmux": { "branch": "master", "commit": "9e9e6aa9b3eb7a8d3896a993611622ac97abff52" },
   "blink-cmp-git": { "branch": "master", "commit": "52fae6028287b5c2663f26e60a9db00ff647c4d3" },
   "blink.cmp": { "branch": "main", "commit": "78336bc89ee5365633bcf754d93df01678b5c08f" },
   "blink.indent": { "branch": "main", "commit": "2e9c9768affeaf3a48b2dc329eb59763012f79f6" },
@@ -74,5 +75,5 @@
   "vim-illuminate": { "branch": "master", "commit": "1cc33d347c574c3bd21a4852fc9ffed677c1c58c" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
   "yaml-companion.nvim": { "branch": "main", "commit": "fc8dc139ab8f410ae830d5cf48f9558f47c701f8" },
-  "yazi.nvim": { "branch": "main", "commit": "ba594d97021f9f033045b7ff3a2515199fb85272" }
+  "yazi.nvim": { "branch": "main", "commit": "a2f5568c480b593b2ec589525263625b00cc3e8e" }
 }

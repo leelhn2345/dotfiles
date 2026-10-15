@@ -1,10 +1,16 @@
 return {
   "mrjones2014/smart-splits.nvim",
+  dependencies = {
+    "smart-splits-nvim/backend-tmux",
+  },
   event = "VeryLazy",
   config = function()
     local smartSplits = require("smart-splits")
 
-    smartSplits.setup({ resize = { amount = 5 } })
+    smartSplits.setup({
+      mux = { backend = "smart-splits-backend-tmux" },
+      resize = { amount = 5 },
+    })
 
     local keymap = vim.keymap
     local opts = { silent = true }
