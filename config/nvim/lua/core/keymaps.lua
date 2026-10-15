@@ -104,3 +104,31 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>cL", function()
   vim.lsp.codelens.enable(not vim.lsp.codelens.is_enabled())
 end, { desc = "Toggle code lens" })
+
+-- Trust project-local .lazy.lua and restart nvim
+vim.keymap.set("n", "<leader>tr", function()
+  local path = vim.fn.getcwd() .. "/.lazy.lua"
+  if vim.fn.filereadable(path) == 0 then
+    vim.notify("No .lazy.lua in " .. vim.fn.getcwd(), vim.log.levels.WARN)
+    return
+  end
+  local ok, err = vim.secure.trust({ action = "allow", path = path })
+  if not ok then
+    vim.notify("Failed to trust .lazy.lua: " .. err, vim.log.levels.ERROR)
+    return
+  end
+  -- close no-neck-pain's side buffers so they aren't saved into the session.
+  -- disable() is debounced, so give it a moment before restarting.
+  local delay = 0
+  if
+    package.loaded["no-neck-pain"] and require("no-neck-pain.state").enabled
+  then
+    require("no-neck-pain").disable()
+    delay = 50
+  end
+
+  vim.defer_fn(function()
+    vim.cmd("wa") -- save modified buffers so the restart isn't blocked
+    vim.cmd("restart")
+  end, delay)
+end, { desc = "Trust .lazy.lua & restart" })
