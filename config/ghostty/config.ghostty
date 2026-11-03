@@ -1,0 +1,50 @@
+# Ghostty config, ported from common/.wezterm.lua
+# Location: ~/.config/ghostty/config.ghostty
+
+# --- core ---
+confirm-close-surface = false
+
+# --- colors ---
+background = 000000
+
+# --- appearance ---
+# native macOS fullscreen (Ghostty's default; explicit for parity)
+macos-non-native-fullscreen = false
+# WezTerm "RESIZE": no title bar, but still resizable
+macos-titlebar-style = hidden
+# macOS: changing this requires a full restart of Ghostty (Cmd+Q)
+background-opacity = 0.8
+# left,right / top,bottom (points). WezTerm defaults were ~1 cell / 0.5 cell.
+window-padding-y = 4
+window-padding-x = 8
+window-padding-balance = true
+window-padding-color = extend
+
+# --- font ---
+font-size = 18
+font-family = "MonaspiceNe Nerd Font"
+font-family = "Flog Symbols"
+font-family = "Monaspace Neon"
+font-family = "Cascadia Code"
+
+font-feature = calt
+font-feature = liga
+font-feature = ss01
+font-feature = ss02
+font-feature = ss03
+font-feature = ss04
+font-feature = ss05
+font-feature = ss06
+font-feature = ss07
+font-feature = ss08
+font-feature = ss09
+
+# --- tabs ---
+# macOS native tabs already hide the tab bar with a single tab; this covers GTK/Linux
+window-show-tab-bar = auto
+
+# --- keys ---
+# treat Option as Alt (WezTerm's default) so <M-hjkl> reaches tmux/nvim
+# instead of composed chars like ˙∆˚¬
+macos-option-as-alt = true
+keybind = ctrl+v=paste_from_clipboard

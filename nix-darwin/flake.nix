@@ -57,6 +57,7 @@
             ];
             casks = [
               "wezterm"
+              "ghostty"
               "obsidian"
               "spotify"
               "pearcleaner"

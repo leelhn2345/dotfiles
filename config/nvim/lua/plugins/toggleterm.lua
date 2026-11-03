@@ -38,5 +38,8 @@ return {
     open_mapping = [[<C-\>]],
     direction = "float",
     insert_mappings = false,
+    float_opts = {
+      border = "rounded",
+    },
   },
 }
