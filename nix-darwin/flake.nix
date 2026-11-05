@@ -63,7 +63,7 @@
               "pearcleaner"
               # "pear-devs/pear/pear-desktop"
               "orbstack" # docker macOS alternative
-              "redis-insight"
+              "zedis"
               "dbeaver-community"
               "mongodb-compass"
               "skim"
@@ -108,7 +108,7 @@
             jless # jq + less
             lsd
             zoxide
-            azure-cli
+            # azure-cli
             k6
             coreutils # for base32
             dust # du but more interactive
