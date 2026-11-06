@@ -63,7 +63,7 @@
               "pearcleaner"
               # "pear-devs/pear/pear-desktop"
               "orbstack" # docker macOS alternative
-              "zedis"
+              "redis-insight"
               "dbeaver-community"
               "mongodb-compass"
               "skim"
