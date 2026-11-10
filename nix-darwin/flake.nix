@@ -67,7 +67,8 @@
               "dbeaver-community"
               "mongodb-compass"
               "skim"
-              "shottr"
+              "macshot"
+              "parsec"
             ];
             enable = true;
             onActivation = {
@@ -131,7 +132,7 @@
             rustup
             watchexec
             go
-            dotnet-sdk
+            # dotnet-sdk
             typst
             claude-code
             natscli # NATS
@@ -141,7 +142,7 @@
           ];
 
           environment.variables = {
-            DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
+            # DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
           };
 
           # lspmux: one shared rust-analyzer instance per workspace across editors.
