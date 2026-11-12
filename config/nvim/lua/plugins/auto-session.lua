@@ -37,6 +37,7 @@ return {
       "kulala_ui.json",
       "text.kulala_ui",
       "snacks_terminal",
+      "claudecode",
       "leetcode.nvim",
       "codediff-history",
     },
